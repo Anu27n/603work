@@ -605,8 +605,9 @@ body.nav-active { overflow: hidden; }
   top: 0;
   left: 0;
   width: 100%;
-  background-color: transparent;
-  padding-block: 40px;
+  background-color:var(--smoky-black-2);
+  opacity: 0.9;
+  padding-block: 20px;
   z-index: 4;
   border-block-end: 1px solid transparent;
   transition: var(--transition-1);
@@ -1616,7 +1617,7 @@ textarea.input-field {
    * HEADER
    */
 
-  .header { top: 51px; }
+  .header { top: 0; }
 
   .header.active { top: 0; }
 
