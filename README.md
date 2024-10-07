@@ -73,9 +73,6 @@ I'm always open to discussing contributions, project ideas, or receiving feedbac
 - **LinkedIn**: [Anu27n](https://www.linkedin.com/in/anubhav-jain27n/)
 - **GitHub**: [Anu27n](https://github.com/Anu27n)
 
-## Acknowledgments
-- **Shields.io** for the beautiful badges.
-- **Komarev's GitHub Profile Views Counter** for tracking profile and repository views.
 
 ## License ⚖️
 This project is licensed under the **MIT License**. See the [LICENSE](./LICENSE) file for more details.
