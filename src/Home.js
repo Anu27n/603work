@@ -138,9 +138,7 @@ const Home = () => {
           <p className="label-2 section-subtitle" id="about-label">Our Story</p>
           <h2 className="headline-1 section-title">603 vor Tells a Story</h2>
           <p className="section-text">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-            industry's standard dummy text ever since the when an unknown printer took a galley of type and scrambled
-            it to make a type specimen book. It has survived not only five centuries, but also the leap into.
+          603 The Coworking Space was founded with a simple mission: to create work environments that help businesses thrive. By listening to our clients and understanding their needs, we’ve crafted flexible, tailored solutions that promote growth and collaboration. As we continue to evolve, our focus on innovation and customer success remains at the core of everything we do.
           </p>
           <div className="contact-label">Book Through Call</div>
           <a href="tel:+804001234567" className="body-1 contact-number hover-underline">+91 9136036603</a>

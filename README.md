@@ -40,7 +40,7 @@ git clone https://github.com/Anu27n/603work.git
 
 ### 3. Navigate to the Project Directory
 Once cloned, navigate to the project directory:
-```bash
+```windows
 cd 603Work
 ```
 
