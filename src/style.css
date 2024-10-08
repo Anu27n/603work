@@ -621,7 +621,7 @@ body.nav-active { overflow: hidden; }
 
 .header.hide {
   transform: translateY(-100%);
-  transition-delay: 250ms;
+  transition: transform 0.3s ease-in-out;
 }
 
 .header .container {

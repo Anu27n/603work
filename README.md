@@ -144,5 +144,12 @@ A huge thank you to everyone who has contributed to this project! Your support, 
         <sub><b>Sujal Charati</b></sub>
       </a>
     </td>
+    <td align="center">
+      <a href="https://github.com/aliqyan-21">
+        <img src="https://avatars.githubusercontent.com/aliqyan-21?v=4" width="100px" style="border-radius: 50%;" alt="aliqyan-21"/>
+        <br />
+        <sub><b>Aliqyan-21</b></sub>
+      </a>
+    </td>
   </tr>
 </table>
