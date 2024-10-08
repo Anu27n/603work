@@ -1,6 +1,23 @@
+import { useState, useEffect } from 'react';
+
 function Navbar() {
+  const [prevScrollPos, setPrevScrollPos] = useState(window.scrollY);
+  const [hidden, setHidden] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPos = window.scrollY;
+      const isHidden = prevScrollPos < currentScrollPos;
+      setHidden(isHidden);
+      setPrevScrollPos(currentScrollPos);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [prevScrollPos]);
     return (
-      <header className="header" data-header>
+      <header className={`header ${hidden ? 'hide' : ''}`} data-header>
           <div className="container">
             <a href="#" className="logo">
               <img src="./images/603logo (1).avif" width="160" height="50" alt="Grilli - Home" />
