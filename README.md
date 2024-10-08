@@ -1,4 +1,4 @@
- 603 The Coworking Space – Book Your Space, Build Your Vision
+ 603 The Coworking Space – Book Your Space, Build Your Vision,Build your Mission
 
 ## Project Description 📝
 Welcome to 603 The Coworking Space – a platform designed to provide a seamless booking experience for individuals and businesses looking for inspiring work environments. Whether you need modern office interiors to boost productivity or creative studios that foster innovation, we offer carefully curated spaces that blend style with functionality. The booking process is easy and intuitive, allowing users to focus on bringing their visions to life.
