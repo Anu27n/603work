@@ -15,8 +15,8 @@ const Home = () => {
                   <div className="slider-bg">
                     <img src="./images/sunmill-loc_batcheditor_fotor (1).avif" width="1880" height="950" alt="" className="img-cover" />
                   </div>
-                  <p className="label-2 section-subtitle slider-reveal">Classic Elegance</p>
-                  <h1 className="display-1 hero-title slider-reveal">
+                  <p className="label-2 section-subtitle slider-reveal" style={{fontWeight:'bold',fontSize:'larger'}}>Classic Elegance</p>
+                  <h1 className="display-1 hero-title slider-reveal " style={{ fontFamily:'sans-mono',fontWeight:'lighter'}}>
                     Create Your Space <br />
                     that breathe creativity
                   </h1>
