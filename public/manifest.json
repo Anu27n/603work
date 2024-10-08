@@ -1,5 +1,5 @@
 {
-  "short_name": "React App",
+  "short_name": "603 CoWorking Space",
   "name": "Create React App Sample",
   "icons": [
     {
@@ -8,7 +8,7 @@
       "type": "image/x-icon"
     },
     {
-      "src": "logo192.png",
+      "src": "603logo (1).avif",
       "type": "image/png",
       "sizes": "192x192"
     },
