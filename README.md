@@ -41,7 +41,7 @@ git clone https://github.com/Anu27n/603work.git
 ### 3. Navigate to the Project Directory
 Once cloned, navigate to the project directory:
 ```bash
-cd 603WorkVed
+cd 603work
 ```
 
 ### 4. Open the File in Your Browser
