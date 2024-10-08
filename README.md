@@ -41,26 +41,21 @@ git clone https://github.com/Anu27n/603work.git
 ### 3. Navigate to the Project Directory
 Once cloned, navigate to the project directory:
 ```bash
-cd 603WorkVed
+cd 603Work
 ```
 
-### 4. Open the File in Your Browser
-To view the project locally, open the `index.html` file in your web browser:
+### 4. Install dependencies
+To install dependencies, do command:
+```windows
+npm install
+```
 
-- **Windows**:
-  ```bash
-  start index.html
-  ```
 
-- **macOS**:
-  ```bash
-  open index.html
-  ```
-
-- **Linux**:
-  ```bash
-  xdg-open index.html
-  ```
+### 5.Run the project
+To run the project on your local machine:
+```windows
+npm start
+```
 
 ## Contribution Guidelines
 If you'd like to contribute, please ensure you read the [CONTRIBUTING.md](./CONTRIBUTING.md) file before making any pull requests.
