@@ -73,4 +73,31 @@ I'm always open to discussing contributions, project ideas, or receiving feedbac
 This project is licensed under the **MIT License**. See the [LICENSE](./LICENSE) file for more details.
 
 ## Contributors ❤️
+
 A huge thank you to everyone who has contributed to this project! Your support, whether through code, feedback, or ideas, helps keep this project growing and thriving.
+
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/Anu27n">
+        <img src="https://avatars.githubusercontent.com/Anu27n?v=4" width="100px" style="border-radius: 50%;" alt="Anu27n"/>
+        <br />
+        <sub><b>Anubhav Jain</b></sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/abhayksahu369">
+        <img src="https://avatars.githubusercontent.com/abhayksahu369?v=4" width="100px" style="border-radius: 50%;" alt="abhayksahu369"/>
+        <br />
+        <sub><b>Abhay Kumar Sahu</b></sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/sujalcharati">
+        <img src="https://avatars.githubusercontent.com/sujalcharati?v=4" width="100px" style="border-radius: 50%;" alt="sujalcharati"/>
+        <br />
+        <sub><b>Sujal Charati</b></sub>
+      </a>
+    </td>
+  </tr>
+</table>
