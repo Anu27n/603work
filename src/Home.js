@@ -61,6 +61,7 @@ const Home = () => {
                       eraseSpeed={50}
                       eraseDelay={1000}
                       typingDelay={500}
+                      typing
                     />
                   </h1>
 
