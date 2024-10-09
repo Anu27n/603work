@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "./Navbar";
-
+import ReactTypingEffect from "react-typing-effect";
 const Home = () => {
   return (
     <div>
@@ -26,12 +26,26 @@ const Home = () => {
                   >
                     Classic Elegance
                   </p>
-                  <h1
+                  {/* <h1
                     className="display-1 hero-title slider-reveal "
                     style={{ fontFamily: "sans-mono", fontWeight: "lighter" }}
                   >
                     Create Your Space <br />
                     that breathe creativity
+                  </h1> */}
+
+                  <h1 className="hero-title typing-effect">
+                    <ReactTypingEffect
+                      text={[
+                        "Create Your Space ...",
+                        "that breathe creativity ...",
+                      ]}
+                      speed={100}
+                      eraseSpeed={50}
+                      eraseDelay={1000}
+                      typingDelay={500}
+                      typing
+                    />
                   </h1>
                   <p className="body-2 hero-text slider-reveal">
                     Best working environment that suits your business needs.

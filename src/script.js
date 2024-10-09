@@ -1,5 +1,3 @@
-"use strict";
-
 document.addEventListener("DOMContentLoaded", function () {
   /**
    * PRELOAD
@@ -19,12 +17,13 @@ document.addEventListener("DOMContentLoaded", function () {
    * add event listener on multiple elements
    */
   const addEventOnElements = function (elements, eventType, callback) {
-    if (elements && elements.length > 0) {
-      // Check if elements exist and have length
-      for (let i = 0; i < elements.length; i++) {
+    if (elements) {
+      for (let i = 0, len = elements.length; i < len; i++) {
+        console.log(elements[i]); // Log each element
         if (elements[i]) {
-          // Check if the element exists
           elements[i].addEventListener(eventType, callback);
+        } else {
+          console.warn(`Element at index ${i} is null`);
         }
       }
     }
