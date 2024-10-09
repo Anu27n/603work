@@ -1,0 +1,55 @@
+
+.about-us {
+    padding: 100px 0;
+    background-color: var(--smoky-black-2); 
+  }
+  
+  .about-us-content {
+    text-align: center; 
+  }
+  
+  .section-title {
+    margin-bottom: 40px;
+  }
+  
+  
+  
+  .content-blocks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .content-block {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    margin: 20px;
+    width: 45%; 
+    text-align: left; 
+  }
+
+  @media (max-width: 768px) {
+    .content-blocks {
+      flex-direction: column;
+    }
+    .content-block {
+      width: 90%;
+    }
+  }
+  
+  .about-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; 
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+  }
+  
+  
+  
+  .cta {
+    margin-top: 40px; 
+  }
+  
+  
