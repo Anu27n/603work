@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-
+import { Link } from 'react-router-dom';
 function Navbar() {
   const [prevScrollPos, setPrevScrollPos] = useState(window.scrollY);
   const [hidden, setHidden] = useState(false);
@@ -43,17 +43,18 @@ function Navbar() {
                   </a>
                 </li>
                 <li className="navbar-item">
-                  <a href="#about" className="navbar-link hover-underline">
-                    <div className="separator"></div>
-                    <span className="span">About Us</span>
-                  </a>
-                </li>
-                <li className="navbar-item">
-                  <a href="#" className="navbar-link hover-underline">
-                    <div className="separator"></div>
-                    <span className="span">Images</span>
-                  </a>
-                </li>
+              <Link to="/about-us" className="navbar-link hover-underline">
+                <div className="separator"></div>
+                <span className="span">About Us</span>
+              </Link>
+            </li>
+            <li className="navbar-item">
+              <a href="#" className="navbar-link hover-underline">
+                <div className="separator"></div>
+                <span className="span">Images</span>
+              </a>
+            </li>
+               
                 <li className="navbar-item">
                   <a href="#" className="navbar-link hover-underline">
                     <div className="separator"></div>
