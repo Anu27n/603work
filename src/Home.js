@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "./Navbar";
 import ReactTypingEffect from "react-typing-effect";
 
+
 const Home = () => {
   return (
     <div>
@@ -27,6 +28,7 @@ const Home = () => {
                   >
                     Classic Elegance
                   </p>
+
                   <h1 className="hero-title typing-effect">
                     <ReactTypingEffect
                       text={[
@@ -39,6 +41,14 @@ const Home = () => {
                       typingDelay={500}
                       typing
                     />
+
+                  <h1
+                    className="display-1 hero-title slider-reveal "
+                    style={{ fontFamily: "sans-mono", fontWeight: "lighter" }}
+                  >
+                    Create Your Space <br />
+                    that breathe creativity
+
                   </h1>
                   <p className="body-2 hero-text slider-reveal">
                     Best working environment that suits your business needs.
@@ -389,6 +399,7 @@ const Home = () => {
                   </div>
                 </li>
 
+
                 <li>
                   <div className="event-card has-before hover:shine">
                     <div
@@ -421,6 +432,7 @@ const Home = () => {
                   </div>
                 </li>
 
+
                 <li>
                   <div className="event-card has-before hover:shine">
                     <div
@@ -428,6 +440,40 @@ const Home = () => {
                       style={{ "--width": "350", "--height": "450" }}
                     >
                       <img
+
+                        src="./images/google-oc-rapt-studio-office-design-9-700x467.avif"
+                        width="350"
+                        height="450"
+                        loading="lazy"
+                        alt="Flavour so good you’ll try to eat with your eyes."
+                        className="img-cover"
+                      />
+                      <time
+                        className="publish-date label-2"
+                        dateTime="2024-09-08"
+                      >
+                        08/09/2024
+                      </time>
+                    </div>
+                    <div className="card-content">
+                      <p className="card-subtitle label-2 text-center">
+                        Main Cabinete
+                      </p>
+                      <h3 className="card-title title-2 text-center">
+                        Cabinait is the place for best productive work.
+                      </h3>
+                    </div>
+                  </div>
+                </li>
+
+                <li>
+                  <div className="event-card has-before hover:shine">
+                    <div
+                      className="card-banner img-holder"
+                      style={{ "--width": "350", "--height": "450" }}
+                    >
+                      <img
+
                         src="./images/jose-losada-DyFjxmHt3Es-unsplash.avif"
                         width="350"
                         height="450"
@@ -466,6 +512,7 @@ const Home = () => {
       </main>
       <footer
         className="footer section has-bg-image text-center"
+
         style={{
           backgroundImage:
             "url('./images/fae955e3-de29-4d6b-a41a-85563f86a931.avif')",
@@ -501,11 +548,148 @@ const Home = () => {
                 <div className="separator"></div>
                 <div className="separator"></div>
                 <div className="separator"></div>
+
+        style={{ position: "relative", overflow: "hidden" }}
+      >
+        <div
+          className="background-blur"
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            backgroundImage:
+              "url('./images/fae955e3-de29-4d6b-a41a-85563f86a931.avif')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            filter: "blur(8px)",
+            zIndex: -1,
+          }}
+        ></div>
+        <div className="container">
+          <div className="footer-content">
+            <div className="footer-top grid-list">
+              <div className="footer-brand has-before has-after">
+                <a href="#" className="logo">
+                  <img
+                    src="./images/603logo (1).avif"
+                    width="160"
+                    height="50"
+                    loading="lazy"
+                    alt="grilli home"
+                  />
+                </a>
+                <address className="body-4">
+                  Makhija Arcade, 35th Rd, Khar, Khar West, Mumbai, Maharashtra
+                  400052
+                </address>
+                <a
+                  href="mailto:booking@grilli.com"
+                  className="body-4 contact-link"
+                >
+                  booking@grilli.com
+                </a>
+                <a href="tel:+88123123456" className="body-4 contact-link">
+                  Booking Request : +88-123-123456
+                </a>
+                <p className="body-4">Open : 09:00 am - 01:00 pm</p>
+                <div className="wrapper">
+                  <div className="separator"></div>
+                  <div className="separator"></div>
+                  <div className="separator"></div>
+                </div>
+                <p className="title-1">Get News & Offers</p>
+                <p className="label-1">
+                  Subscribe us & Get <span className="span">25% Off.</span>
+                </p>
+                <form action="" className="input-wrapper">
+                  <div className="icon-wrapper">
+                    <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+                    <input
+                      type="email"
+                      name="email_address"
+                      placeholder="Your email"
+                      autoComplete="off"
+                      className="input-field"
+                    />
+                  </div>
+                  <button type="submit" className="btn btn-secondary">
+                    <span className="text text-1">Subscribe</span>
+                    <span className="text text-2" aria-hidden="true">
+                      Subscribe
+                    </span>
+                  </button>
+                </form>
+
               </div>
-              <p className="title-1">Get News & Offers</p>
-              <p className="label-1">
-                Subscribe us & Get <span className="span">25% Off.</span>
+              <ul className="footer-list">
+                <li>
+                  <a href="#" className="label-2 footer-link hover-underline">
+                    Home
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="label-2 footer-link hover-underline">
+                    Menus
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="label-2 footer-link hover-underline">
+                    About Us
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="label-2 footer-link hover-underline">
+                    Our Chefs
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="label-2 footer-link hover-underline">
+                    Contact
+                  </a>
+                </li>
+              </ul>
+              <ul className="footer-list">
+                <li>
+                  <a href="#" className="label-2 footer-link hover-underline">
+                    Facebook
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="label-2 footer-link hover-underline">
+                    Instagram
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="label-2 footer-link hover-underline">
+                    Twitter
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="label-2 footer-link hover-underline">
+                    Youtube
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="label-2 footer-link hover-underline">
+                    Google Map
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div className="footer-bottom">
+              <p className="copyright">
+                &copy; 2024 . All Rights Reserved | Crafted by{" "}
+                <a
+                  href="603thecoworkingspace.com"
+                  target="_blank"
+                  className="link"
+                >
+                  603 The Coworking Space
+                </a>
               </p>
+
               <form action="" className="input-wrapper">
                 <div className="icon-wrapper">
                   <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
@@ -591,6 +775,9 @@ const Home = () => {
                 603 The Coworking Space
               </a>
             </p>
+
+            </div>
+
           </div>
         </div>
       </footer>
@@ -601,6 +788,7 @@ const Home = () => {
         data-back-top-btn
       >
         <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
+        <span className="caret-text">^</span>
       </a>
       <script src="./script.js"></script>
       <script
