@@ -2436,5 +2436,16 @@ textarea.input-field {
   .features .shape-2 {
     bottom: 80px;
     left: 0;
-  }
+  
+
 }
+
+.logohover{
+  transition: transform 0.8s ease-in-out;
+}
+.logohover:hover{
+  transform: rotate(360deg) scale(1.3); /* Spins 360 degrees and scales up */
+}
+
+}
+
