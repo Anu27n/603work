@@ -19,7 +19,12 @@ document.addEventListener("DOMContentLoaded", function () {
   const addEventOnElements = function (elements, eventType, callback) {
     if (elements) {
       for (let i = 0, len = elements.length; i < len; i++) {
-        elements[i].addEventListener(eventType, callback);
+        console.log(elements[i]); // Log each element
+        if (elements[i]) {
+          elements[i].addEventListener(eventType, callback);
+        } else {
+          console.warn(`Element at index ${i} is null`);
+        }
       }
     }
   };

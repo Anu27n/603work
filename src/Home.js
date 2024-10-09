@@ -29,29 +29,6 @@ const Home = () => {
                     Classic Elegance
                   </p>
 
-                  {/* 
-                  <h1
-                    className="display-1 hero-title slider-reveal "
-                    style={{ fontFamily: "sans-mono", fontWeight: "lighter" }}
-                  >
-                    Create Your Space <br />
-                    that breathe creativity
-                  </h1>
-
-                  <h1 className="text-[#edcead] w-full text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold flex items-center justify-center whitespace-nowrap mt-44 sm:mt-52 md:mt-64 lg:mt-40">
-                    <ReactTypingEffect
-                      text={[
-                        "Effortless Planning ...",
-                        "Seamless Rides ...",
-                        "Real-Time Tracking ...",
-                      ]}
-                      speed={100}
-                      eraseSpeed={50}
-                      eraseDelay={1000}
-                      typingDelay={500}
-                    />
-                  </h1> */}
-
                   <h1 className="hero-title typing-effect">
                     <ReactTypingEffect
                       text={[
