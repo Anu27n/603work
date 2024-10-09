@@ -7,6 +7,7 @@ const Home = () => {
     <div>
       <Navbar />
       <main>
+        ``
         <article>
           <section className="hero text-center" aria-label="home" id="home">
             <ul className="hero-slider" data-hero-slider>

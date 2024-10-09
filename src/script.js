@@ -1,9 +1,7 @@
-'use strict';
-
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener("DOMContentLoaded", function () {
   /**
    * PRELOAD
-   * 
+   *
    * loading will be end after document is loaded
    */
   const preloader = document.querySelector("[data-preaload]");
@@ -24,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
         elements[i].addEventListener(eventType, callback);
       }
     }
-  }
+  };
 
   /**
    * NAVBAR
@@ -41,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
       overlay.classList.toggle("active");
     }
     document.body.classList.toggle("nav-active");
-  }
+  };
 
   addEventOnElements(navTogglers, "click", toggleNavbar);
 
@@ -66,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     lastScrollPos = window.scrollY;
-  }
+  };
 
   window.addEventListener("scroll", function () {
     if (window.scrollY >= 50) {
@@ -106,7 +104,7 @@ document.addEventListener('DOMContentLoaded', function() {
       heroSliderItems[currentSlidePos].classList.add("active");
     }
     lastActiveSliderItem = heroSliderItems[currentSlidePos];
-  }
+  };
 
   const slideNext = function () {
     if (currentSlidePos >= heroSliderItems.length - 1) {
@@ -116,7 +114,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     updateSliderPos();
-  }
+  };
 
   if (heroSliderNextBtn) {
     heroSliderNextBtn.addEventListener("click", slideNext);
@@ -130,7 +128,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     updateSliderPos();
-  }
+  };
 
   if (heroSliderPrevBtn) {
     heroSliderPrevBtn.addEventListener("click", slidePrev);
@@ -145,13 +143,21 @@ document.addEventListener('DOMContentLoaded', function() {
     autoSlideInterval = setInterval(function () {
       slideNext();
     }, 7000);
-  }
+  };
 
-  addEventOnElements([heroSliderNextBtn, heroSliderPrevBtn], "mouseover", function () {
-    clearInterval(autoSlideInterval);
-  });
+  addEventOnElements(
+    [heroSliderNextBtn, heroSliderPrevBtn],
+    "mouseover",
+    function () {
+      clearInterval(autoSlideInterval);
+    }
+  );
 
-  addEventOnElements([heroSliderNextBtn, heroSliderPrevBtn], "mouseout", autoSlide);
+  addEventOnElements(
+    [heroSliderNextBtn, heroSliderPrevBtn],
+    "mouseout",
+    autoSlide
+  );
 
   window.addEventListener("load", autoSlide);
 
@@ -163,12 +169,12 @@ document.addEventListener('DOMContentLoaded', function() {
   let x, y;
 
   window.addEventListener("mousemove", function (event) {
-    x = (event.clientX / window.innerWidth * 10) - 5;
-    y = (event.clientY / window.innerHeight * 10) - 5;
+    x = (event.clientX / window.innerWidth) * 10 - 5;
+    y = (event.clientY / window.innerHeight) * 10 - 5;
 
     // reverse the number eg. 20 -> -20, -5 -> 5
-    x = x - (x * 2);
-    y = y - (y * 2);
+    x = x - x * 2;
+    y = y - y * 2;
 
     for (let i = 0, len = parallaxItems.length; i < len; i++) {
       x = x * Number(parallaxItems[i].dataset.parallaxSpeed);
