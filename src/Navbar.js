@@ -29,7 +29,7 @@ function Navbar() {
       }`}
       data-header
     >
-      <div className="top_navbar">
+      <div className="top_navbar_style">
         <p>
           Makhija Arcade, 35th Rd, Khar, Khar West, Mumbai, Maharashtra 400052
         </p>

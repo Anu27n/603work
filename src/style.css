@@ -297,14 +297,14 @@ body.nav-active {
   padding-inline: 16px;
 }
 
-.top_navbar {
+.top_navbar_style {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   justify-items: center;
   padding: 20px;
   margin-top: -34px;
-  color: rgb(243, 239, 234);
+  color: rgb(234, 231, 226);
 
   border-bottom: 1px solid rgb(238, 187, 120);
   margin-bottom: 10px;
