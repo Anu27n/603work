@@ -464,17 +464,15 @@ const Home = () => {
         <div
           className="background-blur"
           style={{
+            backgroundImage:
+              "url('./images/fae955e3-de29-4d6b-a41a-85563f86a931.avif')",
             position: "absolute",
             top: 0,
             left: 0,
             width: "100%",
             height: "100%",
-            backgroundImage:
-              "url('./images/fae955e3-de29-4d6b-a41a-85563f86a931.avif')",
             backgroundSize: "cover",
             backgroundPosition: "center",
-            filter: "blur(8px)",
-            zIndex: -1,
           }}
         ></div>
         <div className="container">
@@ -496,7 +494,7 @@ const Home = () => {
                 </address>
                 <a
                   href="mailto:booking@grilli.com"
-                  className="body-4 contact-link"
+                  className="body-4 contact-link mail1"
                 >
                   booking@grilli.com
                 </a>
@@ -607,9 +605,19 @@ const Home = () => {
         className="back-top-btn active"
         aria-label="back to top"
         data-back-top-btn
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          textDecoration: "none",
+        }}
       >
         <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
-        <span className="caret-text">^</span>
+        <img
+          src="./images/Vector 2.png"
+          alt="Back to top"
+          className="caret-image"
+        />
       </a>
       <script src="./script.js"></script>
       <script
