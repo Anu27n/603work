@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+"use strict";
+
+>>>>>>> c20a921f570acb1ee40e26733ab0729b3f716da6
 document.addEventListener("DOMContentLoaded", function () {
   /**
    * PRELOAD
@@ -17,6 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
    * add event listener on multiple elements
    */
   const addEventOnElements = function (elements, eventType, callback) {
+<<<<<<< HEAD
     if (elements) {
       for (let i = 0, len = elements.length; i < len; i++) {
         console.log(elements[i]); // Log each element
@@ -24,6 +30,14 @@ document.addEventListener("DOMContentLoaded", function () {
           elements[i].addEventListener(eventType, callback);
         } else {
           console.warn(`Element at index ${i} is null`);
+=======
+    if (elements && elements.length > 0) {
+      // Check if elements exist and have length
+      for (let i = 0; i < elements.length; i++) {
+        if (elements[i]) {
+          // Check if the element exists
+          elements[i].addEventListener(eventType, callback);
+>>>>>>> c20a921f570acb1ee40e26733ab0729b3f716da6
         }
       }
     }
