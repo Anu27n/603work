@@ -580,27 +580,27 @@ const Home = () => {
                 <ul className="footer-list">
                   <p className="title-1">Follow us on: </p>
                   <li>
-                    <a href="#" className="label-2 footer-link">
+                    <a href="https://www.facebook.com/" className="label-2 footer-link">
                       <img className="img-height" src={facebookIcon} />
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="label-2 footer-link">
+                    <a href="https://www.instagram.com/603thecoworkingspace/" className="label-2 footer-link">
                       <img className="img-height" src={instagramIcon} />
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="label-2 footer-link">
+                    <a href="https://x.com/603coworking" className="label-2 footer-link">
                       <img className="img-height" src={twitterIcon} />
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="label-2 footer-link">
+                    <a href="https://www.youtube.com/" className="label-2 footer-link">
                       <img className="img-height" src={youtubeIcon} />
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="label-2 footer-link">
+                    <a href="https://www.google.com/maps" className="label-2 footer-link">
                       <img className="img-height map" src={mapsIcon} />
                     </a>
                   </li>
