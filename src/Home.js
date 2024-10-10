@@ -391,8 +391,8 @@ const Home = () => {
                         Main Office
                       </p>
                       <h3 className="card-title title-2 text-center">
-                        The Main Office is the Place Which has to be designed to
-                        its best.
+                        Main Office is the place which has to be designed to its
+                        best.
                       </h3>
                     </div>
                   </div>
@@ -421,10 +421,10 @@ const Home = () => {
                     </div>
                     <div className="card-content">
                       <p className="card-subtitle label-2 text-center">
-                        Main Cabinete
+                        Main Cabinet
                       </p>
                       <h3 className="card-title title-2 text-center">
-                        Cabinait is the place for best productive work.
+                        Main Cabinet is the place for best productive work.
                       </h3>
                     </div>
                   </div>
@@ -453,7 +453,7 @@ const Home = () => {
                     </div>
                     <div className="card-content">
                       <p className="card-subtitle label-2 text-center">
-                        Main Centre
+                        Main Center
                       </p>
                       <h3 className="card-title title-2 text-center">
                         Main Center is the place for best productive work.
@@ -558,11 +558,11 @@ const Home = () => {
                   </a>
                 </li>
                 <li>
-                   <a href="#about" class="label-2 footer-link hover-underline">
-                  <div class="separator"></div>
-                  <span class="span">About Us</span>
-            </a>
-           </li>
+                  <a href="#about" class="label-2 footer-link hover-underline">
+                    <div class="separator"></div>
+                    <span class="span">About Us</span>
+                  </a>
+                </li>
                 <li>
                   <a href="#" className="label-2 footer-link hover-underline">
                     Our Chefs
@@ -596,7 +596,10 @@ const Home = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="https://www.google.com/maps/place/Makhija+Arcade,+35th+Rd,+Khar,+Khar+West,+Mumbai,+Maharashtra+400052/@19.0651497,72.8325179,17z/data=!3m1!4b1!4m6!3m5!1s0x3be7c91140262913:0xc53b6407e4d39f76!8m2!3d19.0651497!4d72.8350928!16s%2Fg%2F12hkbx6fn?entry=ttu&g_ep=EgoyMDI0MTAwNy4xIKXMDSoASAFQAw%3D%3D" className="label-2 footer-link hover-underline">
+                  <a
+                    href="https://www.google.com/maps/place/Makhija+Arcade,+35th+Rd,+Khar,+Khar+West,+Mumbai,+Maharashtra+400052/@19.0651497,72.8325179,17z/data=!3m1!4b1!4m6!3m5!1s0x3be7c91140262913:0xc53b6407e4d39f76!8m2!3d19.0651497!4d72.8350928!16s%2Fg%2F12hkbx6fn?entry=ttu&g_ep=EgoyMDI0MTAwNy4xIKXMDSoASAFQAw%3D%3D"
+                    className="label-2 footer-link hover-underline"
+                  >
                     Google Map
                   </a>
                 </li>
