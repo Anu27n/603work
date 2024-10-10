@@ -1,24 +1,30 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Navbar from "./Navbar";
+import MakeYourSpace from "./MakeYourSpace";
 import Home from './Home';
+import ScrollIndicator from './ScrollIndicator';
+import PreloaderContainer from './PreloaderContainer'; // For Preloader
+
 import './style.css';
 import './script.js'; 
-import './preloader.js'
-import './TopBar.js'
-import ScrollIndicator from './ScrollIndicator';
-import PreloaderContainer from './PreloaderContainer.js'; // For Preloader
-import './style.css'; 
-import './script.js'; 
+import './preloader.js';
 import './TopBar.js';
-
 
 function App() {
   return (
-    <div className="App">
-      <ScrollIndicator />
-      <PreloaderContainer>
-        <Home />
-      </PreloaderContainer>
-    </div>
+    <Router>
+      <div className="App">
+        <ScrollIndicator />
+        <PreloaderContainer>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/make-your-space" element={<MakeYourSpace />} />
+          </Routes>
+        </PreloaderContainer>
+      </div>
+    </Router>
   );
 }
 
