@@ -1,5 +1,10 @@
 import React from "react";
 import ReactTypingEffect from "react-typing-effect";
+import facebookIcon from "./images/facebook.svg"
+import instagramIcon from "./images/instagram.svg"
+import twitterIcon from "./images/twitter.svg"
+import youtubeIcon from "./images/youtube.svg"
+import mapsIcon from "./images/maps.svg"
 import Navbar from "./Navbar";
 const Home = () => {
   return (
@@ -495,6 +500,33 @@ const Home = () => {
           <div className="footer-content">
             <div className="footer-top grid-list">
               <div className="footer-brand has-before has-after">
+                <ul className="footer-list">
+                  <li>
+                    <a href="#" className="label-2 footer-link hover-underline">
+                      Home
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="label-2 footer-link hover-underline">
+                      Menus
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="label-2 footer-link hover-underline">
+                      About Us
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="label-2 footer-link hover-underline">
+                      Our Chefs
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="label-2 footer-link hover-underline">
+                      Contact
+                    </a>
+                  </li>
+                </ul> 
                 <a href="#" className="logo">
                   <img
                     src="./images/603logo (1).avif"
@@ -545,8 +577,36 @@ const Home = () => {
                     </span>
                   </button>
                 </form>
+                <ul className="footer-list">
+                  <p className="title-1">Follow us on: </p>
+                  <li>
+                    <a href="#" className="label-2 footer-link">
+                      <img className="img-height" src={facebookIcon} />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="label-2 footer-link">
+                      <img className="img-height" src={instagramIcon} />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="label-2 footer-link">
+                      <img className="img-height" src={twitterIcon} />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="label-2 footer-link">
+                      <img className="img-height" src={youtubeIcon} />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="label-2 footer-link">
+                      <img className="img-height map" src={mapsIcon} />
+                    </a>
+                  </li>
+                </ul>
               </div>
-              <ul className="footer-list">
+              {/* <ul className="footer-list">
                 <li>
                   <a href="#" className="label-2 footer-link hover-underline">
                     Home
@@ -600,7 +660,7 @@ const Home = () => {
                     Google Map
                   </a>
                 </li>
-              </ul>
+              </ul> */}
             </div>
             <div className="footer-bottom">
               <p className="copyright">
