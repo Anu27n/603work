@@ -1,6 +1,6 @@
 import React from "react";
-import Navbar from "./Navbar";
 import ReactTypingEffect from "react-typing-effect";
+import Navbar from "./Navbar";
 const Home = () => {
   return (
     <div>
@@ -18,11 +18,12 @@ const Home = () => {
                       height="950"
                       alt=""
                       className="img-cover"
+                      style={{ opacity: "0.8" }}
                     />
                   </div>
                   <p
                     className="label-2 section-subtitle slider-reveal"
-                    style={{ fontWeight: "bold", fontSize: "larger" }}
+                    style={{ fontWeight: "900", fontSize: "larger" }}
                   >
                     Classic Elegance
                   </p>
@@ -139,7 +140,8 @@ const Home = () => {
               <span className="label-2 text-center span">Book A Space</span>
             </a>
           </section>
-          <section id="spaces"
+          <section
+            id="spaces"
             className="section service bg-black-10 text-center"
             aria-label="service"
           >
