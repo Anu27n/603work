@@ -9,7 +9,7 @@
 /*-----------------------------------*\
   #CUSTOM PROPERTY
 \*-----------------------------------*/
-
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
 :root {
   /**
    * COLORS
@@ -54,7 +54,7 @@
    */
 
   /* font-family */
-  --fontFamily-forum: "Forum", cursive;
+  --fontFamily-forum: 'Lora';
   --fontFamily-dm_sans: "DM Sans", sans-serif;
 
   /* font-size */
@@ -194,6 +194,7 @@ body {
   line-height: var(--lineHeight-5);
   overflow: hidden;
   height: 300vh;
+  zoom: 0.9;
 }
 
 body.loaded {
@@ -204,6 +205,9 @@ body.nav-active {
   overflow: hidden;
 }
 
+.hero-title {
+  font-family: 'Lora';
+}
 ::-webkit-scrollbar {
   width: 5px;
 }
@@ -1381,7 +1385,7 @@ body.nav-active {
 }
 
 .glass-box {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(44, 42, 42, 0.61);
   border-radius: 10px;
   padding: 20px;
   backdrop-filter: blur(9px);
