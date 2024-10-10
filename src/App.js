@@ -15,7 +15,6 @@ function App() {
   return (
     <div className="App">
       <ScrollIndicator />
-      <Home />
       <PreloaderContainer>
         <Home />
       </PreloaderContainer>
