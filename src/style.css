@@ -1703,13 +1703,13 @@ textarea.input-field {
 
 .img-height{
   height: 40px;
+  transition: all .5s;
 }
 
 .img-height:hover{
   scale: 1.2;
   /* -webkit-transition: all .5s;
   -moz-transition: all .5s; */
-  transition: all .5s;
 }
 
 .map{
