@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 
 function Navbar() {
   const [prevScrollPos, setPrevScrollPos] = useState(window.scrollY);
@@ -30,12 +30,16 @@ function Navbar() {
       data-header
     >
       <div className="top_navbar_style">
-        <p>
+        <p style={{ fontWeight: "bolder", marginTop: "10px" }}>
           Makhija Arcade, 35th Rd, Khar, Khar West, Mumbai, Maharashtra 400052
         </p>
 
-        <p>Daily : 8.00 am to 10.00 pm</p>
-        <p>+91 9136036603</p>
+        <p style={{ fontWeight: "bolder", marginTop: "10px" }}>
+          Daily : 8.00 am to 10.00 pm
+        </p>
+        <p style={{ fontWeight: "bolder", marginTop: "10px" }}>
+          +91 9136036603
+        </p>
         <a
           href="mailto:sales@603thecoworkingspace.com"
           className="topbar-item link"
@@ -43,7 +47,12 @@ function Navbar() {
           <div className="icon">
             <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
           </div>
-          <span className="span">sales@603thecoworkingspace.com</span>
+          <span
+            className="span"
+            style={{ fontWeight: "bolder", marginTop: "10px" }}
+          >
+            sales@603thecoworkingspace.com
+          </span>
         </a>
       </div>
       <div className="container">
