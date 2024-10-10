@@ -119,7 +119,7 @@ document.addEventListener("DOMContentLoaded", function () {
    * Initiating Her0 Slider after Preloader is completed
    */
   setTimeout(() => {
-    const heroSlider = document.querySelector("[data-hero-slider]");
+    // const heroSlider = document.querySelector("[data-hero-slider]");
     const heroSliderItems = document.querySelectorAll("[data-hero-slider-item]");
     const heroSliderPrevBtn = document.querySelector("[data-prev-btn]");
     const heroSliderNextBtn = document.querySelector("[data-next-btn]");
