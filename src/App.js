@@ -5,6 +5,8 @@ import './style.css';
 import './script.js';
 import './preloader.js';
 import './TopBar.js';
+import Modal from './Modal';
+
 
 function App() {
   return (
