@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+
 function Navbar() {
   const [prevScrollPos, setPrevScrollPos] = useState(window.scrollY);
   const [hidden, setHidden] = useState(false);
@@ -35,7 +36,6 @@ function Navbar() {
       className={`header ${hidden ? "hide" : ""} ${
         isScrolled ? "navbar-scrolled" : "navbar-transparent"
       }`}
-      data-header
     >
       <div className="top_navbar_style">
         <p>
@@ -63,7 +63,7 @@ function Navbar() {
             className="logohover"
           />
         </a>
-        <nav className={`navbar ${isMenuOpen ? 'active' : ''}`} data-navbar>
+        <nav className={`navbar ${isMenuOpen ? 'active' : ''}`}>
           <button
             className="close-btn"
             aria-label="close menu"
@@ -100,7 +100,7 @@ function Navbar() {
             </li>
             <li className="navbar-item">
               <a href="#" className="navbar-link hover-underline">
-                <div className="separator"></div>
+                <div className="separator "></div>
                 <span className="span">Images</span>
               </a>
             </li>
@@ -149,8 +149,6 @@ function Navbar() {
         <div 
           className={`overlay ${isMenuOpen ? 'active' : ''}`} 
           onClick={toggleMenu}
-          data-nav-toggler 
-          data-overlay
         ></div>
       </div>
     </header>

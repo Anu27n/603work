@@ -1,15 +1,23 @@
 import React from "react";
 import ReactTypingEffect from "react-typing-effect";
 import Navbar from "./Navbar";
+
 const Home = () => {
   return (
     <div>
       <Navbar />
       <main>
         <article>
-          <section className="hero text-center" aria-label="home" id="home">
+          <section
+            className="hero text-center"
+            aria-label="home"
+            id="home"
+          >
             <ul className="hero-slider" data-hero-slider>
-              <li className="slider-item active" data-hero-slider-item>
+              <li
+                className="slider-item active"
+                data-hero-slider-item
+              >
                 <div className="container">
                   <div className="slider-bg">
                     <img
@@ -27,14 +35,6 @@ const Home = () => {
                   >
                     Classic Elegance
                   </p>
-                  {/* <h1
-                    className="display-1 hero-title slider-reveal "
-                    style={{ fontFamily: "sans-mono", fontWeight: "lighter" }}
-                  >
-                    Create Your Space <br />
-                    that breathe creativity
-                  </h1> */}
-
                   <h1 className="hero-title typing-effect">
                     <ReactTypingEffect
                       text={[
@@ -51,9 +51,15 @@ const Home = () => {
                   <p className="body-2 hero-text slider-reveal">
                     Best working environment that suits your business needs.
                   </p>
-                  <a href="#" className="btn btn-primary slider-reveal">
+                  <a
+                    href="#"
+                    className="btn btn-primary slider-reveal"
+                  >
                     <span className="text text-1">Make Your Space</span>
-                    <span className="text text-2" aria-hidden="true">
+                    <span
+                      className="text text-2"
+                      aria-hidden="true"
+                    >
                       Make Your Space
                     </span>
                   </a>
@@ -80,9 +86,15 @@ const Home = () => {
                   Spaces that are occupied by Corporates and Start ups, designed
                   with your business in mind
                 </p>
-                <a href="#" className="btn btn-primary slider-reveal">
+                <a
+                  href="#"
+                  className="btn btn-primary slider-reveal"
+                >
                   <span className="text text-1">Make Your Space</span>
-                  <span className="text text-2" aria-hidden="true">
+                  <span
+                    className="text text-2"
+                    aria-hidden="true"
+                  >
                     Make Your Space
                   </span>
                 </a>
@@ -108,9 +120,15 @@ const Home = () => {
                   Come with your team & experience the joy of inspiring office
                   design.
                 </p>
-                <a href="#" className="btn btn-primary slider-reveal">
+                <a
+                  href="#"
+                  className="btn btn-primary slider-reveal"
+                >
                   <span className="text text-1">Make Your Space</span>
-                  <span className="text text-2" aria-hidden="true">
+                  <span
+                    className="text text-2"
+                    aria-hidden="true"
+                  >
                     Make Your Space
                   </span>
                 </a>
@@ -130,7 +148,10 @@ const Home = () => {
             >
               <ion-icon name="chevron-forward"></ion-icon>
             </button>
-            <a href="indexLayout.html" className="hero-btn has-after">
+            <a
+              href="indexLayout.html"
+              className="hero-btn has-after"
+            >
               <img
                 src="./images/hero-icon.png"
                 width="48"
@@ -214,7 +235,7 @@ const Home = () => {
                   <div className="service-card">
                     <a href="#" className="has-before hover:shine">
                       <figure
-                        className="card-banner img-holder"
+                        className="card -banner img-holder"
                         style={{ "--width": 285, "--height": 336 }}
                       >
                         <img
@@ -247,7 +268,10 @@ const Home = () => {
           >
             <div className="container">
               <div className="about-content">
-                <p className="label-2 section-subtitle" id="about-label">
+                <p
+                  className="label-2 section-subtitle"
+                  id="about-label"
+                >
                   Our Story
                 </p>
                 <h2 className="headline-1 section-title">
@@ -271,7 +295,10 @@ const Home = () => {
                 </a>
                 <a href="#" className="btn btn-primary">
                   <span className="text text-1">Read More</span>
-                  <span className="text text-2" aria-hidden="true">
+                  <span
+                    className="text text-2"
+                    aria-hidden="true"
+                  >
                     Read More
                   </span>
                 </a>
@@ -328,7 +355,10 @@ const Home = () => {
               <div className="glass-box">
                 <p
                   className="headline-2 testi-text"
-                  style={{ color: "rgb(255, 255, 255)", fontSize: "30px" }}
+                  style={{
+                    color: "rgb(255, 255, 255)",
+                    fontSize: "30px",
+                  }}
                 >
                   Creativity flows freely at 603 The Coworking Space. As a
                   content creator, I find the ambiance truly inspiring. Being
@@ -355,9 +385,14 @@ const Home = () => {
               </div>
             </div>
           </section>
-          <section className="section event bg-black-10" aria-label="event">
+          <section
+            className="section event bg-black-10"
+            aria-label="event"
+          >
             <div className="container">
-              <p className="section-subtitle label-2 text-center">
+              <p
+                className="section-subtitle label-2 text-center"
+              >
                 Recent Updates
               </p>
               <h2 className="section-title headline-1 text-center">
@@ -387,10 +422,14 @@ const Home = () => {
                       </time>
                     </div>
                     <div className="card-content">
-                      <p className="card-subtitle label-2 text-center">
+                      <p
+                        className="card-subtitle label-2 text-center"
+                      >
                         Main Office
                       </p>
-                      <h3 className="card-title title-2 text-center">
+                      <h3
+                        className="card-title title-2 text-center"
+                      >
                         The Main Office is the Place Which has to be designed to
                         its best.
                       </h3>
@@ -420,10 +459,14 @@ const Home = () => {
                       </time>
                     </div>
                     <div className="card-content">
-                      <p className="card-subtitle label-2 text-center">
+                      <p
+                        className="card-subtitle label-2 text-center"
+                      >
                         Main Cabinete
                       </p>
-                      <h3 className="card-title title-2 text-center">
+                      <h3
+                        className="card-title title-2 text-center"
+                      >
                         Cabinait is the place for best productive work.
                       </h3>
                     </div>
@@ -452,10 +495,14 @@ const Home = () => {
                       </time>
                     </div>
                     <div className="card-content">
-                      <p className="card-subtitle label-2 text-center">
+                      <p
+                        className="card-subtitle label-2 text-center"
+                      >
                         Main Centre
                       </p>
-                      <h3 className="card-title title-2 text-center">
+                      <h3
+                        className="card-title title-2 text-center"
+                      >
                         Main Center is the place for best productive work.
                       </h3>
                     </div>
@@ -465,7 +512,10 @@ const Home = () => {
 
               <a href="#" className="btn btn-primary">
                 <span className="text text-1">Check Out BOQ</span>
-                <span className="text text-2" aria-hidden="true">
+                <span
+                  className="text text-2"
+                  aria-hidden="true"
+                >
                   Check Out BOQ
                 </span>
               </a>
@@ -514,7 +564,10 @@ const Home = () => {
                 >
                   booking@grilli.com
                 </a>
-                <a href="tel:+88123123456" className="body-4 contact-link">
+                <a
+                  href="tel:+88123123456"
+                  className="body-4 contact-link"
+                >
                   Booking Request : +88-123-123456
                 </a>
                 <p className="body-4">Open : 09:00 am - 01:00 pm</p>
@@ -538,9 +591,15 @@ const Home = () => {
                       className="input-field"
                     />
                   </div>
-                  <button type="submit" className="btn btn-secondary">
+                  <button
+                    type="submit"
+                    className="btn btn-secondary"
+                  >
                     <span className="text text-1">Subscribe</span>
-                    <span className="text text-2" aria-hidden="true">
+                    <span
+                      className="text text-2"
+                      aria-hidden="true"
+                    >
                       Subscribe
                     </span>
                   </button>
@@ -548,54 +607,84 @@ const Home = () => {
               </div>
               <ul className="footer-list">
                 <li>
-                  <a href="#" className="label-2 footer-link hover-underline">
+                  <a
+                    href="#"
+                    className="label-2 footer-link hover-underline"
+                  >
                     Home
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="label-2 footer-link hover-underline">
+                  <a
+                    href="#"
+                    className="label-2 footer-link hover-underline"
+                  >
                     Menus
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="label-2 footer-link hover-underline">
+                  <a
+                    href="#"
+                    className="label-2 footer-link hover-underline"
+                  >
                     About Us
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="label-2 footer-link hover-underline">
+                  <a
+                    href="#"
+                    className="label-2 footer-link hover-underline"
+                  >
                     Our Chefs
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="label-2 footer-link hover-underline">
+                  <a
+                    href="#"
+                    className="label-2 footer-link hover-underline"
+                  >
                     Contact
                   </a>
                 </li>
               </ul>
               <ul className="footer-list">
                 <li>
-                  <a href="#" className="label-2 footer-link hover-underline">
+                  <a
+                    href="#"
+                    className="label-2 footer-link hover-underline"
+                  >
                     Facebook
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="label-2 footer-link hover-underline">
+                  <a
+                    href="#"
+                    className="label-2 footer-link hover-underline"
+                  >
                     Instagram
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="label-2 footer-link hover-underline">
+                  <a
+                    href="#"
+                    className="label-2 footer-link hover-underline"
+                  >
                     Twitter
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="label-2 footer-link hover-underline">
+                  < a
+                    href="#"
+                    className="label-2 footer-link hover-underline"
+                  >
                     Youtube
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="label-2 footer-link hover-underline">
+                  <a
+                    href="#"
+                    className="label-2 footer-link hover-underline"
+                  >
                     Google Map
                   </a>
                 </li>
