@@ -6,7 +6,6 @@ import './script.js';
 import './preloader.js';
 import './TopBar.js';
 
-
 function App() {
   return (
     <div className="App">
