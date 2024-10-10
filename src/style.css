@@ -1682,7 +1682,12 @@ textarea.input-field {
 }
 
 .footer-list {
-  display: grid;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  list-style: none;
   gap: 20px;
 }
 
@@ -1691,8 +1696,24 @@ textarea.input-field {
   font-weight: var(--weight-bold);
   text-transform: uppercase;
   letter-spacing: var(--letterSpacing-4);
+  white-space: nowrap;
   margin-inline: auto;
   transition: var(--transition-1);
+}
+
+.img-height{
+  height: 40px;
+}
+
+.img-height:hover{
+  scale: 1.2;
+  /* -webkit-transition: all .5s;
+  -moz-transition: all .5s; */
+  transition: all .5s;
+}
+
+.map{
+  margin-left: -5px;
 }
 
 .footer-link:is(:hover, :focus-visible) {
@@ -1940,7 +1961,7 @@ textarea.input-field {
    */
 
   .footer-brand > * {
-    max-width: 460px;
+    max-width: 520px;
     margin-inline: auto;
   }
 
@@ -1984,6 +2005,7 @@ textarea.input-field {
     width: calc(50% - 20px);
     margin-inline: auto;
   }
+  
 
   /**
    * HEADER
@@ -2200,14 +2222,14 @@ textarea.input-field {
    */
 
   .footer .grid-list {
-    grid-template-columns: 0.45fr 1fr 0.45fr;
+    /* grid-template-columns: 0.45fr 1fr 0.45fr; */
     align-items: center;
   }
 
   .footer-brand {
-    grid-column: auto;
+    /* grid-column: auto; */
     order: 1;
-    padding-block: 100px;
+    /* padding-block: 100px; */
   }
 
   .footer-list:last-child {
