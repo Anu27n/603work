@@ -596,7 +596,7 @@ const Home = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="label-2 footer-link hover-underline">
+                  <a href="https://www.google.com/maps/place/Makhija+Arcade,+35th+Rd,+Khar,+Khar+West,+Mumbai,+Maharashtra+400052/@19.0651497,72.8325179,17z/data=!3m1!4b1!4m6!3m5!1s0x3be7c91140262913:0xc53b6407e4d39f76!8m2!3d19.0651497!4d72.8350928!16s%2Fg%2F12hkbx6fn?entry=ttu&g_ep=EgoyMDI0MTAwNy4xIKXMDSoASAFQAw%3D%3D" className="label-2 footer-link hover-underline">
                     Google Map
                   </a>
                 </li>
