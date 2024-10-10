@@ -1,4 +1,6 @@
 import React from 'react';
+import './style.css';
+
 
 const Preloader = () => (
   <div className="preload" data-preaload>
@@ -8,3 +10,5 @@ const Preloader = () => (
 );
 
 export default Preloader;
+
+
