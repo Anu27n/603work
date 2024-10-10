@@ -1,9 +1,10 @@
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 
 function Navbar() {
   const [prevScrollPos, setPrevScrollPos] = useState(window.scrollY);
   const [hidden, setHidden] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,6 +23,11 @@ function Navbar() {
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, [prevScrollPos]);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <header
       className={`header ${hidden ? "hide" : ""} ${
@@ -30,16 +36,11 @@ function Navbar() {
       data-header
     >
       <div className="top_navbar_style">
-        <p style={{ fontWeight: "bolder", marginTop: "10px" }}>
+        <p>
           Makhija Arcade, 35th Rd, Khar, Khar West, Mumbai, Maharashtra 400052
         </p>
-
-        <p style={{ fontWeight: "bolder", marginTop: "10px" }}>
-          Daily : 8.00 am to 10.00 pm
-        </p>
-        <p style={{ fontWeight: "bolder", marginTop: "10px" }}>
-          +91 9136036603
-        </p>
+        <p>Daily : 8.00 am to 10.00 pm</p>
+        <p>+91 9136036603</p>
         <a
           href="mailto:sales@603thecoworkingspace.com"
           className="topbar-item link"
@@ -47,12 +48,7 @@ function Navbar() {
           <div className="icon">
             <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
           </div>
-          <span
-            className="span"
-            style={{ fontWeight: "bolder", marginTop: "10px" }}
-          >
-            sales@603thecoworkingspace.com
-          </span>
+          <span className="span">sales@603thecoworkingspace.com</span>
         </a>
       </div>
       <div className="container">
@@ -62,14 +58,14 @@ function Navbar() {
             width="160"
             height="50"
             alt="Grilli - Home"
-            class="logohover"
+            className="logohover"
           />
         </a>
-        <nav className="navbar" data-navbar>
+        <nav className={`navbar ${isMenuOpen ? 'active' : ''}`} data-navbar>
           <button
             className="close-btn"
             aria-label="close menu"
-            data-nav-toggler
+            onClick={toggleMenu}
           >
             <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
           </button>
@@ -142,13 +138,18 @@ function Navbar() {
         <button
           className="nav-open-btn"
           aria-label="open menu"
-          data-nav-toggler
+          onClick={toggleMenu}
         >
           <span className="line line-1"></span>
           <span className="line line-2"></span>
           <span className="line line-3"></span>
         </button>
-        <div className="overlay" data-nav-toggler data-overlay></div>
+        <div 
+          className={`overlay ${isMenuOpen ? 'active' : ''}`} 
+          onClick={toggleMenu}
+          data-nav-toggler 
+          data-overlay
+        ></div>
       </div>
     </header>
   );
