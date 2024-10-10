@@ -558,10 +558,11 @@ const Home = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="label-2 footer-link hover-underline">
-                    About Us
-                  </a>
-                </li>
+                   <a href="#about" class="label-2 footer-link hover-underline">
+                  <div class="separator"></div>
+                  <span class="span">About Us</span>
+            </a>
+           </li>
                 <li>
                   <a href="#" className="label-2 footer-link hover-underline">
                     Our Chefs
