@@ -139,7 +139,7 @@ const Home = () => {
               <span className="label-2 text-center span">Book A Space</span>
             </a>
           </section>
-          <section
+          <section id="spaces"
             className="section service bg-black-10 text-center"
             aria-label="service"
           >
