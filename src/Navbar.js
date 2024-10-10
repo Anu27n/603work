@@ -80,7 +80,7 @@ function Navbar() {
               </a>
             </li>
             <li className="navbar-item">
-              <a href="#menu" className="navbar-link hover-underline">
+              <a href="#spaces" className="navbar-link hover-underline">
                 <div className="separator"></div>
                 <span className="span">Spaces</span>
               </a>
