@@ -961,7 +961,22 @@ body.nav-active {
     transform: scale(1.15);
   }
 }
-
+.modal-content{
+  color: black;
+}
+.modal-content h2{
+  display: flex;
+  justify-content: center ;
+}
+.modal-content p{
+  padding-top: 1rem;
+  padding-bottom: 0.25rem;
+}
+.inputBox {
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding: 5px;
+}
 .hero .section-subtitle::after {
   margin-block: 14px 20px;
 }
@@ -1365,7 +1380,9 @@ body.nav-active {
   border-radius: var(--radius-circle);
   margin-block-end: 15px;
 }
-
+.primary-btn{
+  font-size: 18px;
+}
 .testi .profile-name {
   color: var(--gold-crayola);
   font-weight: var(--weight-bold);
@@ -1682,7 +1699,12 @@ textarea.input-field {
 }
 
 .footer-list {
-  display: grid;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  list-style: none;
   gap: 20px;
 }
 
@@ -1691,8 +1713,24 @@ textarea.input-field {
   font-weight: var(--weight-bold);
   text-transform: uppercase;
   letter-spacing: var(--letterSpacing-4);
+  white-space: nowrap;
   margin-inline: auto;
   transition: var(--transition-1);
+}
+
+.img-height{
+  height: 40px;
+  transition: all .5s;
+}
+
+.img-height:hover{
+  scale: 1.2;
+  /* -webkit-transition: all .5s;
+  -moz-transition: all .5s; */
+}
+
+.map{
+  margin-left: -5px;
 }
 
 .footer-link:is(:hover, :focus-visible) {
@@ -1940,7 +1978,7 @@ textarea.input-field {
    */
 
   .footer-brand > * {
-    max-width: 460px;
+    max-width: 520px;
     margin-inline: auto;
   }
 
@@ -1984,6 +2022,7 @@ textarea.input-field {
     width: calc(50% - 20px);
     margin-inline: auto;
   }
+  
 
   /**
    * HEADER
@@ -2200,14 +2239,14 @@ textarea.input-field {
    */
 
   .footer .grid-list {
-    grid-template-columns: 0.45fr 1fr 0.45fr;
+    /* grid-template-columns: 0.45fr 1fr 0.45fr; */
     align-items: center;
   }
 
   .footer-brand {
-    grid-column: auto;
+    /* grid-column: auto; */
     order: 1;
-    padding-block: 100px;
+    /* padding-block: 100px; */
   }
 
   .footer-list:last-child {

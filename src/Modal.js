@@ -16,12 +16,10 @@ function Modal({ isModalOpen, toggleModal }) {
   return (
     <div className={`modal-container ${isModalOpen ? "show" : ""}`}>
       <div className="modal-content">
-        <button className="close-btn" onClick={toggleModal}>
-          ×
-        </button>
+        <button className="close-btn" onClick={toggleModal}>×</button>
         <h2>{isLogin ? "Welcome back" : "Create an account"}</h2>
         <p>{isLogin ? "Please login to continue" : "Sign up to get started"}</p>
-
+        
         <div className="inputBox">
           <input type="email" placeholder="E-mail" required />
         </div>
