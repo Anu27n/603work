@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
-
+import { useNavigate } from "react-router-dom";
 function Navbar() {
   const [prevScrollPos, setPrevScrollPos] = useState(window.scrollY);
   const [hidden, setHidden] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const navigate = useNavigate(); // Initialize useNavigate hook
 
   useEffect(() => {
     const handleScroll = () => {
