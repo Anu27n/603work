@@ -1,15 +1,17 @@
 import React from 'react';
 import Home from './Home';
-import './style.css'; // Ensure the path is correct
+import PreloaderContainer from './PreloaderContainer.js'; // For Preloader
+import './style.css'; 
 import './script.js'; 
-import './preloader.js'
-import './TopBar.js'
+import './TopBar.js';
 
 
 function App() {
   return (
     <div className="App">
-      <Home />
+      <PreloaderContainer>
+        <Home />
+      </PreloaderContainer>
     </div>
   );
 }
