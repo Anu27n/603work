@@ -194,6 +194,7 @@ body {
   line-height: var(--lineHeight-5);
   overflow: hidden;
   height: 300vh;
+  zoom: 0.9;
 }
 
 body.loaded {
