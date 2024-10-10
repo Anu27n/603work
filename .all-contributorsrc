@@ -1,0 +1,15 @@
+{
+  "projectName": "603work",
+  "projectOwner": "me",
+  "repoType": "github",
+  "repoHost": "https://github.com/Anu27n/603work",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": true,
+  "commitConvention": "gitmoji",
+  "contributors": [],
+  "contributorsPerLine": 7,
+  "linkToUsage": true
+}

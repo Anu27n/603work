@@ -1,4 +1,7 @@
 ## Repository Stats 📊
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](#contributors-)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 <div align="center">
 
@@ -120,6 +123,12 @@ This project is licensed under the **MIT License**. See the [LICENSE](./LICENSE)
 ## Contributors ❤️
 
 A huge thank you to everyone who has contributed to this project! Your support, whether through code, feedback, or ideas, helps keep this project growing and thriving.
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+<!-- ALL-CONTRIBUTORS-LIST:END -->
 
 <table>
   <tr>

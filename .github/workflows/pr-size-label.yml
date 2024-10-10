@@ -1,0 +1,20 @@
+name: PR Size Labeler
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
+  pr_size:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout the repository
+      uses: actions/checkout@v2
+
+    - name: Label PR based on size
+      uses: assignLabel/PRSize@v2
+      with:
+        small: '10'    # Label PRs with less than 10 lines changed as "small"
+        medium: '50'   # Label PRs with less than 50 lines changed as "medium"
+        large: '100'   # Label PRs with less than 100 lines changed as "large"
+        xlarge: '500'  # Label PRs with less than 500 lines changed as "xlarge"
