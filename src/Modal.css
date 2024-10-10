@@ -7,8 +7,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.7); /* Darken the overlay */
-    z-index: 1000; /* Ensure it's higher than the background video */
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none; /* Prevent interaction when hidden */
+  }
+  
+  .modal-container.show {
+    opacity: 1;
+    pointer-events: auto; /* Enable interaction when visible */
   }
   
   .modal-content {
@@ -17,53 +25,93 @@
     width: 400px;
     border-radius: 10px;
     position: relative;
-    z-index: 1001; /* Ensure it's above the overlay */
+    z-index: 1001;
   }
-  
   
   .close-btn {
     position: absolute;
     top: 10px;
-    right: 10px;
+    right: 15px;
     background: none;
     border: none;
     font-size: 1.5rem;
     cursor: pointer;
   }
   
-  .form-group {
+  .inputBox {
     margin-bottom: 1rem;
   }
   
-  .form-group label {
-    display: block;
-    margin-bottom: 0.5rem;
+  .password-container {
+    position: relative;
   }
   
-  .form-group input {
-    width: 100%;
-    padding: 0.5rem;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-  }
-  
-  .form-btn {
-    width: 100%;
-    padding: 0.75rem;
+  .eye-button {
+    position: absolute;
+    right: 10px; /* Adjust as needed */
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
     border: none;
-    background-color: #007bff;
+    cursor: pointer;
+    font-size: 1.2rem; /* Adjust as needed */
+    color: #555; /* Adjust color */
+  }
+  
+  .primary-btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #4CAF50; /* Green */
     color: white;
+    font-size: 1rem;
     border-radius: 5px;
     cursor: pointer;
   }
   
-  .toggle-link {
-    margin-top: 1rem;
-    text-align: center;
+  .primary-btn:hover {
+    background-color: #45a049;
   }
   
-  .toggle-link span {
-    color: #007bff;
+  .divider {
+    text-align: center;
+    margin: 1rem 0;
+  }
+  
+  .divider span {
+    background-color: white;
+    padding: 0 10px;
+    position: relative;
+  }
+  
+  .social-login {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .social-login button {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
+    background-color: #f1f1f1; /* Light gray */
+  }
+  
+  .social-login button img {
+    width: 20px; /* Adjust icon size */
+    margin-right: 10px; /* Space between icon and text */
+  }
+  
+  .toggle-text {
+    text-align: center;
+    margin-top: 1rem;
+    cursor: pointer;
+  }
+  
+  .toggle-text span {
+    color: #007BFF; /* Link color */
   }
   
