@@ -961,7 +961,22 @@ body.nav-active {
     transform: scale(1.15);
   }
 }
-
+.modal-content{
+  color: black;
+}
+.modal-content h2{
+  display: flex;
+  justify-content: center ;
+}
+.modal-content p{
+  padding-top: 1rem;
+  padding-bottom: 0.25rem;
+}
+.inputBox {
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding: 5px;
+}
 .hero .section-subtitle::after {
   margin-block: 14px 20px;
 }
@@ -1365,7 +1380,9 @@ body.nav-active {
   border-radius: var(--radius-circle);
   margin-block-end: 15px;
 }
-
+.primary-btn{
+  font-size: 18px;
+}
 .testi .profile-name {
   color: var(--gold-crayola);
   font-weight: var(--weight-bold);
