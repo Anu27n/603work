@@ -135,7 +135,7 @@ const Home = () => {
             >
               <ion-icon name="chevron-forward"></ion-icon>
             </button>
-            <a href="indexLayout.html" className="hero-btn has-after">
+            <a href="https://603interiorlayout.netlify.app/" className="hero-btn has-after">
               <img
                 src="./images/hero-icon.png"
                 width="48"
