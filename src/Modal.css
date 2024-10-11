@@ -112,6 +112,10 @@ input::placeholder {
   background-color: #f1f1f1; /* Light gray */
 }
 
+.social-login button:hover {
+  background-color: #dcdcdc;
+}
+
 .social-login button img {
   width: 20px; /* Adjust icon size */
   margin-right: 10px; /* Space between icon and text */
@@ -125,4 +129,8 @@ input::placeholder {
 
 .toggle-text span {
   color: #007bff; /* Link color */
+}
+
+.toggle-text span:hover {
+  text-decoration: underline;
 }
