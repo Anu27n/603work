@@ -1,0 +1,45 @@
+.heroText {
+    position: absolute;
+    z-index: 2;
+    text-align: center;
+    width: 100%;
+    font-weight: var(--weight-regular);
+    font-family: Lora;
+    font-size: 13rem;
+    top: 34%;
+    color: white;
+}
+
+.serviceImg {
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.serviceImg.fade-in {
+    opacity: 1;
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1);
+    }
+}
+
+.serviceImg.zoom {
+    animation: zoom 5s infinite alternate;
+}
+
+ul.bullets {
+    margin: 3rem 0;
+    list-style-type: disc;
+}
+
+
+.reverse{
+    margin-left: 5rem;
+}
+

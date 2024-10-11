@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Modal from './Modal'; // Import the modal component
+import {useLocation} from "react-router-dom";
 
 function Navbar() {
   const [prevScrollPos, setPrevScrollPos] = useState(window.scrollY);
@@ -7,6 +8,8 @@ function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false); // Modal state
+
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,6 +29,17 @@ function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [prevScrollPos]);
 
+  // for scrolling smoothly to each relevant section in home page
+  useEffect(() =>{
+    if(location.hash){
+      const sectionId = location.hash.replace("#","");
+      const section = document.getElementById(sectionId);
+      if(section){
+        section.scrollIntoView({behavior: 'smooth'});
+      }
+    }
+  },[location]);
+
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -34,6 +48,9 @@ function Navbar() {
   const toggleModal = () => {
     setIsModalOpen(!isModalOpen);
   };
+
+  const isHomeOpen = location.pathname === '/';
+  const isServicesOpen = location.pathname === '/services';
 
   return (
     <>
@@ -64,6 +81,7 @@ function Navbar() {
               className="logohover"
             />
           </a>
+
           <nav className={`navbar ${isMenuOpen ? 'active' : ''}`} data-navbar>
             <button className="close-btn" aria-label="close menu" onClick={toggleMenu}>
               <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
@@ -73,37 +91,43 @@ function Navbar() {
             </a>
             <ul className="navbar-list">
               <li className="navbar-item">
-                <a href="#home" className="navbar-link hover-underline active">
+                <a href="/" className={`navbar-link hover-underline ${isHomeOpen ? 'active' : ''}`}>
                   <div className="separator"></div>
                   <span className="span">Home</span>
                 </a>
               </li>
               <li className="navbar-item">
-                <a href="#spaces" className="navbar-link hover-underline">
+                <a href="/#spaces" className="navbar-link hover-underline">
                   <div className="separator"></div>
                   <span className="span">Spaces</span>
                 </a>
               </li>
               <li className="navbar-item">
-                <a href="#about" className="navbar-link hover-underline">
+                <a href="/#about" className="navbar-link hover-underline">
                   <div className="separator"></div>
                   <span className="span">About Us</span>
                 </a>
               </li>
               <li className="navbar-item">
-                <a href="#" className="navbar-link hover-underline">
+                <a href="/services" className={`navbar-link hover-underline ${isServicesOpen ? 'active' : ''}`}>
+                  <div className="separator"></div>
+                  <span className="span">Our Services</span>
+                </a>
+              </li>
+              <li className="navbar-item">
+                <a href="/#" className="navbar-link hover-underline">
                   <div className="separator"></div>
                   <span className="span">Images</span>
                 </a>
               </li>
               <li className="navbar-item">
-                <a href="#" className="navbar-link hover-underline">
+                <a href="/#" className="navbar-link hover-underline">
                   <div className="separator"></div>
                   <span className="span">Contact</span>
                 </a>
               </li>
               <li className="navbar-item">
-                <a href="#" className="navbar-link hover-underline" onClick={toggleModal}>
+                <a href="/#" className="navbar-link hover-underline" onClick={toggleModal}>
                   <div className="separator"></div>
                   <span className="span">Login</span>
                 </a>
@@ -112,7 +136,7 @@ function Navbar() {
             <div className="text-center">
               <p className="headline-1 navbar-title">Visit Us</p>
               <address className="body-4">
-                Restaurant St, Delicious City, <br />
+                Restaurant St, Delicious City, <br/>
                 London 9578, UK
               </address>
               <p className="body-4 navbar-text">Open: 9.30 am - 2.30 pm</p>
