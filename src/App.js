@@ -8,6 +8,8 @@ import './TopBar.js';
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import Modal from './Modal';
 import Services from "./Pages/Services/Services";
+import Blogs from "./Pages/Blogs/Blogs";
+import BlogPost from "./Pages/Blogs/BlogPost";
 
 
 function App() {
@@ -19,6 +21,8 @@ function App() {
               <Routes>
                   <Route path="/" element={<Home />} />
                   <Route path="/services" element={<Services />} />
+                  <Route path="/blogs" element={<Blogs />} />
+                  <Route path="/blogs/:id" element={<BlogPost />} />
               </Routes>
           </Router>
       </PreloaderContainer>

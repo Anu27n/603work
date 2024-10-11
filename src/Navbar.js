@@ -51,6 +51,8 @@ function Navbar() {
 
   const isHomeOpen = location.pathname === '/';
   const isServicesOpen = location.pathname === '/services';
+  const isBlogsOpen = location.pathname === '/blogs';
+
 
   return (
     <>
@@ -72,7 +74,7 @@ function Navbar() {
           </a>
         </div>
         <div className="container">
-          <a href="#" className="logo">
+          <a href="/" className="logo">
             <img
               src="./images/603logo (1).avif"
               width="160"
@@ -112,6 +114,12 @@ function Navbar() {
                 <a href="/services" className={`navbar-link hover-underline ${isServicesOpen ? 'active' : ''}`}>
                   <div className="separator"></div>
                   <span className="span">Our Services</span>
+                </a>
+              </li>
+              <li className="navbar-item">
+                <a href="/blogs" className={`navbar-link hover-underline ${isBlogsOpen ? 'active' : ''}`}>
+                  <div className="separator"></div>
+                  <span className="span">Our Blogs</span>
                 </a>
               </li>
               <li className="navbar-item">
