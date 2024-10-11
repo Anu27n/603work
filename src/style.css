@@ -306,12 +306,20 @@ body.nav-active {
   flex-direction: row;
   justify-content: space-between;
   justify-items: center;
-  padding: 20px;
-  margin-top: -34px;
+  align-content: center;
+  align-items: center;
+  padding: 5px;
+  margin-top: -20px;
   color: rgb(234, 231, 226);
-
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0)); 
+  backdrop-filter: blur(10px); 
+  -webkit-backdrop-filter: blur(10px); 
+  border-radius: 0px 0px 5px 5px; 
+  border:1px solid rgba(255, 255, 255, 0.18); 
+  /* box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37); */
   border-bottom: 1px solid rgb(238, 187, 120);
   margin-bottom: 10px;
+  font-family:var(--fontFamily-dm_sans);
 }
 .separator {
   width: 8px;
@@ -1084,12 +1092,12 @@ body.nav-active {
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 30px;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.5s ease-in-out;
 }
 
 .service-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.2);
 }
 
 .service-card .has-before {
