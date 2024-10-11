@@ -25,7 +25,7 @@ This project and its community adhere to the [Code of Conduct](CODE_OF_CONDUCT.m
 
 If you come across a bug or an issue with [WorkVed], please take the following steps:
 
-1. **Search** the [issue tracker](https://github.com/Mayank77maruti/603WorkVed/issues) to check if the issue has already been reported. If it has, feel free to add any additional information or subscribe to the existing issue.
+1. **Search** the [issue tracker](https://github.com/Anu27n/603work to check if the issue has already been reported. If it has, feel free to add any additional information or subscribe to the existing issue.
 
 2. **Create a New Issue** if the issue hasn't been reported yet, with a descriptive title and a clear description of the problem. Include any relevant details such as operating system, browser version, and steps to reproduce the issue.
 
@@ -33,7 +33,7 @@ If you come across a bug or an issue with [WorkVed], please take the following s
 
 If you have an idea for a new feature or improvement, please follow these steps:
 
-1. **Search** the [issue tracker](https://github.com/Mayank77maruti/603WorkVed/issues) to check if the feature request already exists. If it does, you can comment on the existing request to provide more information or express your interest.
+1. **Search** the [issue tracker](https://github.com/Anu27n/603work) to check if the feature request already exists. If it does, you can comment on the existing request to provide more information or express your interest.
 
 2. **Create a New Issue** if the feature request doesn't exist, with a clear and concise title and a detailed description of the feature or enhancement you're proposing. Explain why it's valuable and how it aligns with the project's goals.
 
@@ -45,7 +45,7 @@ If you want to contribute code changes, follow these steps:
 
 2. **Clone your forked repository** to your local machine.
     ```bash
-    git clone https://github.com/Mayank77maruti/603WorkVed.git
+    git clone https://github.com/Anu27n/603work
     ```
 
 3. **Create a new branch** for your changes.
