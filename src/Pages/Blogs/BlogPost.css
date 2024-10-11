@@ -1,0 +1,44 @@
+.blog-hero {
+    position: absolute;
+    z-index: 2;
+    text-align: center;
+    width: 100%;
+    font-weight: var(--weight-regular);
+    font-family: Lora;
+    font-size: 8rem;
+    top: 25%;
+    color: white;
+    padding: 2rem;
+}
+
+.blog-post {
+    text-align: left;
+    width: 100%;
+    font-weight: var(--weight-regular);
+    font-family: Lora;
+    font-size: 2rem;
+    color: white;
+    margin-top: 8rem;
+    padding: 2rem;
+    line-height: 1.6;
+}
+
+.blog-post p {
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    color: #efe2c9;
+}
+
+.blog-post ul {
+    list-style-type: disc;
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+}
+
+.blog-post ul li {
+    margin-bottom: 1.5rem;
+}
+
+.blog-post p:last-of-type {
+    margin-top: 2rem;
+}
