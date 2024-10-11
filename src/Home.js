@@ -135,24 +135,25 @@ const Home = () => {
             >
               <ion-icon name="chevron-forward"></ion-icon>
             </button>
-            <a href="indexLayout.html" className="hero-btn has-after">
+            <a href="https://603interiorlayout.netlify.app/" className="hero-btn has-after">
               <img
                 src="./images/hero-icon.png"
                 width="48"
                 height="48"
                 alt="booking icon"
-              />
+                />
+              
               <span className="label-2 text-center span">Book A Space</span>
-            </a>
-          </section>
-          <section
+                </a>
+           </section>
+           <section
             id="spaces"
             className="section service bg-black-10 text-center"
             aria-label="service"
-          >
+            >
             <div className="container">
               <p className="section-subtitle label-2">
-                Luxurious Office Interiors
+              Luxurious Office Interiors
               </p>
               <h2 className="headline-1 section-title">We Offer Top Notch</h2>
               <p className="section-text">
@@ -166,8 +167,7 @@ const Home = () => {
                     <a href="#" className="has-before hover:shine">
                       <figure
                         className="card-banner img-holder"
-                        style={{ "--width": 285, "--height": 336 }}
-                      >
+                        style={{ "--width": 285, "--height": 336 }}>
                         <img
                           src="./images/benjamin-child-0sT9YhNgSEs-unsplash.avif"
                           width="285"
