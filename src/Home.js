@@ -113,7 +113,7 @@ const Home = () => {
                   Come with your team & experience the joy of inspiring office
                   design.
                 </p>
-                <a href="#" className="btn btn-primary slider-reveal">
+                <a href="https://603interiorlayout.netlify.app/" className="btn btn-primary slider-reveal">
                   <span className="text text-1">Make Your Space</span>
                   <span className="text text-2" aria-hidden="true">
                     Make Your Space
@@ -135,7 +135,7 @@ const Home = () => {
             >
               <ion-icon name="chevron-forward"></ion-icon>
             </button>
-            <a href="https://603interiorlayout.netlify.app/" className="hero-btn has-after">
+            <a href="indexLayout.html" className="hero-btn has-after">
               <img
                 src="./images/hero-icon.png"
                 width="48"
