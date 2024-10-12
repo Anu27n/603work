@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import "./Modal.css";
+import PasswordStrengthBar from "react-password-strength-bar";
 
 function Modal({ isModalOpen, toggleModal }) {
   const [isLogin, setIsLogin] = useState(true); // State to toggle between login and signup
   const [showPassword, setShowPassword] = useState(false); // State to toggle password visibility
+  const [password, setPassword] = useState('');
 
   const toggleForm = () => {
     setIsLogin(!isLogin);
@@ -11,6 +13,10 @@ function Modal({ isModalOpen, toggleModal }) {
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
+  };
+
+  const handlePasswordChange = (e) => {
+    setPassword(e.target.value);
   };
 
   return (
@@ -28,6 +34,7 @@ function Modal({ isModalOpen, toggleModal }) {
           <input
             type={showPassword ? "text" : "password"}
             placeholder="Password"
+            onChange={handlePasswordChange}
             required
           />
           <button
@@ -38,22 +45,25 @@ function Modal({ isModalOpen, toggleModal }) {
             {showPassword ? "👁️" : "👁️‍🗨️"}
           </button>
         </div>
-
+        
         {!isLogin && (
-          <div className="inputBox password-container">
-            <input
-              type={showPassword ? "text" : "password"}
-              placeholder="Confirm Password"
-              required
-            />
-            <button
-              type="button"
-              className="eye-button"
-              onClick={togglePasswordVisibility}
-            >
-              {showPassword ? "👁️" : "👁️‍🗨️"}
-            </button>
-          </div>
+          <>
+            <PasswordStrengthBar password={password} />
+            <div className="inputBox password-container">
+              <input
+                type={showPassword ? "text" : "password"}
+                placeholder="Confirm Password"
+                required
+              />
+              <button
+                type="button"
+                className="eye-button"
+                onClick={togglePasswordVisibility}
+              >
+                {showPassword ? "👁️" : "👁️‍🗨️"}
+              </button>
+            </div>
+          </>
         )}
 
         <button className="primary-btn">{isLogin ? "Login" : "Sign Up"}</button>
