@@ -429,11 +429,38 @@ const Services = () => {
                             <span className="text text-2" aria-hidden="true">Read More</span>
                         </a>
                     </div>
-
+                    <a
+                        href="#top"
+                        className="back-top-btn active"
+                        aria-label="back to top"
+                        data-back-top-btn
+                        style={{
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        textDecoration: "none",
+                        }}
+                    >
+                        <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
+                        <img
+                        src="./images/Vector 2.png"
+                        alt="Back to top"
+                        className="caret-image"
+                        />
+                    </a>
+                    <script src="./script.js"></script>
+                    <script
+                        type="module"
+                        src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+                    ></script>
+                    <script
+                        nomodule
+                        src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+                    ></script>
 
                 </div>
             </section>
-
+            
 
         </>
     );
