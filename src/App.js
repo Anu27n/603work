@@ -1,23 +1,30 @@
-import React from 'react';
 import Home from './Home';
-import './style.css';
-import './script.js'; 
-import './preloader.js'
-import './TopBar.js'
 import ScrollIndicator from './ScrollIndicator';
 import PreloaderContainer from './PreloaderContainer.js'; // For Preloader
-import './style.css'; 
-import './script.js'; 
+import './style.css';
+import './script.js';
+import './preloader.js';
 import './TopBar.js';
+import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
+import Modal from './Modal';
+import Services from "./Pages/Services/Services";
+import Blogs from "./Pages/Blogs/Blogs";
+import BlogPost from "./Pages/Blogs/BlogPost";
 
 
 function App() {
   return (
     <div className="App">
       <ScrollIndicator />
-      <Home />
       <PreloaderContainer>
-        <Home />
+          <Router>
+              <Routes>
+                  <Route path="/" element={<Home />} />
+                  <Route path="/services" element={<Services />} />
+                  <Route path="/blogs" element={<Blogs />} />
+                  <Route path="/blogs/:id" element={<BlogPost />} />
+              </Routes>
+          </Router>
       </PreloaderContainer>
     </div>
   );

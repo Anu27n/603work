@@ -1,0 +1,136 @@
+input::placeholder {
+  padding-left: 10px;
+}
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none; /* Prevent interaction when hidden */
+}
+
+.modal-container.show {
+  opacity: 1;
+  pointer-events: auto; /* Enable interaction when visible */
+}
+
+.modal-content {
+  background-color: white;
+  color: #333333;
+  padding: 2rem;
+  width: 400px;
+  border-radius: 10px;
+  position: relative;
+  z-index: 1001;
+}
+
+.modal-content .primary-btn {
+  margin-top: 1rem;
+  font-size: 2rem;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.inputBox {
+  margin-top: 1rem;
+  border: solid, 2px, darkseagreen;
+  border-radius: 15px;
+}
+
+.password-container {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.eye-button {
+  position: absolute;
+  right: 10px; /* Adjust as needed */
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem; /* Adjust as needed */
+  color: #555; /* Adjust color */
+}
+
+.primary-btn {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: #4caf50; /* Green */
+  color: white;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.primary-btn:hover {
+  background-color: #45a049;
+}
+
+.divider {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.divider span {
+  background-color: white;
+  padding: 0 10px;
+  position: relative;
+}
+
+.social-login {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.social-login button {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #f1f1f1; /* Light gray */
+}
+
+.social-login button:hover {
+  background-color: #dcdcdc;
+}
+
+.social-login button img {
+  width: 20px; /* Adjust icon size */
+  margin-right: 10px; /* Space between icon and text */
+}
+
+.toggle-text {
+  text-align: center;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.toggle-text span {
+  color: #007bff; /* Link color */
+}
+
+.toggle-text span:hover {
+  text-decoration: underline;
+}
