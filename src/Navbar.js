@@ -158,7 +158,7 @@ function Navbar() {
               </a>
             </div>
           </nav>
-          <a href="indexLayout.html" className="btn btn-secondary">
+          <a href="https://603interiorlayout.netlify.app/" className="btn btn-secondary">
             <span className="text text-1">Make Your Space</span>
             <span className="text text-2" aria-hidden="true">
               Make Your Space
