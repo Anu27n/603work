@@ -6,6 +6,7 @@ import twitterIcon from "./images/twitter.svg"
 import youtubeIcon from "./images/youtube.svg"
 import mapsIcon from "./images/maps.svg"
 import Navbar from "./Navbar";
+import FAQ from "./Pages/FAQ/FAQ";
 const Home = () => {
   return (
     <div>
@@ -478,6 +479,7 @@ const Home = () => {
           </section>
         </article>
       </main>
+      <FAQ></FAQ>
       <footer
         className="footer section has-bg-image text-center"
         style={{ position: "relative", overflow: "hidden" }}
