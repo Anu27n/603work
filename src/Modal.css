@@ -43,7 +43,7 @@ input::placeholder {
   right: 15px;
   background: none;
   border: none;
-  font-size: 1.5rem;
+  font-size: 3rem;
   cursor: pointer;
 }
 
@@ -98,27 +98,31 @@ input::placeholder {
 
 .social-login {
   display: flex;
-  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  flex-direction: row;
   gap: 10px;
+  margin-left: 70px;
 }
 
 .social-login button {
   display: flex;
   align-items: center;
-  padding: 10px;
+  padding: 5px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  background-color: #f1f1f1; /* Light gray */
+
+  /* background-color: #f1f1f1; Light gray */
 }
 
-.social-login button:hover {
+/* .social-login button:hover {
   background-color: #dcdcdc;
-}
+} */
 
 .social-login button img {
   width: 20px; /* Adjust icon size */
-  margin-right: 10px; /* Space between icon and text */
+  /* margin-right:10px Space between icon and text */
 }
 
 .toggle-text {
