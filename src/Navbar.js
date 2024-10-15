@@ -129,7 +129,7 @@ function Navbar() {
                 </a>
               </li>
               <li className="navbar-item">
-                <a href="/#" className="navbar-link hover-underline">
+                <a href="/Contact" className="navbar-link hover-underline">
                   <div className="separator"></div>
                   <span className="span">Contact</span>
                 </a>
