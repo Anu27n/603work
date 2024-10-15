@@ -969,6 +969,8 @@ body.nav-active {
     transform: scale(1.15);
   }
 }
+
+
 .modal-content{
   color: black;
 }
@@ -980,6 +982,11 @@ body.nav-active {
   padding-top: 1rem;
   padding-bottom: 0.25rem;
 }
+
+.signup-modal{
+  background-color: black;
+}
+
 .inputBox {
   border: 1px solid gray;
   border-radius: 5px;
@@ -2627,4 +2634,8 @@ textarea.input-field {
     top: 10px;
     right: 10px;
   }
+
+  
+
+
 }
