@@ -10,6 +10,8 @@ import Modal from './Modal';
 import Services from "./Pages/Services/Services";
 import Blogs from "./Pages/Blogs/Blogs";
 import BlogPost from "./Pages/Blogs/BlogPost";
+import Contact from './Pages/Contact/Contact';
+
 
 
 function App() {
@@ -23,6 +25,8 @@ function App() {
                   <Route path="/services" element={<Services />} />
                   <Route path="/blogs" element={<Blogs />} />
                   <Route path="/blogs/:id" element={<BlogPost />} />
+                  <Route path="/contact" element={<Contact />} />
+
               </Routes>
           </Router>
       </PreloaderContainer>
