@@ -504,7 +504,7 @@ const Home = () => {
               <div className="footer-brand has-before has-after">
                 <ul className="footer-list">
                   <li>
-                    <a href="#" className="label-2 footer-link hover-underline">
+                    <a href="/" className="label-2 footer-link hover-underline">
                       Home
                     </a>
                   </li>
@@ -514,7 +514,7 @@ const Home = () => {
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="label-2 footer-link hover-underline">
+                    <a href="/#about" className="label-2 footer-link hover-underline">
                       About Us
                     </a>
                   </li>
@@ -524,7 +524,7 @@ const Home = () => {
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="label-2 footer-link hover-underline">
+                    <a href="/Contact" className="label-2 footer-link hover-underline">
                       Contact
                     </a>
                   </li>
