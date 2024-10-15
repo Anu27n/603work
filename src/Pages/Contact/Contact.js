@@ -2,8 +2,8 @@ import React from "react";
 import ContactInfo from "./ContactInfo";
 import DirectorInfo from "./DirectorInfo";
 import ContactForm from "./ContactForm";
-import Navbar from "./Navbar";
-import styles from "./Contact.module.css";
+import Navbar from "../../Navbar";
+import styles from "../Contact/Contact.module.css";
 
 
 function Contact() {

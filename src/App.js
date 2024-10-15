@@ -10,7 +10,7 @@ import Modal from './Modal';
 import Services from "./Pages/Services/Services";
 import Blogs from "./Pages/Blogs/Blogs";
 import BlogPost from "./Pages/Blogs/BlogPost";
-import Contact from './Contact';
+import Contact from './Pages/Contact/Contact';
 
 
 

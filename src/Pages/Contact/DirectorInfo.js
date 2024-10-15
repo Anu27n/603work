@@ -1,6 +1,6 @@
 import React from "react";
-import styles from "./Contact.module.css";
-import directorimage from "../src/images/directorimage.png"; 
+import styles from "../Contact/Contact.module.css";
+import directorimage from "../../images/directorimage.png"; 
 
 function DirectorInfo() {
   return (
