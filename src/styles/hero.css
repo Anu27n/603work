@@ -1,0 +1,161 @@
+/* hero.css: Hero section styles. */
+/*-----------------------------------*\
+  #HERO
+\*-----------------------------------*/
+
+.hero .slider-btn {
+  display: none;
+}
+
+.hero {
+  position: relative;
+  padding-block: 120px;
+  min-height: 100vh;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.hero .slider-item {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-content: center;
+  padding-block-start: 100px;
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition-3);
+  z-index: 1;
+}
+
+.hero .slider-item.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.hero .slider-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: scale(1.15);
+  pointer-events: none;
+  user-select: none;
+  z-index: -1;
+}
+
+.hero .slider-item.active .slider-bg {
+  animation: smoothScale 7s linear forwards;
+}
+
+@keyframes smoothScale {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.15);
+  }
+}
+.modal-content {
+  color: black;
+}
+.modal-content h2 {
+  display: flex;
+  justify-content: center;
+}
+.modal-content p {
+  padding-top: 1rem;
+  padding-bottom: 0.25rem;
+}
+.inputBox {
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding: 5px;
+}
+.hero .section-subtitle::after {
+  margin-block: 14px 20px;
+}
+
+.hero-text {
+  background: linear-gradient(to right, rgb(213, 168, 110), rgb(249, 249, 248), rgb(227, 120, 12));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  margin-block: 10px 40px;
+}
+
+.hero .btn {
+  margin-inline: auto;
+}
+
+.hero-btn {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  z-index: 2;
+  background-color: var(--gold-1);
+  width: 110px;
+  height: 110px;
+  padding: 12px;
+  transform: scale(0.6);
+}
+
+.hero-btn img {
+  margin-inline: auto;
+  margin-block-end: 6px;
+}
+
+.hero-btn .span {
+  color: rgb(0, 0, 0);
+  font-weight: var(--weight-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--letterSpacing-1);
+  line-height: var(--lineHeight-3);
+}
+
+.hero-btn::after {
+  inset: 0;
+  border: 1px solid var(--gold-1);
+  animation: rotate360 15s linear infinite;
+}
+
+.slider-reveal {
+  transform: translateY(30px);
+  opacity: 0;
+}
+
+.hero .slider-item.active .slider-reveal {
+  animation: sliderReveal 1s ease forwards;
+}
+
+@keyframes sliderReveal {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.hero .slider-item.active .section-subtitle {
+  animation-delay: 500ms;
+}
+
+.hero .slider-item.active .hero-title {
+  animation-delay: 1000ms;
+}
+
+.hero .slider-item.active .hero-text {
+  animation-delay: 1.5s;
+}
+
+.hero .slider-item.active .btn {
+  animation-delay: 2s;
+}

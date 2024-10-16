@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import "./Modal.css";
+import "./styles/modal.css";
 import PasswordStrengthBar from "react-password-strength-bar";
 
 function Modal({ isModalOpen, toggleModal }) {
   const [isLogin, setIsLogin] = useState(true); // State to toggle between login and signup
   const [showPassword, setShowPassword] = useState(false); // State to toggle password visibility
-  const [password, setPassword] = useState('');
+  const [password, setPassword] = useState("");
 
   const toggleForm = () => {
     setIsLogin(!isLogin);
@@ -22,44 +22,29 @@ function Modal({ isModalOpen, toggleModal }) {
   return (
     <div className={`modal-container ${isModalOpen ? "show" : ""}`}>
       <div className="modal-content">
-        <button className="close-btn" onClick={toggleModal}>×</button>
+        <button className="close-btn" onClick={toggleModal}>
+          ×
+        </button>
         <h2>{isLogin ? "Welcome back" : "Create an account"}</h2>
         <p>{isLogin ? "Please login to continue" : "Sign up to get started"}</p>
-        
+
         <div className="inputBox">
           <input type="email" placeholder="E-mail" required />
         </div>
 
         <div className="inputBox password-container">
-          <input
-            type={showPassword ? "text" : "password"}
-            placeholder="Password"
-            onChange={handlePasswordChange}
-            required
-          />
-          <button
-            type="button"
-            className="eye-button"
-            onClick={togglePasswordVisibility}
-          >
+          <input type={showPassword ? "text" : "password"} placeholder="Password" onChange={handlePasswordChange} required />
+          <button type="button" className="eye-button" onClick={togglePasswordVisibility}>
             {showPassword ? "👁️" : "👁️‍🗨️"}
           </button>
         </div>
-        
+
         {!isLogin && (
           <>
             <PasswordStrengthBar password={password} />
             <div className="inputBox password-container">
-              <input
-                type={showPassword ? "text" : "password"}
-                placeholder="Confirm Password"
-                required
-              />
-              <button
-                type="button"
-                className="eye-button"
-                onClick={togglePasswordVisibility}
-              >
+              <input type={showPassword ? "text" : "password"} placeholder="Confirm Password" required />
+              <button type="button" className="eye-button" onClick={togglePasswordVisibility}>
                 {showPassword ? "👁️" : "👁️‍🗨️"}
               </button>
             </div>

@@ -1,0 +1,284 @@
+/* utilities.css: Reusable utility classes. */
+
+/*-----------------------------------*\
+  #REUSED STYLE
+\*-----------------------------------*/
+
+.separator {
+  width: 8px;
+  height: 8px;
+  border: 1px solid var(--gold-crayola);
+  transform: rotate(45deg);
+}
+
+.contact-label {
+  font-weight: var(--weight-bold);
+}
+
+.contact-number {
+  color: var(--gold-crayola);
+  max-width: max-content;
+  margin-inline: auto;
+}
+
+.hover-underline {
+  position: relative;
+  max-width: max-content;
+}
+
+.hover-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 5px;
+  border-block: 1px solid var(--gold-crayola);
+  transform: scaleX(0.2);
+  opacity: 0;
+  transition: var(--transition-2);
+}
+
+.hover-underline:is(:hover, :focus-visible)::after {
+  transform: scaleX(1);
+  opacity: 1;
+}
+
+.contact-number::after {
+  bottom: -5px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.img-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.section-subtitle {
+  position: relative;
+  color: var(--gold-crayola);
+  font-weight: var(--weight-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--letterSpacing-2);
+  margin-block-end: 12px;
+}
+
+.section-subtitle::after {
+  content: url("../images/separator.svg");
+  display: block;
+  width: 100px;
+  margin-inline: auto;
+  margin-block-start: 5px;
+}
+
+.btn {
+  position: relative;
+  color: #ffffff;
+  font-size: var(--fontSize-label-2);
+  font-weight: var(--weight-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--letterSpacing-5);
+  max-width: max-content;
+  border: 2px solid var(--gold-1);
+  padding: 12px 45px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200%;
+  height: 200%;
+  border-radius: var(--radius-circle);
+  background-color: var(--gold-crayola);
+  transition: var(--transition-2);
+  z-index: -1;
+}
+
+.btn .text {
+  transition: var(--transition-1);
+}
+
+.btn .text-2 {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: max-content;
+  color: var(--smoky-black-1);
+}
+
+.btn:is(:hover, :focus-visible)::before {
+  bottom: -50%;
+}
+
+.btn:is(:hover, :focus-visible) .text-1 {
+  transform: translateY(-40px);
+}
+
+.btn:is(:hover, :focus-visible) .text-2 {
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.btn-secondary {
+  background-color: var(--gold-1);
+  color: var(--black);
+}
+
+.btn-secondary::before {
+  background-color: var(--white);
+}
+
+.btn-secondary .text-2 {
+  color: var(--gold-2);
+}
+
+.has-before,
+.has-after {
+  position: relative;
+  z-index: 1;
+}
+
+.has-before::before,
+.has-after::after {
+  content: "";
+  position: absolute;
+}
+
+.bg-black-10 {
+  background-color: var(--smoky-black-2);
+}
+
+.grid-list {
+  display: grid;
+  gap: 40px;
+}
+
+.hover\:shine {
+  position: relative;
+}
+
+.hover\:shine::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background-image: linear-gradient(to right, transparent 0%, #fff6 100%);
+  transform: skewX(-0.08turn) translateX(-180%);
+}
+
+.hover\:shine:is(:hover, :focus-within)::after {
+  transform: skewX(-0.08turn) translateX(275%);
+  transition: var(--transition-3);
+}
+
+.img-holder {
+  aspect-ratio: var(--width) / var(--height);
+  overflow: hidden;
+  background-color: var(--eerie-black-4);
+}
+
+.btn-text {
+  color: var(--gold-crayola);
+  padding-block-end: 4px;
+  margin-inline: auto;
+  text-transform: uppercase;
+  letter-spacing: var(--letterSpacing-3);
+  font-weight: var(--weight-bold);
+  transition: var(--transition-1);
+}
+
+.btn-text:is(:hover, :focus-visible) {
+  color: var(--white);
+}
+
+.shape {
+  display: none;
+  position: absolute;
+  max-width: max-content;
+  z-index: -1;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.move-anim {
+  animation: move 5s linear infinite;
+}
+
+@keyframes move {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(30px);
+  }
+}
+
+.has-bg-image {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.input-field {
+  background-color: var(--eerie-black-2);
+  color: var(--white);
+  height: 56px;
+  padding: 10px 20px;
+  border: 1px solid var(--white-alpha-10);
+  margin-block-end: 20px;
+  outline: none;
+  transition: border-color var(--transition-2);
+}
+
+.input-field::placeholder {
+  color: inherit;
+}
+
+.input-field:focus {
+  border-color: var(--gold-crayola);
+}
+
+.icon-wrapper {
+  position: relative;
+  margin-block-end: 20px;
+}
+
+.icon-wrapper .input-field {
+  margin-block-end: 0;
+  padding-inline-start: 40px;
+  appearance: none;
+  cursor: pointer;
+}
+
+.icon-wrapper ion-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.4rem;
+  --ionicon-stroke-width: 50px;
+  pointer-events: none;
+}
+
+.icon-wrapper ion-icon:first-child {
+  left: 15px;
+}
+
+.icon-wrapper ion-icon:last-child {
+  right: 10px;
+}
