@@ -1,13 +1,15 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import ReactTypingEffect from "react-typing-effect";
-import facebookIcon from "./images/facebook.svg"
-import instagramIcon from "./images/instagram.svg"
-import twitterIcon from "./images/twitter.svg"
-import youtubeIcon from "./images/youtube.svg"
-import mapsIcon from "./images/maps.svg"
+import facebookIcon from "./images/facebook.svg";
+import instagramIcon from "./images/instagram.svg";
+import mapsIcon from "./images/maps.svg";
+import twitterIcon from "./images/twitter.svg";
+import youtubeIcon from "./images/youtube.svg";
 import Navbar from "./Navbar";
 import FAQ from "./Pages/FAQ/FAQ";
 const Home = () => {
+  const navigate = useNavigate();
   return (
     <div>
       <Navbar />
@@ -57,7 +59,10 @@ const Home = () => {
                   <p className="body-2 hero-text slider-reveal">
                     Best working environment that suits your business needs.
                   </p>
-                  <a href="https://603interiorlayout.netlify.app/" className="btn btn-primary slider-reveal">
+                  <a
+                    href="https://603interiorlayout.netlify.app/"
+                    className="btn btn-primary slider-reveal"
+                  >
                     <span className="text text-1">Make Your Space</span>
                     <span className="text text-2" aria-hidden="true">
                       Make Your Space
@@ -86,7 +91,10 @@ const Home = () => {
                   Spaces that are occupied by Corporates and Start ups, designed
                   with your business in mind
                 </p>
-                <a href="https://603interiorlayout.netlify.app/" className="btn btn-primary slider-reveal">
+                <a
+                  href="https://603interiorlayout.netlify.app/"
+                  className="btn btn-primary slider-reveal"
+                >
                   <span className="text text-1">Make Your Space</span>
                   <span className="text text-2" aria-hidden="true">
                     Make Your Space
@@ -114,7 +122,10 @@ const Home = () => {
                   Come with your team & experience the joy of inspiring office
                   design.
                 </p>
-                <a href="https://603interiorlayout.netlify.app/" className="btn btn-primary slider-reveal">
+                <a
+                  href="https://603interiorlayout.netlify.app/"
+                  className="btn btn-primary slider-reveal"
+                >
                   <span className="text text-1">Make Your Space</span>
                   <span className="text text-2" aria-hidden="true">
                     Make Your Space
@@ -136,15 +147,17 @@ const Home = () => {
             >
               <ion-icon name="chevron-forward"></ion-icon>
             </button>
-            <a href="indexLayout.html" className="hero-btn has-after">
-              <img
-                src="./images/hero-icon.png"
-                width="48"
-                height="48"
-                alt="booking icon"
-              />
-              <span className="label-2 text-center span">Book A Space</span>
-            </a>
+            <button onClick={(e) => navigate("/book-a-space")}>
+              <a className="hero-btn has-after">
+                <img
+                  src="./images/hero-icon.png"
+                  width="48"
+                  height="48"
+                  alt="booking icon"
+                />
+                <span className="label-2 text-center span">Book A Space</span>
+              </a>
+            </button>
           </section>
           <section
             id="spaces"
@@ -514,7 +527,10 @@ const Home = () => {
                     </a>
                   </li>
                   <li>
-                    <a href="/#about" className="label-2 footer-link hover-underline">
+                    <a
+                      href="/#about"
+                      className="label-2 footer-link hover-underline"
+                    >
                       About Us
                     </a>
                   </li>
@@ -524,11 +540,14 @@ const Home = () => {
                     </a>
                   </li>
                   <li>
-                    <a href="/Contact" className="label-2 footer-link hover-underline">
+                    <a
+                      href="/Contact"
+                      className="label-2 footer-link hover-underline"
+                    >
                       Contact
                     </a>
                   </li>
-                </ul> 
+                </ul>
                 <a href="#" className="logo">
                   <img
                     src="./images/603logo (1).avif"
@@ -582,27 +601,42 @@ const Home = () => {
                 <ul className="footer-list">
                   <p className="title-1">Follow us on: </p>
                   <li>
-                    <a href="https://www.facebook.com/" className="label-2 footer-link">
+                    <a
+                      href="https://www.facebook.com/"
+                      className="label-2 footer-link"
+                    >
                       <img className="img-height" src={facebookIcon} />
                     </a>
                   </li>
                   <li>
-                    <a href="https://www.instagram.com/603thecoworkingspace/" className="label-2 footer-link">
+                    <a
+                      href="https://www.instagram.com/603thecoworkingspace/"
+                      className="label-2 footer-link"
+                    >
                       <img className="img-height" src={instagramIcon} />
                     </a>
                   </li>
                   <li>
-                    <a href="https://x.com/603coworking" className="label-2 footer-link">
+                    <a
+                      href="https://x.com/603coworking"
+                      className="label-2 footer-link"
+                    >
                       <img className="img-height" src={twitterIcon} />
                     </a>
                   </li>
                   <li>
-                    <a href="https://www.youtube.com/" className="label-2 footer-link">
+                    <a
+                      href="https://www.youtube.com/"
+                      className="label-2 footer-link"
+                    >
                       <img className="img-height" src={youtubeIcon} />
                     </a>
                   </li>
                   <li>
-                    <a href="https://www.google.com/maps" className="label-2 footer-link">
+                    <a
+                      href="https://www.google.com/maps"
+                      className="label-2 footer-link"
+                    >
                       <img className="img-height map" src={mapsIcon} />
                     </a>
                   </li>
