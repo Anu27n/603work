@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import Modal from './Modal'; // Import the modal component
-import {useLocation} from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
+import Modal from "./Modal"; // Import the modal component
 
 function Navbar() {
   const [prevScrollPos, setPrevScrollPos] = useState(window.scrollY);
@@ -24,21 +24,21 @@ function Navbar() {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, [prevScrollPos]);
 
   // for scrolling smoothly to each relevant section in home page
-  useEffect(() =>{
-    if(location.hash){
-      const sectionId = location.hash.replace("#","");
+  useEffect(() => {
+    if (location.hash) {
+      const sectionId = location.hash.replace("#", "");
       const section = document.getElementById(sectionId);
-      if(section){
-        section.scrollIntoView({behavior: 'smooth'});
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
       }
     }
-  },[location]);
+  }, [location]);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -49,28 +49,35 @@ function Navbar() {
     setIsModalOpen(!isModalOpen);
   };
 
-  const isHomeOpen = location.pathname === '/';
-  const isServicesOpen = location.pathname === '/services';
-  const isBlogsOpen = location.pathname === '/blogs';
-  const isImgsOpen = location.pathname === '/photos';
+  const isHomeOpen = location.pathname === "/";
+  const isServicesOpen = location.pathname === "/services";
+  const isBlogsOpen = location.pathname === "/blogs";
+  const isImgsOpen = location.pathname === "/photos";
 
   return (
     <>
       <header
-        className={`header ${hidden ? 'hide' : ''} ${
-          isScrolled ? 'navbar-scrolled' : 'navbar-transparent'
+        className={`header ${hidden ? "hide" : ""} ${
+          isScrolled ? "navbar-scrolled" : "navbar-transparent"
         }`}
         data-header
       >
-        <div className="top_navbar_style">
-          <p>Makhija Arcade, 35th Rd, Khar, Khar West, Mumbai, Maharashtra 400052</p>
-          <p>Daily: 8.00 am to 10.00 pm</p>
-          <p>+91 9136036603</p>
-          <a href="mailto:sales@603thecoworkingspace.com" className="topbar-item link">
+        <div className="top_navbar_style ">
+          <p className="backglass">
+            Makhija Arcade, 35th Rd, Khar, Khar West, Mumbai, Maharashtra 400052
+          </p>
+          <p className="backglass">Daily: 8.00 am to 10.00 pm</p>
+          <p className="backglass">+91 9136036603</p>
+          <a
+            href="mailto:sales@603thecoworkingspace.com"
+            className="topbar-item link"
+          >
             <div className="icon">
               <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
             </div>
-            <span className="span">sales@603thecoworkingspace.com</span>
+            <span className="span backglass">
+              sales@603thecoworkingspace.com
+            </span>
           </a>
         </div>
         <div className="container">
@@ -84,93 +91,139 @@ function Navbar() {
             />
           </a>
 
-          <nav className={`navbar ${isMenuOpen ? 'active' : ''}`} data-navbar>
-            <button className="close-btn" aria-label="close menu" onClick={toggleMenu}>
+          <nav className={`navbar ${isMenuOpen ? "active" : ""}`} data-navbar>
+            <button
+              className="close-btn"
+              aria-label="close menu"
+              onClick={toggleMenu}
+            >
               <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
             </button>
             <a href="#" className="logo">
-              <img src="./images/603logo (1).avif" width="160" height="50" alt="Grilli - Home" />
+              <img
+                src="./images/603logo (1).avif"
+                width="160"
+                height="50"
+                alt="Grilli - Home"
+              />
             </a>
-            <ul className="navbar-list">
+            <ul className="navbar-list ">
               <li className="navbar-item">
-                <a href="/" className={`navbar-link hover-underline ${isHomeOpen ? 'active' : ''}`}>
+                <a
+                  href="/"
+                  className={`navbar-link hover-underline ${
+                    isHomeOpen ? "active" : ""
+                  }`}
+                >
                   <div className="separator"></div>
-                  <span className="span">Home</span>
+                  <span className="span backglass">Home</span>
                 </a>
               </li>
               <li className="navbar-item">
                 <a href="/#spaces" className="navbar-link hover-underline">
                   <div className="separator"></div>
-                  <span className="span">Spaces</span>
+                  <span className="span backglass">Spaces</span>
                 </a>
               </li>
               <li className="navbar-item">
                 <a href="/#about" className="navbar-link hover-underline">
                   <div className="separator"></div>
-                  <span className="span">About Us</span>
+                  <span className="span backglass">About Us</span>
                 </a>
               </li>
               <li className="navbar-item">
-                <a href="/services" className={`navbar-link hover-underline ${isServicesOpen ? 'active' : ''}`}>
-                  <div className="separator"></div>
-                  <span className="span">Our Services</span>
+                <a
+                  href="/services"
+                  className={`navbar-link hover-underline ${
+                    isServicesOpen ? "active" : ""
+                  }`}
+                >
+                  <div className="separator "></div>
+                  <span className="span backglass ">Our Services</span>
                 </a>
               </li>
               <li className="navbar-item">
-                <a href="/blogs" className={`navbar-link hover-underline ${isBlogsOpen ? 'active' : ''}`}>
+                <a
+                  href="/blogs"
+                  className={`navbar-link hover-underline ${
+                    isBlogsOpen ? "active" : ""
+                  }`}
+                >
                   <div className="separator"></div>
-                  <span className="span">Our Blogs</span>
+                  <span className="span backglass">Our Blogs</span>
                 </a>
               </li>
               <li className="navbar-item">
-              <a href="/photos" className={`navbar-link hover-underline ${isImgsOpen ? 'active' : ''}`}>
+                <a
+                  href="/photos"
+                  className={`navbar-link hover-underline ${
+                    isImgsOpen ? "active" : ""
+                  }`}
+                >
                   <div className="separator"></div>
-                  <span className="span">Images</span>
+                  <span className="span backglass">Images</span>
                 </a>
               </li>
               <li className="navbar-item">
                 <a href="/Contact" className="navbar-link hover-underline">
                   <div className="separator"></div>
-                  <span className="span">Contact</span>
+                  <span className="span backglass">Contact</span>
                 </a>
               </li>
               <li className="navbar-item">
-                <a href="/#" className="navbar-link hover-underline" onClick={toggleModal}>
+                <a
+                  href="/#"
+                  className="navbar-link hover-underline"
+                  onClick={toggleModal}
+                >
                   <div className="separator"></div>
-                  <span className="span">Login</span>
+                  <span className="span backglass">Login</span>
                 </a>
               </li>
             </ul>
             <div className="text-center">
               <p className="headline-1 navbar-title">Visit Us</p>
               <address className="body-4">
-                Restaurant St, Delicious City, <br/>
+                Restaurant St, Delicious City, <br />
                 London 9578, UK
               </address>
               <p className="body-4 navbar-text">Open: 9.30 am - 2.30 pm</p>
-              <a href="mailto:booking@grilli.com" className="body-4 sidebar-link">
+              <a
+                href="mailto:booking@grilli.com"
+                className="body-4 sidebar-link"
+              >
                 booking@grilli.com
               </a>
               <div className="separator"></div>
               <p className="contact-label">Booking Request</p>
-              <a href="tel:+88123123456" className="body-1 contact-number hover-underline">
+              <a
+                href="tel:+88123123456"
+                className="body-1 contact-number hover-underline"
+              >
                 +88-123-123456
               </a>
             </div>
           </nav>
-          <a href="https://603interiorlayout.netlify.app/" className="btn btn-secondary">
+          <a
+            href="https://603interiorlayout.netlify.app/"
+            className="btn btn-secondary"
+          >
             <span className="text text-1">Make Your Space</span>
             <span className="text text-2" aria-hidden="true">
               Make Your Space
             </span>
           </a>
-          <button className="nav-open-btn" aria-label="open menu" onClick={toggleMenu}>
+          <button
+            className="nav-open-btn"
+            aria-label="open menu"
+            onClick={toggleMenu}
+          >
             <span className="line line-1"></span>
             <span className="line line-2"></span>
             <span className="line line-3"></span>
           </button>
           <div
-            className={`overlay ${isMenuOpen ? 'active' : ''}`}
+            className={`overlay ${isMenuOpen ? "active" : ""}`}
             onClick={toggleMenu}
             data-nav-toggler
             data-overlay
