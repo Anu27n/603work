@@ -2658,3 +2658,8 @@ textarea.input-field {
     text-align: center;
   }
 }
+.backglass{
+  background: linear-gradient(135deg, rgba(114, 113, 91, 0.7), rgba(222, 13, 13, 0));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
