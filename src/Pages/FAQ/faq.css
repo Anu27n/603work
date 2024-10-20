@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;600&display=swap");
+
+#faq {
+  background: linear-gradient(0deg, rgba(255, 255, 255, 1) 46%, rgba(240, 240, 240, 1) 95%, rgba(214, 214, 214, 1) 100%);
+  color: var(--eerie-black-4);
+  padding: 3rem 0;
+}
+
+#faq .container {
+  margin: 0 auto;
+  max-width: 1180px;
+  padding: 0 2.8rem;
+  font-family: var(--fontFamily-dm_sans);
+}
+
+#faq h2 {
+  font-family: var(--fontFamily-forum);
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--eerie-black-3);
+  margin: 5rem 0;
+  text-align: center;
+}
+
+#faq .faq-item {
+  backdrop-filter: blur(10px);
+  border: 2px solid var(--black-alpha-20);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: border 0.3s ease;
+  margin-bottom: 1.5rem;
+}
+
+#faq .faq-item:hover,
+#faq .faq-item.open {
+  border-color: var(--gold-1);
+}
+
+#faq .faq-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1rem 1.25rem;
+  background: none;
+  border: none;
+  text-align: center;
+  cursor: pointer;
+  margin-top: auto;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#faq .faq-question {
+  font-family: "Lora", serif;
+  font-weight: bold;
+  color: var(--eerie-black-3);
+  font-size: 2rem;
+  flex-grow: 1;
+  text-align: center;
+  margin-top: 10px;
+  transition: color 0.3s ease;
+}
+
+#faq .faq-icon {
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: var(--gray-3);
+  stroke-width: 2;
+  margin-left: 1rem; /* Adds space between text and icon */
+  transition: transform 0.2s ease, stroke 0.3s ease;
+}
+
+#faq .faq-icon.rotate {
+  transform: rotate(180deg);
+}
+
+#faq .faq-answer {
+  background-color: var(--white);
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease, opacity 0.2s ease;
+}
+
+#faq .faq-answer.open {
+  max-height: 200px;
+  padding: 2rem 3rem;
+  opacity: 1;
+}
+
+#faq .faq-answer p {
+  font-family: var(--fontFamily-dm_sans);
+  color: var(--eerie-black-4);
+  font-size: 1.6rem; /* Adjust answer font size */
+  line-height: 1.7;
+  text-align: center; /* Center the answer text */
+  font-weight: bold; /* Make answer bold */
+}
+
+#faq .faq-button:hover,
+#faq .faq-item.open .faq-button {
+  background-color: var(--gold-1); /* Change background color on hover */
+}
+#faq .faq-question:hover,
+#faq .faq-item.open .faq-question {
+  background-color: var(--gold-1); /* Change background color on hover */
+}
+
+#faq .faq-button:hover .faq-question,
+#faq .faq-item.open .faq-question {
+  color: black; /* Change question text color to black on hover */
+}
+
+#faq .faq-button:hover .faq-icon,
+#faq .faq-item.open .faq-icon {
+  stroke: black; /* Change icon color to black on hover */
+}

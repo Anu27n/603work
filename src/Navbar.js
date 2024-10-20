@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
-import Modal from "./Modal"; // Import the modal component
+import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
+import Modal from "./Modal"; // Import the modal component
 
 function Navbar() {
   const [prevScrollPos, setPrevScrollPos] = useState(window.scrollY);
@@ -52,6 +52,7 @@ function Navbar() {
   const isHomeOpen = location.pathname === "/";
   const isServicesOpen = location.pathname === "/services";
   const isBlogsOpen = location.pathname === "/blogs";
+  const isImgsOpen = location.pathname === "/photos";
 
   return (
     <>
@@ -79,7 +80,7 @@ function Navbar() {
             <a href="#" className="logo">
               <img src="./images/603logo (1).avif" width="160" height="50" alt="Grilli - Home" />
             </a>
-            <ul className="navbar-list">
+            <ul className="navbar-list ">
               <li className="navbar-item">
                 <a href="/" className={`navbar-link hover-underline ${isHomeOpen ? "active" : ""}`}>
                   <div className="separator"></div>
@@ -100,7 +101,7 @@ function Navbar() {
               </li>
               <li className="navbar-item">
                 <a href="/services" className={`navbar-link hover-underline ${isServicesOpen ? "active" : ""}`}>
-                  <div className="separator"></div>
+                  <div className="separator "></div>
                   <span className="span">Our Services</span>
                 </a>
               </li>
@@ -111,13 +112,13 @@ function Navbar() {
                 </a>
               </li>
               <li className="navbar-item">
-                <a href="/#" className="navbar-link hover-underline">
+                <a href="/photos" className={`navbar-link hover-underline ${isImgsOpen ? "active" : ""}`}>
                   <div className="separator"></div>
                   <span className="span">Images</span>
                 </a>
               </li>
               <li className="navbar-item">
-                <a href="/#" className="navbar-link hover-underline">
+                <a href="/Contact" className="navbar-link hover-underline">
                   <div className="separator"></div>
                   <span className="span">Contact</span>
                 </a>
@@ -146,7 +147,7 @@ function Navbar() {
               </a>
             </div>
           </nav>
-          <a href="indexLayout.html" className="btn btn-secondary">
+          <a href="https://603interiorlayout.netlify.app/" className="btn btn-secondary">
             <span className="text text-1">Make Your Space</span>
             <span className="text text-2" aria-hidden="true">
               Make Your Space

@@ -1,12 +1,15 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 // import ReactTypingEffect from "react-typing-effect"; (temporarily commented out, see below)
 import facebookIcon from "./images/facebook.svg";
 import instagramIcon from "./images/instagram.svg";
+import mapsIcon from "./images/maps.svg";
 import twitterIcon from "./images/twitter.svg";
 import youtubeIcon from "./images/youtube.svg";
-import mapsIcon from "./images/maps.svg";
 import Navbar from "./Navbar";
+import FAQ from "./Pages/FAQ/FAQ";
 const Home = () => {
+  const navigate = useNavigate();
   return (
     <div>
       <Navbar />
@@ -22,7 +25,7 @@ const Home = () => {
                   <p className="label-2 section-subtitle slider-reveal" style={{ fontWeight: "700", fontSize: "large" }}>
                     Classic Elegance
                   </p>
-                  <h1 className="display-1 hero-title slider-reveal ">
+                  <h1 className="display-1 hero-title slider-reveal">
                     Create your Space <br />
                     that breathes creativity
                   </h1>
@@ -33,7 +36,7 @@ const Home = () => {
                     <ReactTypingEffect text={["Create Your Space ...", "that breathe creativity ..."]} speed={100} eraseSpeed={50} eraseDelay={1000} typingDelay={500} typing />
                   </h1> */}
                   <p className="body-2 hero-text slider-reveal">Best working environment that suits your business needs.</p>
-                  <a href="#" className="btn btn-primary slider-reveal">
+                  <a href="https://603interiorlayout.netlify.app/" className="btn btn-primary slider-reveal">
                     <span className="text text-1">Make Your Space</span>
                     <span className="text text-2" aria-hidden="true">
                       Make Your Space
@@ -53,7 +56,7 @@ const Home = () => {
                   vibrant stories
                 </h1>
                 <p className="body-2 hero-text slider-reveal">Spaces that are occupied by Corporates and Start ups, designed with your business in mind</p>
-                <a href="#" className="btn btn-primary slider-reveal">
+                <a href="https://603interiorlayout.netlify.app/" className="btn btn-primary slider-reveal">
                   <span className="text text-1">Make Your Space</span>
                   <span className="text text-2" aria-hidden="true">
                     Make Your Space
@@ -72,7 +75,7 @@ const Home = () => {
                   tells a story
                 </h1>
                 <p className="body-2 hero-text slider-reveal">Come with your team & experience the joy of inspiring office design.</p>
-                <a href="#" className="btn btn-primary slider-reveal">
+                <a href="https://603interiorlayout.netlify.app/" className="btn btn-primary slider-reveal">
                   <span className="text text-1">Make Your Space</span>
                   <span className="text text-2" aria-hidden="true">
                     Make Your Space
@@ -86,10 +89,12 @@ const Home = () => {
             <button className="slider-btn next" aria-label="slide to next" data-next-btn>
               <ion-icon name="chevron-forward"></ion-icon>
             </button>
-            <a href="indexLayout.html" className="hero-btn has-after">
-              <img src="./images/hero-icon.png" width="48" height="48" alt="booking icon" />
-              <span className="label-2 text-center span">Book A Space</span>
-            </a>
+            <button onClick={(e) => navigate("/book-a-space")}>
+              <a className="hero-btn has-after">
+                <img src="./images/hero-icon.png" width="48" height="48" alt="booking icon" />
+                <span className="label-2 text-center span">Book A Space</span>
+              </a>
+            </button>
           </section>
 
           {/* Office interior cards */}
@@ -298,6 +303,7 @@ const Home = () => {
           </section>
         </article>
       </main>
+      <FAQ></FAQ>
       <footer className="footer section has-bg-image text-center" style={{ position: "relative", overflow: "hidden" }}>
         <div
           className="background-blur"
@@ -318,7 +324,7 @@ const Home = () => {
               <div className="footer-brand has-before has-after">
                 <ul className="footer-list">
                   <li>
-                    <a href="#" className="label-2 footer-link hover-underline">
+                    <a href="/" className="label-2 footer-link hover-underline">
                       Home
                     </a>
                   </li>
@@ -328,7 +334,7 @@ const Home = () => {
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="label-2 footer-link hover-underline">
+                    <a href="/#about" className="label-2 footer-link hover-underline">
                       About Us
                     </a>
                   </li>
@@ -338,7 +344,7 @@ const Home = () => {
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="label-2 footer-link hover-underline">
+                    <a href="/Contact" className="label-2 footer-link hover-underline">
                       Contact
                     </a>
                   </li>

@@ -35,7 +35,8 @@
   --white-alpha-10: hsla(0, 0%, 100%, 0.1);
   --black: hsla(0, 0%, 0%, 1);
   --black-alpha-80: hsla(0, 0%, 0%, 0.8);
-  --black-alpha-35: hsla(0, 0%, 0%, 0.5);
+  --black-alpha-35: hsla(0, 0%, 0%, 0.35);
+  --black-alpha-20: hsla(0, 0%, 0%, 0.2);
   --black-alpha-15: hsla(0, 0%, 0%, 0.15);
 
   /**

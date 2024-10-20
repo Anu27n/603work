@@ -803,3 +803,22 @@
     right: 10px;
   }
 }
+
+@media (max-width: 1000px) {
+  .top_navbar_style {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+  }
+}
+
+@media (max-width: 510px) {
+  .top_navbar_style p {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    text-align: center;
+  }
+}
