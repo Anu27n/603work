@@ -1,0 +1,100 @@
+/*-----------------------------------*\
+  #RESET
+\*-----------------------------------*/
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a,
+img,
+data,
+span,
+input,
+button,
+select,
+ion-icon,
+textarea {
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  height: auto;
+}
+
+input,
+button,
+select,
+textarea {
+  background: none;
+  border: none;
+  font: inherit;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+address {
+  font-style: normal;
+}
+
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--eerie-black-1);
+  color: var(--white);
+  font-family: var(--fontFamily-dm_sans);
+  font-size: var(--fontSize-body-4);
+  font-weight: var(--weight-regular);
+  line-height: var(--lineHeight-5);
+  overflow: hidden;
+  height: 300vh;
+  zoom: 0.9;
+}
+
+body.loaded {
+  overflow: overlay;
+}
+
+body.nav-active {
+  overflow: hidden;
+}
+
+.hero-title {
+  font-family: "Lora";
+}
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--gold-1);
+}

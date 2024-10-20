@@ -1,0 +1,46 @@
+/* layout.css: General layout elements like grids, containers, sections, scroll-indicator styles. */
+.container {
+  padding-inline: 16px;
+}
+
+.section {
+  position: relative;
+  padding-block: var(--section-space);
+  overflow: hidden;
+  z-index: 1;
+}
+
+.scroll-indicator {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: var(--gold-1);
+  z-index: 9999;
+  transform-origin: center;
+  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+  /* NOTE: there's two extra properties in the ScrollIndicator component: transform and opacity */
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(1.2);
+  }
+}
+
+.scroll-indicator::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: inherit;
+  animation: pulse 2s infinite;
+  z-index: 9999;
+}

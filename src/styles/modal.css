@@ -1,3 +1,4 @@
+/* modal.css: Modal-related styles. */
 input::placeholder {
   padding-left: 10px;
 }
@@ -24,12 +25,25 @@ input::placeholder {
 
 .modal-content {
   background-color: white;
-  color: #333333;
+  color: #111;
   padding: 2rem;
   width: 400px;
   border-radius: 10px;
   position: relative;
   z-index: 1001;
+}
+
+.signup-modal {
+  background-color: var(--white);
+}
+
+.modal-content h2 {
+  display: flex;
+  justify-content: center;
+}
+.modal-content p {
+  padding-top: 1rem;
+  padding-bottom: 0.25rem;
 }
 
 .modal-content .primary-btn {
