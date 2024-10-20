@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import Modal from './Modal'; // Import the modal component
-import {useLocation} from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import Modal from "./Modal"; // Import the modal component
+import { useLocation } from "react-router-dom";
 
 function Navbar() {
   const [prevScrollPos, setPrevScrollPos] = useState(window.scrollY);
@@ -24,21 +24,21 @@ function Navbar() {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, [prevScrollPos]);
 
   // for scrolling smoothly to each relevant section in home page
-  useEffect(() =>{
-    if(location.hash){
-      const sectionId = location.hash.replace("#","");
+  useEffect(() => {
+    if (location.hash) {
+      const sectionId = location.hash.replace("#", "");
       const section = document.getElementById(sectionId);
-      if(section){
-        section.scrollIntoView({behavior: 'smooth'});
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
       }
     }
-  },[location]);
+  }, [location]);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -49,20 +49,14 @@ function Navbar() {
     setIsModalOpen(!isModalOpen);
   };
 
-  const isHomeOpen = location.pathname === '/';
-  const isServicesOpen = location.pathname === '/services';
-  const isBlogsOpen = location.pathname === '/blogs';
-
+  const isHomeOpen = location.pathname === "/";
+  const isServicesOpen = location.pathname === "/services";
+  const isBlogsOpen = location.pathname === "/blogs";
 
   return (
     <>
-      <header
-        className={`header ${hidden ? 'hide' : ''} ${
-          isScrolled ? 'navbar-scrolled' : 'navbar-transparent'
-        }`}
-        data-header
-      >
-        <div className="top_navbar_style">
+      <header className={`header ${hidden ? "hide" : ""} ${isScrolled ? "navbar-scrolled" : "navbar-transparent"}`} data-header>
+        <div className="top_navbar_style container">
           <p>Makhija Arcade, 35th Rd, Khar, Khar West, Mumbai, Maharashtra 400052</p>
           <p>Daily: 8.00 am to 10.00 pm</p>
           <p>+91 9136036603</p>
@@ -75,16 +69,10 @@ function Navbar() {
         </div>
         <div className="container">
           <a href="/" className="logo">
-            <img
-              src="./images/603logo (1).avif"
-              width="160"
-              height="50"
-              alt="Grilli - Home"
-              className="logohover"
-            />
+            <img src="./images/603logo (1).avif" width="160" height="50" alt="Grilli - Home" className="logohover" />
           </a>
 
-          <nav className={`navbar ${isMenuOpen ? 'active' : ''}`} data-navbar>
+          <nav className={`navbar ${isMenuOpen ? "active" : ""}`} data-navbar>
             <button className="close-btn" aria-label="close menu" onClick={toggleMenu}>
               <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
             </button>
@@ -93,7 +81,7 @@ function Navbar() {
             </a>
             <ul className="navbar-list">
               <li className="navbar-item">
-                <a href="/" className={`navbar-link hover-underline ${isHomeOpen ? 'active' : ''}`}>
+                <a href="/" className={`navbar-link hover-underline ${isHomeOpen ? "active" : ""}`}>
                   <div className="separator"></div>
                   <span className="span">Home</span>
                 </a>
@@ -111,13 +99,13 @@ function Navbar() {
                 </a>
               </li>
               <li className="navbar-item">
-                <a href="/services" className={`navbar-link hover-underline ${isServicesOpen ? 'active' : ''}`}>
+                <a href="/services" className={`navbar-link hover-underline ${isServicesOpen ? "active" : ""}`}>
                   <div className="separator"></div>
                   <span className="span">Our Services</span>
                 </a>
               </li>
               <li className="navbar-item">
-                <a href="/blogs" className={`navbar-link hover-underline ${isBlogsOpen ? 'active' : ''}`}>
+                <a href="/blogs" className={`navbar-link hover-underline ${isBlogsOpen ? "active" : ""}`}>
                   <div className="separator"></div>
                   <span className="span">Our Blogs</span>
                 </a>
@@ -144,7 +132,7 @@ function Navbar() {
             <div className="text-center">
               <p className="headline-1 navbar-title">Visit Us</p>
               <address className="body-4">
-                Restaurant St, Delicious City, <br/>
+                Restaurant St, Delicious City, <br />
                 London 9578, UK
               </address>
               <p className="body-4 navbar-text">Open: 9.30 am - 2.30 pm</p>
@@ -169,12 +157,7 @@ function Navbar() {
             <span className="line line-2"></span>
             <span className="line line-3"></span>
           </button>
-          <div
-            className={`overlay ${isMenuOpen ? 'active' : ''}`}
-            onClick={toggleMenu}
-            data-nav-toggler
-            data-overlay
-          ></div>
+          <div className={`overlay ${isMenuOpen ? "active" : ""}`} onClick={toggleMenu} data-nav-toggler data-overlay></div>
         </div>
       </header>
 

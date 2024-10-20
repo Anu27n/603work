@@ -1,5 +1,5 @@
 import React from "react";
-import ReactTypingEffect from "react-typing-effect";
+// import ReactTypingEffect from "react-typing-effect"; (temporarily commented out, see below)
 import facebookIcon from "./images/facebook.svg";
 import instagramIcon from "./images/instagram.svg";
 import twitterIcon from "./images/twitter.svg";
@@ -19,20 +19,19 @@ const Home = () => {
                   <div className="slider-bg">
                     <img src="./images/sunmill-loc_batcheditor_fotor (1).avif" width="1880" height="950" alt="" className="img-cover" style={{ opacity: "0.8" }} />
                   </div>
-                  <p className="label-2 section-subtitle slider-reveal" style={{ fontWeight: "900", fontSize: "larger" }}>
+                  <p className="label-2 section-subtitle slider-reveal" style={{ fontWeight: "700", fontSize: "large" }}>
                     Classic Elegance
                   </p>
-                  {/* <h1
-                    className="display-1 hero-title slider-reveal "
-                    style={{ fontFamily: "sans-mono", fontWeight: "lighter" }}
-                  >
-                    Create Your Space <br />
-                    that breathe creativity
-                  </h1> */}
-
-                  <h1 className="hero-title typing-effect">
-                    <ReactTypingEffect text={["Create Your Space ...", "that breathe creativity ..."]} speed={100} eraseSpeed={50} eraseDelay={1000} typingDelay={500} typing />
+                  <h1 className="display-1 hero-title slider-reveal ">
+                    Create your Space <br />
+                    that breathes creativity
                   </h1>
+
+                  {/* TODO: if we want to use ReactTypingEffect, timings need to be adjusted.
+                  The animation duration of the typing doesn't match the one of the slides, so the title doesn't render properly */}
+                  {/* <h1 className="hero-title typing-effect">
+                    <ReactTypingEffect text={["Create Your Space ...", "that breathe creativity ..."]} speed={100} eraseSpeed={50} eraseDelay={1000} typingDelay={500} typing />
+                  </h1> */}
                   <p className="body-2 hero-text slider-reveal">Best working environment that suits your business needs.</p>
                   <a href="#" className="btn btn-primary slider-reveal">
                     <span className="text text-1">Make Your Space</span>
@@ -46,7 +45,9 @@ const Home = () => {
                 <div className="slider-bg">
                   <img src="./images/heroLocation (1).avif" width="1880" height="950" alt="" className="img-cover" />
                 </div>
-                <p className="label-2 section-subtitle slider-reveal">delightful experience</p>
+                <p className="label-2 section-subtitle slider-reveal" style={{ fontWeight: "700", fontSize: "large" }}>
+                  delightful experience
+                </p>
                 <h1 className="display-1 hero-title slider-reveal">
                   Transforming offices into <br />
                   vibrant stories
@@ -63,7 +64,9 @@ const Home = () => {
                 <div className="slider-bg">
                   <img src="./images/sunshine-loc.webp" width="1880" height="950" alt="" className="img-cover" />
                 </div>
-                <p className="label-2 section-subtitle slider-reveal">amazing & elegence</p>
+                <p className="label-2 section-subtitle slider-reveal" style={{ fontWeight: "700", fontSize: "large" }}>
+                  amazing elegance
+                </p>
                 <h1 className="display-1 hero-title slider-reveal">
                   Where Every Floor <br />
                   tells a story
@@ -88,6 +91,8 @@ const Home = () => {
               <span className="label-2 text-center span">Book A Space</span>
             </a>
           </section>
+
+          {/* Office interior cards */}
           <section id="spaces" className="section service bg-10 text-center" aria-label="service">
             <div className="container">
               <p className="section-subtitle label-2">Luxurious Office Interiors</p>
@@ -201,7 +206,7 @@ const Home = () => {
             <div className="container" style={{ position: "relative", zIndex: 1 }}>
               <div className="quote"></div>
               <div className="glass-box">
-                <p className="headline-2 testi-text" style={{ color: "rgb(255, 255, 255)", fontSize: "30px" }}>
+                <p className="headline-2 testi-text" style={{ fontSize: "30px" }}>
                   Creativity flows freely at 603 The Coworking Space. As a content creator, I find the ambiance truly inspiring. Being surrounded by fellow creatives has led to unexpected
                   collaborations and projects. It's like working in a hub of innovation, and I couldn't be happier with my choice.
                 </p>

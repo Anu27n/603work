@@ -21,26 +21,21 @@
   --eerie-black-4: hsla(0, 0%, 13%, 1);
 
   --gray-1: #f4f4f4;
+  --gray-2: #d9d6d2;
   --gray-3: #c3c3c3;
   --gray-4: #999999;
   --gray-5: #5a5a5a;
 
   --gold-1: #ffc107;
-  --gold-2: #ca8a04;
-
-  --khaki-100: #ffc22d;
-  --khaki-200: #fcc519;
-  --khaki-300: #facc15;
-  --khaki-400: #ffc107;
-  --khaki-500: #cd952d;
-  --khaki-600: #eab308;
-  --khaki-700: #ca8a04;
+  --gold-2: #df970c;
 
   --white: hsla(0, 0%, 100%, 1);
+  --white-alpha-70: hsla(0, 0%, 100%, 0.7);
   --white-alpha-20: hsla(0, 0%, 100%, 0.2);
   --white-alpha-10: hsla(0, 0%, 100%, 0.1);
   --black: hsla(0, 0%, 0%, 1);
   --black-alpha-80: hsla(0, 0%, 0%, 0.8);
+  --black-alpha-35: hsla(0, 0%, 0%, 0.5);
   --black-alpha-15: hsla(0, 0%, 0%, 0.15);
 
   /**
@@ -149,7 +144,7 @@ body.nav-active {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: var(--gold-crayola);
+  background-color: var(--gold-1);
 }
 
 /*-----------------------------------*\
@@ -162,7 +157,7 @@ body.nav-active {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: var(--gold-crayola);
+  background-color: var(--gray-1);
   z-index: 10;
   display: grid;
   place-content: center;
@@ -187,7 +182,7 @@ body.nav-active {
   width: 112px;
   height: 112px;
   border-radius: var(--radius-circle);
-  border: 3px solid var(--white);
+  border: 3px solid var(--gold-1);
   border-block-start-color: var(--smoky-black-3);
   margin-block-end: 45px;
   animation: rotate360 1s linear infinite;
@@ -214,7 +209,7 @@ body.nav-active {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-stroke: 0.5px var(--eerie-black-3);
+  -webkit-text-stroke: 1px var(--eerie-black-3);
   animation: loadingText linear 2s infinite;
 }
 

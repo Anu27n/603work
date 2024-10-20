@@ -63,7 +63,7 @@
 }
 
 .footer-brand .contact-link:is(:hover, :focus-visible) {
-  color: var(--gold-crayola);
+  color: var(--gold-1);
 }
 
 .footer-brand .wrapper {
@@ -105,7 +105,7 @@
 }
 
 .footer-link {
-  color: var(--gold-crayola);
+  color: var(--gold-1);
   font-weight: var(--weight-bold);
   text-transform: uppercase;
   letter-spacing: var(--letterSpacing-4);
@@ -134,14 +134,33 @@
 }
 
 .copyright {
-  color: var(--quick-silver);
+  color: var(--white);
   line-height: var(--lineHeight-3);
+  text-shadow: var(--eerie-black-4) 1px 1px 2px;
 }
 
 .copyright .link {
   display: inline;
-  color: var(--gold-crayola);
+  color: var(--gold-1);
   text-decoration: underline;
+}
+
+.footer .btn-secondary {
+  background-color: transparent;
+  border-color: var(--gold-1);
+}
+
+.footer .btn-secondary .text {
+  color: var(--gold-1);
+}
+
+.footer .btn-secondary .text-2 {
+  color: var(--smoky-black-1);
+}
+
+.footer .btn-secondary::before {
+  background-color: var(--gold-1);
+  color: var(--eerie-black-1);
 }
 
 /*-----------------------------------*\
@@ -152,7 +171,7 @@
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: var(--gold-crayola);
+  background-color: var(--gold-1);
   color: var(--smoky-black-1);
   font-size: 22px;
   width: 40px;
@@ -169,7 +188,7 @@
 
 .back-top-btn:is(:hover, :focus-visible) {
   background-color: var(--white);
-  color: var(--gold-crayola);
+  color: var(--gold-1a);
 }
 
 .back-top-btn.active {

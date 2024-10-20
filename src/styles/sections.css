@@ -1,10 +1,21 @@
 /* services.css: Services section styles. */
+
+.section-title {
+  font-weight: 600;
+}
+
 /*-----------------------------------*\
   #SERVICE
 \*-----------------------------------*/
 
+.service {
+  background-color: var(--gray-1);
+  color: var(--eerie-black-4);
+}
+
 .service .section-title {
   margin-block-end: 16px;
+  color: var(--eerie-black-4);
 }
 
 .service .section-text {
@@ -13,16 +24,16 @@
 
 .service-card {
   overflow: hidden;
-  background-color: #fff;
+  background-color: var(--white);
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: rgba(50, 50, 93, 0.35) 0px 13px 27px -5px, rgba(0, 0, 0, 0.4) 0px 8px 16px -8px;
   padding: 30px;
   transition: transform 0.5s ease-in-out;
 }
 
 .service-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 0 40px rgba(255, 255, 255, 0.2);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.2) 0px 8px 16px -8px;
 }
 
 .service-card .has-before {
@@ -71,13 +82,13 @@
 
 .service-card .card-text {
   font-size: 14px;
-  color: #666;
+  color: var(--eerie-black-4);
   margin-block-end: 20px;
 }
 
 .service-card .btn-text {
   font-size: 14px;
-  color: #337ab7;
+  color: var(--gold-2);
   text-decoration: none;
   margin-block-start: 10px;
   display: inline-flex;
@@ -88,9 +99,22 @@
   margin-right: 10px;
 }
 
+.service-card .hover-underline::after {
+  border-block: 1px solid var(--gold-2);
+}
+
 /*-----------------------------------*\
   #ABOUT
 \*-----------------------------------*/
+
+.about {
+  background: linear-gradient(0deg, rgba(255, 255, 255, 1) 46%, rgba(240, 240, 240, 1) 95%, rgba(214, 214, 214, 1) 100%);
+  color: var(--eerie-black-4);
+}
+
+.about .section-title {
+  color: var(--eerie-black-4);
+}
 
 .about .section-text {
   margin-block: 15px 30px;
@@ -148,10 +172,14 @@
 
 .about .abs-img-2::before {
   inset: 0;
-  background-image: url("../images/badge-2-bg.png");
+  background-image: url("../images/badge-1-bg.png");
   background-repeat: no-repeat;
   background-size: contain;
   animation: rotate360 15s linear infinite;
+}
+
+.about .hover-underline::after {
+  border-block: 1px solid var(--gold-2);
 }
 
 /*-----------------------------------*\
@@ -317,8 +345,10 @@
   font-size: 18px;
 }
 .testi .profile-name {
-  color: var(--gold-crayola);
+  color: var(--gold-2);
   font-weight: var(--weight-bold);
+  font-size: 110%;
+  text-shadow: var(--white) 1px 1px 2px;
   text-transform: uppercase;
   letter-spacing: var(--letterSpacing-3);
 }
@@ -335,9 +365,9 @@
 }
 
 .glass-box {
-  background: rgba(44, 42, 42, 0.61);
-  border-radius: 10px;
-  padding: 20px;
+  background: var(--white-alpha-70);
+  border-radius: 15px;
+  padding: 30px;
   backdrop-filter: blur(9px);
   -webkit-backdrop-filter: blur(10px);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -348,6 +378,7 @@
 
 .glass-box p {
   margin: 10px 0;
+  color: var(--eerie-black-3);
 }
 
 .profile {
@@ -357,7 +388,7 @@
 
 .profile .img {
   border-radius: 50%;
-  border: 2px solid rgba(255, 255, 255, 0.3);
+  border: 2px solid var(--gold-2);
   padding: 5px;
 }
 
@@ -371,7 +402,7 @@
 .separator {
   width: 30px;
   height: 3px;
-  background-color: var(--gold-crayola);
+  background-color: var(--gold-2);
 }
 
 /*-----------------------------------*\
@@ -486,8 +517,14 @@ textarea.input-field {
     #EVENT
   \*-----------------------------------*/
 
+.event {
+  background-color: var(--gray-1);
+  color: var(--eerie-black-4);
+}
+
 .event .section-title {
   margin-block-end: 40px;
+  color: var(--eerie-black-4);
 }
 
 .event-card {
@@ -508,7 +545,7 @@ textarea.input-field {
   top: 30px;
   left: 25px;
   padding: 5px 10px;
-  color: var(--gold-crayola);
+  color: var(--gold-1);
   background-color: var(--black);
   font-weight: var(--weight-bold);
   letter-spacing: var(--letterSpacing-1);
@@ -516,10 +553,11 @@ textarea.input-field {
 }
 
 .event-card .card-subtitle {
-  color: var(--gold-crayola);
+  color: var(--gold-1);
   text-transform: uppercase;
   font-weight: var(--weight-bold);
   letter-spacing: var(--letterSpacing-2);
+  text-shadow: var(--eerie-black-4) 1px 1px 2px;
   margin-block-end: 5px;
 }
 

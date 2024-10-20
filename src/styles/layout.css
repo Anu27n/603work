@@ -9,16 +9,18 @@
   overflow: hidden;
   z-index: 1;
 }
+
 .scroll-indicator {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 4px;
-  background-color: #d29e46;
+  background-color: var(--gold-1);
   z-index: 9999;
   transform-origin: center;
   transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+  /* NOTE: there's two extra properties in the ScrollIndicator component: transform and opacity */
 }
 
 @keyframes pulse {

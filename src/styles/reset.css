@@ -96,5 +96,5 @@ body.nav-active {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: var(--gold-crayola);
+  background-color: var(--gold-1);
 }

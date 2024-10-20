@@ -7,7 +7,7 @@
 .separator {
   width: 8px;
   height: 8px;
-  border: 1px solid var(--gold-crayola);
+  border: 1px solid var(--gold-1);
   transform: rotate(45deg);
 }
 
@@ -16,7 +16,7 @@
 }
 
 .contact-number {
-  color: var(--gold-crayola);
+  color: var(--gold-2);
   max-width: max-content;
   margin-inline: auto;
 }
@@ -33,7 +33,7 @@
   bottom: 0;
   width: 100%;
   height: 5px;
-  border-block: 1px solid var(--gold-crayola);
+  border-block: 1px solid var(--gold-1);
   transform: scaleX(0.2);
   opacity: 0;
   transition: var(--transition-2);
@@ -60,7 +60,7 @@
 
 .section-subtitle {
   position: relative;
-  color: var(--gold-crayola);
+  color: var(--gold-2);
   font-weight: var(--weight-bold);
   text-transform: uppercase;
   letter-spacing: var(--letterSpacing-2);
@@ -69,6 +69,7 @@
 
 .section-subtitle::after {
   content: url("../images/separator.svg");
+  fill: red;
   display: block;
   width: 100px;
   margin-inline: auto;
@@ -83,7 +84,7 @@
   text-transform: uppercase;
   letter-spacing: var(--letterSpacing-5);
   max-width: max-content;
-  border: 2px solid var(--gold-1);
+  border: 2px solid var(--gold-2);
   padding: 12px 45px;
   overflow: hidden;
   z-index: 1;
@@ -98,13 +99,14 @@
   width: 200%;
   height: 200%;
   border-radius: var(--radius-circle);
-  background-color: var(--gold-crayola);
+  background-color: var(--gold-2);
   transition: var(--transition-2);
   z-index: -1;
 }
 
 .btn .text {
   transition: var(--transition-1);
+  color: var(--gold-2);
 }
 
 .btn .text-2 {
@@ -136,10 +138,6 @@
 
 .btn-secondary::before {
   background-color: var(--white);
-}
-
-.btn-secondary .text-2 {
-  color: var(--gold-2);
 }
 
 .has-before,
@@ -190,7 +188,7 @@
 }
 
 .btn-text {
-  color: var(--gold-crayola);
+  color: var(--gold-1);
   padding-block-end: 4px;
   margin-inline: auto;
   text-transform: uppercase;

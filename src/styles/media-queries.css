@@ -86,7 +86,7 @@
   }
 
   .topbar .link:is(:hover, :focus-visible) {
-    color: var(--gold-crayola);
+    color: var(--gold-1);
   }
 
   /**
@@ -248,9 +248,9 @@
     display: grid;
     position: absolute;
     z-index: 1;
-    color: var(--gold-crayola);
+    color: var(--gold-1);
     font-size: 2.4rem;
-    border: 1px solid var(--gold-crayola);
+    border: 1px solid var(--gold-1);
     width: 45px;
     height: 45px;
     place-items: center;
@@ -272,7 +272,7 @@
   }
 
   .hero .slider-btn:is(:hover, :focus-visible) {
-    background-color: var(--gold-crayola);
+    background-color: var(--gold-1);
     color: var(--black);
   }
 
@@ -534,6 +534,13 @@
 
   .navbar-item {
     border-block-start: none;
+    text-shadow: var(--eerie-black-4) 1px 1px 2px;
+    color: var(--white);
+  }
+
+  .navbar-scrolled .navbar-item {
+    text-shadow: none;
+    color: var(--gray-5);
   }
 
   .navbar .separator {
@@ -542,6 +549,8 @@
 
   .navbar-link:is(:hover, :focus-visible, .active) .span {
     transform: unset;
+    color: var(--gold-1);
+    margin-left: 0;
   }
 
   .navbar-link {
@@ -716,7 +725,7 @@
   }
   /* Add this to your .css file */
   .typing-effect {
-    color: #d16c36;
+    color: var(--gold-1);
     width: 100%;
     font-weight: 800;
     display: flex;
@@ -730,12 +739,13 @@
     /* font-family: sans-mono; */
     font-weight: bolder;
     font-size: 6.5rem;
+    text-shadow: var(--eerie-black-4) 1px 1px 2px;
   }
 }
 
 @media (max-width: 1400px) {
   .typing-effect {
-    color: #d16c36;
+    color: var(--gold-1);
 
     font-size: 5rem; /* Large screens */
   }
@@ -743,7 +753,7 @@
 
 @media (max-width: 1000px) {
   .typing-effect {
-    color: #d16c36;
+    color: var(--gold-1);
 
     font-size: 4rem; /* Large screens */
   }

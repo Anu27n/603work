@@ -12,16 +12,20 @@
   align-items: center;
   padding: 5px;
   margin-top: -20px;
-  color: var(--gray-5);
+  color: var(--white);
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-radius: 0px 0px 5px 5px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   /* box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37); */
-  border-bottom: 1px solid rgb(238, 187, 120);
+  border-bottom: 1px solid var(--gold-2);
   margin-bottom: 10px;
   font-family: var(--fontFamily-dm_sans);
+}
+
+.header.active .top_navbar_style {
+  color: var(--gray-5);
 }
 
 .topbar {
@@ -29,9 +33,18 @@
 }
 
 /*-----------------------------------*\
-    #HEADER
-  \*-----------------------------------*/
+    #LOGO
+\*-----------------------------------*/
+.logohover {
+  transition: transform 0.8s ease-in-out;
+}
+.logohover:hover {
+  transform: rotate(360deg) scale(1.3); /* Spins 360 degrees and scales up */
+}
 
+/*-----------------------------------*\
+    #HEADER
+\*-----------------------------------*/
 .header .btn {
   display: none;
 }
@@ -42,7 +55,7 @@
   left: 0;
   width: 100%;
 
-  background-color: var(--smoky-black-2);
+  background-color: var(--gray-1);
   opacity: 0.9;
 
   padding-block: 20px;
@@ -50,22 +63,10 @@
   border-block-end: 1px solid transparent;
   transition: var(--transition-1);
 }
-.navbar-transparent {
-  background-color: transparent;
-}
-
-.navbar-scrolled {
-  background-color: white;
-  opacity: 0.9;
-}
-
-.navbar-scrolled {
-  color: var(--gray-5);
-}
 
 .header.active {
   padding-block: 20px;
-  background-color: var(--eerie-black-4);
+  background-color: var(--white);
   border-color: var(--black-alpha-15);
 }
 
@@ -82,40 +83,27 @@
   gap: 8px;
 }
 
-.nav-open-btn {
-  padding: 12px;
-  padding-inline-end: 0;
+.navbar-transparent {
+  background-color: transparent;
 }
 
-.nav-open-btn .line {
-  width: 30px;
-  height: 2px;
+.navbar-scrolled {
   background-color: var(--white);
-  margin-block: 4px;
-  transform-origin: left;
-  animation: menuBtn 400ms ease-in-out alternate infinite;
+  opacity: 0.9;
 }
 
-@keyframes menuBtn {
-  0% {
-    transform: scaleX(1);
-  }
-  100% {
-    transform: scaleX(0.5);
-  }
+.navbar-scrolled,
+.navbar-scrolled .top_navbar_style {
+  color: var(--gray-5);
 }
 
-.nav-open-btn .line-2 {
-  animation-delay: 150ms;
-}
-
-.nav-open-btn .line-3 {
-  animation-delay: 300ms;
-}
+/*-----------------------------------*\
+    #NAVBAR
+\*-----------------------------------*/
 
 .navbar {
   position: fixed;
-  background-color: hsl(0deg 37.86% 32.67%);
+  background-color: var(--gray-1);
   top: 0;
   left: -360px;
   bottom: 0;
@@ -134,27 +122,30 @@
   transform: translateX(360px);
 }
 
-.navbar .close-btn {
-  color: var(--white);
-  border: 1px solid currentColor;
-  padding: 4px;
-  border-radius: var(--radius-circle);
-  margin-inline-start: auto;
-  margin-block: 30px 20px;
-}
-
-.navbar .close-btn ion-icon {
-  --ionicon-stroke-width: 40px;
-}
-
-.navbar .close-btn:is(:hover, :focus-visible) {
-  color: var(--gold-crayola);
-}
-
 .navbar .logo {
   max-width: max-content;
   margin-inline: auto;
   margin-block-end: 60px;
+  margin-top: 20px;
+}
+
+.header .btn-secondary {
+  color: var(--gold-1);
+  background-color: transparent;
+  border: 1px solid var(--gold-1);
+}
+
+.header .btn-secondary .text {
+  color: var(--gold-1);
+}
+
+.header .btn-secondary .text-2 {
+  color: var(--smoky-black-1);
+}
+
+.header .btn-secondary::before {
+  background-color: var(--gold-1);
+  color: var(--eerie-black-1);
 }
 
 .navbar-list {
@@ -164,6 +155,8 @@
 
 .navbar-item {
   border-block-start: 1px solid var(--white-alpha-20);
+  font-weight: 500;
+  color: var(--eerie-black-4);
 }
 
 .navbar-link {
@@ -187,6 +180,10 @@
   transform: translateX(20px);
 }
 
+.navbar-scrolled .navbar-link:is(:hover, :focus-visible, .active) .span {
+  color: var(--gold-2);
+}
+
 .navbar-link .separator {
   position: absolute;
   top: 50%;
@@ -196,8 +193,13 @@
   transition: var(--transition-1);
 }
 
+.navbar-link:is(:hover, :focus-visible, .active) .span {
+  margin-left: 20px;
+}
+
 .navbar-link:is(:hover, :focus-visible, .active) .separator {
   opacity: 1;
+  border: 1px solid var(--gold-2);
 }
 
 .navbar-title {
@@ -210,14 +212,6 @@
 
 .navbar .body-4 {
   color: var(--quick-silver);
-}
-
-.sidebar-link {
-  transition: var(--transition-1);
-}
-
-.sidebar-link:is(:hover, :focus-visible) {
-  color: var(--gold-crayola);
 }
 
 .navbar .text-center .separator {
@@ -251,9 +245,66 @@
   pointer-events: all;
 }
 
-.logohover {
-  transition: transform 0.8s ease-in-out;
+@keyframes menuBtn {
+  0% {
+    transform: scaleX(1);
+  }
+  100% {
+    transform: scaleX(0.5);
+  }
 }
-.logohover:hover {
-  transform: rotate(360deg) scale(1.3); /* Spins 360 degrees and scales up */
+
+/* Open/Close Buttons */
+.nav-open-btn {
+  padding: 12px;
+  padding-inline-end: 0;
+}
+
+.nav-open-btn .line {
+  width: 30px;
+  height: 2px;
+  background-color: var(--white);
+  margin-block: 4px;
+  transform-origin: left;
+  animation: menuBtn 400ms ease-in-out alternate infinite;
+}
+
+.navbar-scrolled .nav-open-btn .line {
+  background-color: var(--gray-5);
+}
+
+.nav-open-btn .line-2 {
+  animation-delay: 150ms;
+}
+
+.nav-open-btn .line-3 {
+  animation-delay: 300ms;
+}
+
+.navbar .close-btn {
+  color: var(--white);
+  border: 1px solid currentColor;
+  padding: 4px;
+  border-radius: var(--radius-circle);
+  margin-inline-start: auto;
+  margin-block: 30px 20px;
+}
+
+.navbar .close-btn ion-icon {
+  --ionicon-stroke-width: 40px;
+}
+
+.navbar .close-btn:is(:hover, :focus-visible) {
+  color: var(--gold-1);
+}
+
+/*-----------------------------------*\
+    #SIDEBAR MENU
+\*-----------------------------------*/
+.sidebar-link {
+  transition: var(--transition-1);
+}
+
+.sidebar-link:is(:hover, :focus-visible) {
+  color: var(--gold-1);
 }
