@@ -3,6 +3,20 @@
   #MEDIA QUERIES
 \*-----------------------------------*/
 
+@media (max-width: 520px) {
+  .top_navbar_style {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    justify-items: center;
+    padding: 20px;
+    margin-top: -34px;
+    color: rgb(234, 231, 226);
+    border-bottom: 1px solid rgb(238, 187, 120);
+    margin-bottom: 10px;
+  }
+}
+
 /**
  * responsive for larger than 575px screen
  */
