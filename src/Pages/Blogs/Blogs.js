@@ -210,9 +210,7 @@ const Blogs = () => {
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="label-2 footer-link hover-underline">
-                      Our Chefs
-                    </a>
+                  
                   </li>
                   <li>
                     <a href="#" className="label-2 footer-link hover-underline">

@@ -115,14 +115,14 @@ const Services = () => {
                                             width="285"
                                             height="336"
                                             loading="lazy"
-                                            alt="Appetizers"
+                                            alt="Pantry"
                                             className="img-cover"
                                         />
                                     </figure>
                                 </a>
                                 <div className="card-content">
                                     <h3 className="title-4 card-title">
-                                        <a href="#">Appetizers</a>
+                                        <a href="#">Pantry</a>
                                     </h3>
                                     <a href="#" className="btn-text hover-underline label-2">
                                         View Space
@@ -505,7 +505,7 @@ const Services = () => {
                   </li>
                   <li>
                     <a href="#" className="label-2 footer-link hover-underline">
-                      Our Chefs
+                      Our Spaces
                     </a>
                   </li>
                   <li>

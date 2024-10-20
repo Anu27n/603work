@@ -125,12 +125,12 @@ const Home = () => {
                   <div className="service-card">
                     <a href="#" className="has-before hover:shine">
                       <figure className="card-banner img-holder" style={{ "--width": 285, "--height": 336 }}>
-                        <img src="./images/nastuh-abootalebi-JdcJn85xD2k-unsplash.avif" width="285" height="336" loading="lazy" alt="Appetizers" className="img-cover" />
+                        <img src="./images/nastuh-abootalebi-JdcJn85xD2k-unsplash.avif" width="285" height="336" loading="lazy" alt="Pantry" className="img-cover" />
                       </figure>
                     </a>
                     <div className="card-content">
                       <h3 className="title-4 card-title">
-                        <a href="#">Appetizers</a>
+                        <a href="#">Pantry</a>
                       </h3>
                       <a href="#" className="btn-text hover-underline label-2">
                         View Space
@@ -337,9 +337,7 @@ const Home = () => {
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="label-2 footer-link hover-underline">
-                      Our Chefs
-                    </a>
+                    
                   </li>
                   <li>
                     <a href="/Contact" className="label-2 footer-link hover-underline">
