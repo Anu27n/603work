@@ -102,7 +102,7 @@ const Home = () => {
             <div className="container">
               <p className="section-subtitle label-2">Luxurious Office Interiors</p>
               <h2 className="headline-1 section-title">We Offer Top Notch</h2>
-              <p className="section-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry lorem Ipsum has been the industrys standard dummy text ever.</p>
+              <p className="section-text">We offer top-notch products designed to meet all your office space needs..</p>
               <ul className="grid-list">
                 <li>
                   <div className="service-card">
@@ -164,11 +164,9 @@ const Home = () => {
                 <p className="label-2 section-subtitle" id="about-label">
                   Our Story
                 </p>
-                <h2 className="headline-1 section-title">603 vor Tells a Story</h2>
+                <h2 className="headline-1 section-title">Welcome to 603 Interiors</h2>
                 <p className="section-text">
-                  603 The Coworking Space was founded with a simple mission: to create work environments that help businesses thrive. By listening to our clients and understanding their needs, we’ve
-                  crafted flexible, tailored solutions that promote growth and collaboration. As we continue to evolve, our focus on innovation and customer success remains at the core of everything
-                  we do.
+                At 603 Interiors, we believe that the right workspace can transform the way you work. Our expertise in designing functional, aesthetically pleasing, and customized office spaces sets us apart. With a dedicated in-house design team that has successfully crafted inspiring environments for 603 The Coworking Space, we bring the same innovation and precision to your corporate office. Whether you're looking to redesign your existing office or create a new space from scratch, 603 Interiors offers end-to-end solutions tailored to your business needs. Experience the perfect blend of creativity, efficiency, and functionality with 603 Interiors – where every space is designed with purpose.Book Through Call
                 </p>
                 <div className="contact-label">Book Through Call</div>
                 <a href="tel:+804001234567" className="body-1 contact-number hover-underline">

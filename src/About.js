@@ -5,11 +5,9 @@ const About = () => (
     <div className="container">
       <div className="about-content">
         <p className="label-2 section-subtitle" id="about-label">Our Story</p>
-        <h2 className="headline-1 section-title">603 vor Tells a Story</h2>
+        <h2 className="headline-1 section-title">Welcome to 603 Interiors</h2>
         <p className="section-text">
-          Lorem Ipsum is simply dummy text of the printingand typesetting industry lorem Ipsum has been the
-          industrys standard dummy text ever since the when an unknown printer took a galley of type and scrambled
-          it to make a type specimen book It has survived not only five centuries, but also the leap into.
+        At 603 Interiors, we believe that the right workspace can transform the way you work. Our expertise in designing functional, aesthetically pleasing, and customized office spaces sets us apart. With a dedicated in-house design team that has successfully crafted inspiring environments for 603 The Coworking Space, we bring the same innovation and precision to your corporate office. Whether you're looking to redesign your existing office or create a new space from scratch, 603 Interiors offers end-to-end solutions tailored to your business needs. Experience the perfect blend of creativity, efficiency, and functionality with 603 Interiors – where every space is designed with purpose.
         </p>
         <div className="contact-label">Book Through Call</div>
         <a href="tel:+804001234567" className="body-1 contact-number hover-underline">+91 9136036603</a>
