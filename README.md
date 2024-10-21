@@ -121,7 +121,7 @@ This project is licensed under the **MIT License**. See the [LICENSE](./LICENSE)
 ## Contributors ❤️
 
 A huge thank you to everyone who has contributed to this project! Your support, whether through code, feedback, or ideas, helps keep this project growing and thriving.
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- ALL-CONTRIBUTORS-LIST:START  -->
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
 <!-- markdownlint-restore -->
