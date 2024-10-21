@@ -127,36 +127,3 @@ A huge thank you to everyone who has contributed to this project! Your support, 
 <!-- markdownlint-restore -->
 <!-- prettier-ignore-end -->
 <!-- ALL-CONTRIBUTORS-LIST:END -->
-
-<table>
-  <tr>
-    <td align="center">
-      <a href="https://github.com/Anu27n">
-        <img src="https://avatars.githubusercontent.com/Anu27n?v=4" width="100px" style="border-radius: 50%;" alt="Anu27n"/>
-        <br />
-        <sub><b>Anubhav Jain</b></sub>
-      </a>
-    </td>
-    <td align="center">
-      <a href="https://github.com/abhayksahu369">
-        <img src="https://avatars.githubusercontent.com/abhayksahu369?v=4" width="100px" style="border-radius: 50%;" alt="abhayksahu369"/>
-        <br />
-        <sub><b>Abhay Kumar Sahu</b></sub>
-      </a>
-    </td>
-    <td align="center">
-      <a href="https://github.com/sujalcharati">
-        <img src="https://avatars.githubusercontent.com/sujalcharati?v=4" width="100px" style="border-radius: 50%;" alt="sujalcharati"/>
-        <br />
-        <sub><b>Sujal Charati</b></sub>
-      </a>
-    </td>
-    <td align="center">
-      <a href="https://github.com/aliqyan-21">
-        <img src="https://avatars.githubusercontent.com/aliqyan-21?v=4" width="100px" style="border-radius: 50%;" alt="aliqyan-21"/>
-        <br />
-        <sub><b>Aliqyan-21</b></sub>
-      </a>
-    </td>
-  </tr>
-</table>
