@@ -4,7 +4,7 @@ import instagramIcon from "../../images/instagram.svg"
 import twitterIcon from "../../images/twitter.svg"
 import youtubeIcon from "../../images/youtube.svg"
 import mapsIcon from "../../images/maps.svg"
-import Navbar from "../../Navbar";
+import Navbar from "../../Components/Navbar";
 import './Services.css';
 
 const Services = () => {

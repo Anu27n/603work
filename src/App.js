@@ -1,16 +1,16 @@
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
-import Home from "./Home";
+import Home from "./Pages/Home/Home.js";
 import BlogPost from "./Pages/Blogs/BlogPost";
 import Blogs from "./Pages/Blogs/Blogs";
 import Contact from "./Pages/Contact/Contact";
 import Image from "./Pages/Photos/Photos.js";
 import Services from "./Pages/Services/Services";
-import "./preloader.js";
-import PreloaderContainer from "./PreloaderContainer.js"; // For Preloader
-import "./script.js";
-import ScrollIndicator from "./ScrollIndicator";
-import "./style.css";
-import "./TopBar.js";
+import "./Components/preloader.js";
+import PreloaderContainer from "./Components/PreloaderContainer.js"; // For Preloader
+import "./Script/script.js";
+import ScrollIndicator from "./Components/ScrollIndicator.js";
+import "./styles/style.css";
+import "./Components/TopBar.js";
 
 function App() {
   return (
