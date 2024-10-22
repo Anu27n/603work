@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./styles/modal.css";
+import "../styles/modal.css";
 import PasswordStrengthBar from "react-password-strength-bar";
 
 function Modal({ isModalOpen, toggleModal }) {

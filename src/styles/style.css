@@ -1,0 +1,20 @@
+/*-----------------------------------*\
+  #index.css
+\*-----------------------------------*/
+
+/**
+ * copyright 2022 codewithsadee
+ * refactored 2024 marta-vilaseca
+ */
+
+@import "./global.css";
+@import "./reset.css";
+@import "./typography.css";
+@import "./layout.css";
+@import "./utilities.css";
+@import "./navbar.css";
+@import "./hero.css";
+@import "./modal.css";
+@import "./sections.css";
+@import "./footer.css";
+@import "./media-queries.css";

@@ -1,13 +1,13 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 // import ReactTypingEffect from "react-typing-effect"; (temporarily commented out, see below)
-import facebookIcon from "./images/facebook.svg";
-import instagramIcon from "./images/instagram.svg";
-import mapsIcon from "./images/maps.svg";
-import twitterIcon from "./images/twitter.svg";
-import youtubeIcon from "./images/youtube.svg";
-import Navbar from "./Navbar";
-import FAQ from "./Pages/FAQ/FAQ";
+import facebookIcon from "../../images/facebook.svg";
+import instagramIcon from "../../images/instagram.svg";
+import mapsIcon from "../../images/maps.svg";
+import twitterIcon from "../../images/twitter.svg";
+import youtubeIcon from "../../images/youtube.svg";
+import Navbar from "../../Components/Navbar";
+import FAQ from "../FAQ/FAQ";
 const Home = () => {
   const navigate = useNavigate();
   return (

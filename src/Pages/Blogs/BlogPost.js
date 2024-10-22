@@ -1,9 +1,9 @@
 import { useParams } from "react-router-dom";
-import Navbar from "../../Navbar";
+import Navbar from "../../Components/Navbar";
 import React, {useState, useEffect} from "react";
 import './BlogPost.css'
 import '../Services/Services.css';
-import '../../style.css';
+import '../../styles/style.css';
 
 const images = [
     "../../images/sunmill-loc_batcheditor_fotor (1).avif",

@@ -1,5 +1,5 @@
 import React from 'react';
-import './IndexLayout.css'; // Ensure this file exists and is named correctly
+import './styles/IndexLayout.css'; // Ensure this file exists and is named correctly
 
 const IndexLayout = () => {
   return (

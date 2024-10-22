@@ -2,7 +2,7 @@ import React from "react";
 import ContactInfo from "./ContactInfo";
 import DirectorInfo from "./DirectorInfo";
 import ContactForm from "./ContactForm";
-import Navbar from "../../Navbar";
+import Navbar from "../../Components/Navbar";
 import styles from "../Contact/Contact.module.css";
 
 
