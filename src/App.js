@@ -6,16 +6,21 @@ import "./styles/style.css";
 import "./Components/preloader.js";
 import "./Script/script.js";
 import "./Components/TopBar.js";
+import Chatbot from "./Components/Chatbot/Chatbot.js";
+
 
 function App() {
   return (
     <div className="App">
+
       <ScrollIndicator />
       <PreloaderContainer>
         <Router>
           <AppRoutes />
         </Router>
+        <Chatbot /> 
       </PreloaderContainer>
+
     </div>
   );
 }
