@@ -1,5 +1,5 @@
 .background {
-  background-color: var(--eerie-black-1);
+  background-color: var(--gray-1);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -32,21 +32,23 @@
 .contactInfo,
 .directorInfo {
   font-family: var(--fontFamily-forum);
-  color: var(--white);
+  color: var(--eerie-black-4);
   padding: 20px;
   margin-bottom: 20px;
   border-radius: var(--radius-24);
 }
 
+
+
 .title {
-  color: var(--white);
+  color: var(--eerie-black-4);
   font-size: var(--fontSize-title-1);
   line-height: var(--lineHeight-1);
   margin-bottom: 46px;
 }
 
 .highlight {
-  color: #eab308;
+  color: var(--gold-2);
   display: inline;
 }
 
@@ -54,7 +56,9 @@
   display: flex;
   gap: 24px;
   margin-bottom: 18px;
-  color: var(--white);
+  color: var(--eerie-black-4);
+  font-family: var(--fontFamily-dm_sans);
+
 }
 
 .icon {
@@ -68,6 +72,7 @@
   font-size: var(--fontSize-body-3);
   line-height: var(--lineHeight-5);
   margin-top: 45px;
+  font-family: var(--fontFamily-dm_sans);
 }
 
 .directorImage {
@@ -77,7 +82,7 @@
 }
 
 .directorName {
-  color: #eab308;
+  color:var(--gold-2);
   font-size: 30px;
   font-weight: 600;
   line-height: 1.2;
@@ -105,7 +110,7 @@
 }
 
 .label {
-  color: #374151;
+  color: var(--gray-5);
   font-size: 16px;
   font-weight: 600;
   display: block;
@@ -140,15 +145,16 @@
   padding: 14px 20px;
   cursor: pointer;
 }
-
+/* 
 .submitButton {
   background-color: #d1d5db;
   color: #9ca3af;
-}
+} */
 
-.resetButton {
-  background-color: #e5e7eb;
-  color: #374151;
+.resetButton,
+.submitButton {
+  background-color: var(--gray-2);
+  color: var(--eerie-black-4);
 }
 
 @media (max-width: 991px) {
