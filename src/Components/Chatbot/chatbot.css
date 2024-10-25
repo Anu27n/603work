@@ -1,0 +1,96 @@
+.chatbot-container {
+  position: fixed;
+  bottom: 10px;
+  left: 20px;
+  z-index: 1000;
+}
+
+/* Chatbot toggle button  */
+.chatbot-toggle {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  background-color: var(--gold-1); 
+  padding: 10px;
+  border-radius: 25px;
+  box-shadow: 0 4px 8px var(--black-alpha-35);
+}
+
+.chatbot-toggle img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.chatbot-toggle-text {
+  color: var(--black);
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* Chat window */
+.chat-window {
+  position: fixed;
+  bottom: 80px;
+  left: 20px;
+  width: 400px;
+  background-color: var(--white);  
+  border-radius: 5px;
+  border: 1px solid var(--gray-4);
+  box-shadow: 0 4px 8px var(--black-alpha-35);
+  padding: 10px;
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.chat-messages {
+  color: var(--black);
+}
+
+/* Message styling  */
+.message {
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  max-width: 90%;
+  word-wrap: break-word;
+  box-shadow: 0 2px 5px var(--black-alpha-20);
+}
+
+/* User message box */
+.message.user {
+  background-color: var(--gold-1);
+  color: var(--black);
+  align-self: flex-end;
+  text-align: left;
+}
+
+/* Bot message box */
+.message.bot {
+  background-color: var(--gray-2);
+  color: var(--black);
+  text-align: left;
+}
+
+/* Predefined questions */
+.predefined-questions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.predefined-questions button {
+  background-color: var(--gold-1);
+  color: var(--black);
+  border: none;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  flex: 1 1 calc(50% - 5px); 
+}
+
+.predefined-questions button:hover {
+  background-color: var(--gold-2);
+}
+
