@@ -1,8 +1,9 @@
 import { Route, Routes } from "react-router-dom";
-import Home from "../Pages/Home/Home.js";
 import BlogPost from "../Pages/Blogs/BlogPost";
 import Blogs from "../Pages/Blogs/Blogs";
+import Book from "../Pages/Book/book.js";
 import Contact from "../Pages/Contact/Contact";
+import Home from "../Pages/Home/Home.js";
 import Image from "../Pages/Photos/Photos.js";
 import Services from "../Pages/Services/Services";
 
@@ -15,7 +16,7 @@ const AppRoutes = () => {
       <Route path="/blogs/:id" element={<BlogPost />} />
       <Route path="/photos" element={<Image />} />
       <Route path="/contact" element={<Contact />} />
-      <Route path="/book-a-space" element={"This Page is under construction"} />
+      <Route path="/book-a-space" element={<Book />} />
     </Routes>
   );
 };
