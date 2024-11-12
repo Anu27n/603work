@@ -8,6 +8,7 @@ import twitterIcon from "../../images/twitter.svg";
 import youtubeIcon from "../../images/youtube.svg";
 import Navbar from "../../Components/Navbar";
 import FAQ from "../FAQ/FAQ";
+
 const Home = () => {
   const navigate = useNavigate();
   return (
