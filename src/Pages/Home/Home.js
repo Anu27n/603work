@@ -57,7 +57,7 @@ const Home = () => {
                   vibrant stories
                 </h1>
                 <p className="body-2 hero-text slider-reveal">Spaces that are occupied by Corporates and Start ups, designed with your business in mind</p>
-                <a href="https://603-layout.vercel.app/" className="btn btn-primary slider-reveal">
+                <a href="https://603interiorlayout.netlify.app/" className="btn btn-primary slider-reveal">
                   <span className="text text-1">Make Your Space</span>
                   <span className="text text-2" aria-hidden="true">
                     Make Your Space
