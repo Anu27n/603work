@@ -105,7 +105,7 @@ npm start
 
 ## Contribution Guidelines
 
-If you'd like to contribute, please ensure you read the [CONTRIBUTING.md](./CONTRIBUTING.md) file before making any pull requests.
+If you'd like to contribute, please ensure you read the [CONTRIBUTION.md](./CONTRIBUTION.md) file before making any pull requests.
 
 ## Contact Me
 
