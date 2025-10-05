@@ -1,0 +1,329 @@
+/* ========== KEYFRAME ANIMATIONS ========== */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+/* ========== HERO SECTION ANIMATIONS ========== */
+
+.hero-container {
+    animation: fadeInScale 0.8s ease-out;
+}
+
+.heroText {
+    animation: slideInLeft 1s ease-out 0.3s both;
+}
+
+/* ========== SECTION CONTENT ANIMATIONS ========== */
+
+.section-content-animated {
+    transition: all 0.8s ease-out;
+}
+
+.section-subtitle {
+    animation: fadeInUp 0.6s ease-out 0.2s both;
+}
+
+.section-title {
+    animation: fadeInUp 0.6s ease-out 0.4s both;
+}
+
+/* ========== BLOG CARDS ANIMATIONS ========== */
+
+.blog-card-wrapper {
+    animation: fadeInUp 0.6s ease-out backwards;
+}
+
+.blog-card-wrapper:nth-child(1) { animation-delay: 0.1s; }
+.blog-card-wrapper:nth-child(2) { animation-delay: 0.2s; }
+.blog-card-wrapper:nth-child(3) { animation-delay: 0.3s; }
+.blog-card-wrapper:nth-child(4) { animation-delay: 0.4s; }
+.blog-card-wrapper:nth-child(5) { animation-delay: 0.5s; }
+.blog-card-wrapper:nth-child(6) { animation-delay: 0.6s; }
+
+/* ========== CARD HOVER EFFECTS ========== */
+
+.service-card {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Shimmer effect on card hover */
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+    transition: left 0.5s;
+    z-index: 1;
+}
+
+.service-card:hover::before {
+    left: 100%;
+}
+
+.service-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+/* ========== CARD IMAGE EFFECTS ========== */
+
+.card-banner {
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+.card-banner img {
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    filter: brightness(0.9);
+}
+
+.service-card:hover .card-banner img {
+    transform: scale(1.15) rotate(2deg);
+    filter: brightness(1.1);
+}
+
+/* ========== CARD CONTENT EFFECTS ========== */
+
+.card-content {
+    transition: all 0.3s ease;
+}
+
+.service-card:hover .card-content {
+    transform: translateY(-5px);
+}
+
+/* ========== CARD TITLE HOVER - NO EFFECTS ========== */
+
+.card-title a {
+    transition: all 0.3s ease;
+}
+
+/* ========== READ MORE BUTTON - UNDERLINE AND ARROW ON DIRECT HOVER ========== */
+
+.btn-text {
+    position: relative;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.btn-text::before {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: currentColor;
+    transition: width 0.3s ease;
+}
+
+.btn-text::after {
+    content: '→';
+    position: absolute;
+    right: -20px;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+/* Only trigger effects when hovering directly on the Read More button */
+.btn-text:hover::before {
+    width: 100%;
+}
+
+.btn-text:hover::after {
+    right: -25px;
+    opacity: 1;
+}
+
+.btn-text:hover {
+    transform: translateX(5px);
+}
+
+/* ========== BACK TO TOP BUTTON ========== */
+
+.back-top-btn {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.back-top-btn:hover {
+    transform: translateY(-5px) scale(1.1);
+    animation: pulse 1s infinite;
+}
+
+/* ========== FOOTER ANIMATIONS ========== */
+
+.footer-link {
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+}
+
+.footer-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--gold-crayola, #d4af37);
+    transition: width 0.3s ease;
+}
+
+.footer-link:hover::after {
+    width: 100%;
+}
+
+.footer-link:hover {
+    color: var(--gold-crayola, #d4af37);
+    transform: translateX(5px);
+}
+
+/* ========== SOCIAL ICONS ========== */
+
+.img-height {
+    transition: all 0.3s ease;
+    filter: grayscale(0.5);
+}
+
+.img-height:hover {
+    transform: scale(1.2) rotate(5deg);
+    filter: grayscale(0);
+}
+
+/* ========== FORM ELEMENTS ========== */
+
+.input-wrapper {
+    transition: all 0.3s ease;
+}
+
+.input-wrapper:hover {
+    transform: translateY(-2px);
+}
+
+.input-field {
+    transition: all 0.3s ease;
+}
+
+.input-field:focus {
+    transform: scale(1.02);
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+}
+
+.btn-secondary {
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-secondary::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.1);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.btn-secondary:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.btn-secondary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.4);
+}
+
+/* ========== LOGO ANIMATION ========== */
+
+.logo img {
+    transition: all 0.3s ease;
+}
+
+.logo:hover img {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+/* ========== SEPARATOR ANIMATION ========== */
+
+.separator {
+    animation: float 3s ease-in-out infinite;
+}
+
+.separator:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.separator:nth-child(3) {
+    animation-delay: 1s;
+}
+
+/* ========== ACCESSIBILITY ========== */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
