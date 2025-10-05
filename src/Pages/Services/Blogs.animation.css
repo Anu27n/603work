@@ -1,5 +1,3 @@
-/* ========== KEYFRAME ANIMATIONS ========== */
-
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -51,8 +49,6 @@
     }
 }
 
-/* ========== HERO SECTION ANIMATIONS ========== */
-
 .hero-container {
     animation: fadeInScale 0.8s ease-out;
 }
@@ -60,8 +56,6 @@
 .heroText {
     animation: slideInLeft 1s ease-out 0.3s both;
 }
-
-/* ========== SECTION CONTENT ANIMATIONS ========== */
 
 .section-content-animated {
     transition: all 0.8s ease-out;
@@ -75,8 +69,6 @@
     animation: fadeInUp 0.6s ease-out 0.4s both;
 }
 
-/* ========== BLOG CARDS ANIMATIONS ========== */
-
 .blog-card-wrapper {
     animation: fadeInUp 0.6s ease-out backwards;
 }
@@ -88,15 +80,12 @@
 .blog-card-wrapper:nth-child(5) { animation-delay: 0.5s; }
 .blog-card-wrapper:nth-child(6) { animation-delay: 0.6s; }
 
-/* ========== CARD HOVER EFFECTS ========== */
-
 .service-card {
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     overflow: hidden;
 }
 
-/* Shimmer effect on card hover */
 .service-card::before {
     content: '';
     position: absolute;
@@ -118,8 +107,6 @@
     box-shadow: 0 20px 40px rgba(0,0,0,0.3);
 }
 
-/* ========== CARD IMAGE EFFECTS ========== */
-
 .card-banner {
     overflow: hidden;
     transition: all 0.4s ease;
@@ -135,8 +122,6 @@
     filter: brightness(1.1);
 }
 
-/* ========== CARD CONTENT EFFECTS ========== */
-
 .card-content {
     transition: all 0.3s ease;
 }
@@ -145,13 +130,9 @@
     transform: translateY(-5px);
 }
 
-/* ========== CARD TITLE HOVER - NO EFFECTS ========== */
-
 .card-title a {
     transition: all 0.3s ease;
 }
-
-/* ========== READ MORE BUTTON - UNDERLINE AND ARROW ON DIRECT HOVER ========== */
 
 .btn-text {
     position: relative;
@@ -178,7 +159,6 @@
     transition: all 0.3s ease;
 }
 
-/* Only trigger effects when hovering directly on the Read More button */
 .btn-text:hover::before {
     width: 100%;
 }
@@ -192,8 +172,6 @@
     transform: translateX(5px);
 }
 
-/* ========== BACK TO TOP BUTTON ========== */
-
 .back-top-btn {
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -202,8 +180,6 @@
     transform: translateY(-5px) scale(1.1);
     animation: pulse 1s infinite;
 }
-
-/* ========== FOOTER ANIMATIONS ========== */
 
 .footer-link {
     transition: all 0.3s ease;
@@ -231,8 +207,6 @@
     transform: translateX(5px);
 }
 
-/* ========== SOCIAL ICONS ========== */
-
 .img-height {
     transition: all 0.3s ease;
     filter: grayscale(0.5);
@@ -242,8 +216,6 @@
     transform: scale(1.2) rotate(5deg);
     filter: grayscale(0);
 }
-
-/* ========== FORM ELEMENTS ========== */
 
 .input-wrapper {
     transition: all 0.3s ease;
@@ -291,8 +263,6 @@
     box-shadow: 0 10px 30px rgba(212, 175, 55, 0.4);
 }
 
-/* ========== LOGO ANIMATION ========== */
-
 .logo img {
     transition: all 0.3s ease;
 }
@@ -301,8 +271,6 @@
     transform: scale(1.1);
     filter: brightness(1.2);
 }
-
-/* ========== SEPARATOR ANIMATION ========== */
 
 .separator {
     animation: float 3s ease-in-out infinite;
@@ -315,8 +283,6 @@
 .separator:nth-child(3) {
     animation-delay: 1s;
 }
-
-/* ========== ACCESSIBILITY ========== */
 
 @media (prefers-reduced-motion: reduce) {
     *,
