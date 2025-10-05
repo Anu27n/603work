@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, {useState, useEffect, useRef} from "react";
 import {useNavigate} from "react-router-dom";
 import facebookIcon from "../../images/facebook.svg"
 import instagramIcon from "../../images/instagram.svg"
@@ -54,6 +54,10 @@ const Blogs = () => {
     const [hoveredCard, setHoveredCard] = useState(null);
     const [isVisible, setIsVisible] = useState(false);
     const [showBackToTop, setShowBackToTop] = useState(false);
+    const [scrollY, setScrollY] = useState(0);
+
+    const sectionRef = useRef(null);
+    const cardsRef = useRef([]);
 
     const handleCardClick = (id) => {
         navigate(`/blogs/${id}`);
@@ -83,9 +87,25 @@ const Blogs = () => {
 
     useEffect(() => {
         const handleScroll = () => {
-            setShowBackToTop(window.scrollY > 300);
+            const currentScrollY = window.scrollY;
+            setScrollY(currentScrollY);
+            setShowBackToTop(currentScrollY > 300);
+
+            const scrollElements = document.querySelectorAll('.scroll-reveal, .scroll-reveal-left, .scroll-reveal-right, .scroll-reveal-scale');
+            
+            scrollElements.forEach((el) => {
+                const elementTop = el.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < window.innerHeight - elementVisible) {
+                    el.classList.add('revealed');
+                }
+            });
         };
+
         window.addEventListener('scroll', handleScroll);
+        handleScroll();
+        
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
@@ -112,6 +132,7 @@ const Blogs = () => {
                     className={`serviceImg ${zooming ? "zoom" : ""} ${fadeIn ? "fade-in" : ""}`}
                     style={{
                         width: "100%",
+                        transform: `translateY(${scrollY * 0.5}px)`,
                     }}
                     onAnimationEnd={() => setZooming(false)}
                 />
@@ -119,15 +140,19 @@ const Blogs = () => {
 
             <section
                 id="spaces"
-                className="section service bg-black-10 text-center"
+                className="section service bg-black-10 text-center parallax-section"
                 aria-label="service"
+                ref={sectionRef}
+                style={{
+                    transform: `translateY(${scrollY * 0.1}px)`,
+                }}
             >
                 <div className="container">
-                    <div className={`section-content-animated ${isVisible ? 'visible' : ''}`}>
+                    <div className={`section-content-animated scroll-reveal ${isVisible ? 'revealed' : ''}`}>
                         <p className="section-subtitle label-2">
                             Our Blogs
                         </p>
-                        <h2 className="headline-1 section-title title-box"
+                        <h2 className="headline-1 section-title title-box scroll-reveal"
                           style={{marginBottom:"10rem"}}
                         >
                             Read Our Latest Blogs Here
@@ -135,40 +160,47 @@ const Blogs = () => {
                     </div>
                     
                     <div className="grid-list card-box">
-                        {blogs.map((blog, index) => (
-                            <div 
-                                key={blog.id} 
-                                className="blog-card-wrapper"
-                                onMouseEnter={() => setHoveredCard(blog.id)}
-                                onMouseLeave={() => setHoveredCard(null)}
-                            >
-                                <div className="service-card">
-                                    <a onClick={() => handleCardClick(blog.id)} className="has-before hover:shine">
-                                        <figure
-                                            className="card-banner img-holder"
-                                            style={{ "--width": 285, "--height": 336 }}
-                                        >
-                                            <img
-                                                src={blog.image}
-                                                width="285"
-                                                height="336"
-                                                loading="lazy"
-                                                alt={blog.title}
-                                                className="img-cover"
-                                            />
-                                        </figure>
-                                    </a>
-                                    <div className="card-content">
-                                        <h3 className="title-4 card-title">
-                                            <a onClick={() => handleCardClick(blog.id)}>{blog.title}</a>
-                                        </h3>
-                                        <a onClick={() => handleCardClick(blog.id)} className="btn-text hover-underline label-2">
-                                            Read More
+                        {blogs.map((blog, index) => {
+                            const animationClass = index % 3 === 0 ? 'scroll-reveal-left' : 
+                                                   index % 3 === 1 ? 'scroll-reveal-scale' : 
+                                                   'scroll-reveal-right';
+                            
+                            return (
+                                <div 
+                                    key={blog.id} 
+                                    className={`blog-card-wrapper ${animationClass}`}
+                                    ref={el => cardsRef.current[index] = el}
+                                    onMouseEnter={() => setHoveredCard(blog.id)}
+                                    onMouseLeave={() => setHoveredCard(null)}
+                                >
+                                    <div className="service-card">
+                                        <a onClick={() => handleCardClick(blog.id)} className="has-before hover:shine">
+                                            <figure
+                                                className="card-banner img-holder"
+                                                style={{ "--width": 285, "--height": 336 }}
+                                            >
+                                                <img
+                                                    src={blog.image}
+                                                    width="285"
+                                                    height="336"
+                                                    loading="lazy"
+                                                    alt={blog.title}
+                                                    className="img-cover"
+                                                />
+                                            </figure>
                                         </a>
+                                        <div className="card-content">
+                                            <h3 className="title-4 card-title">
+                                                <a onClick={() => handleCardClick(blog.id)}>{blog.title}</a>
+                                            </h3>
+                                            <a onClick={() => handleCardClick(blog.id)} className="btn-text hover-underline label-2">
+                                                Read More
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        ))}
+                            );
+                        })}
                     </div>
 
                     <a
@@ -206,7 +238,7 @@ const Blogs = () => {
             </section>
 
             <footer
-                className="footer section has-bg-image text-center"
+                className="footer section has-bg-image text-center scroll-reveal"
                 style={{ position: "relative", overflow: "hidden" }}
             >
                 <div
@@ -227,7 +259,7 @@ const Blogs = () => {
                     <div className="footer-content">
                         <div className="footer-top grid-list">
                             <div className="footer-brand has-before has-after">
-                                <ul className="footer-list">
+                                <ul className="footer-list scroll-reveal-left">
                                     <li>
                                         <a href="#" className="label-2 footer-link hover-underline">
                                             Home
@@ -250,7 +282,7 @@ const Blogs = () => {
                                         </a>
                                     </li>
                                 </ul> 
-                                <a href="#" className="logo">
+                                <a href="#" className="logo scroll-reveal-scale">
                                     <img
                                         src="./images/603logo (1).avif"
                                         width="160"
@@ -259,30 +291,30 @@ const Blogs = () => {
                                         alt="grilli home"
                                     />
                                 </a>
-                                <address className="body-4">
+                                <address className="body-4 scroll-reveal">
                                     Makhija Arcade, 35th Rd, Khar, Khar West, Mumbai, Maharashtra
                                     400052
                                 </address>
                                 <a
                                     href="mailto:booking@grilli.com"
-                                    className="body-4 contact-link mail1"
+                                    className="body-4 contact-link mail1 scroll-reveal"
                                 >
                                     booking@grilli.com
                                 </a>
-                                <a href="tel:+88123123456" className="body-4 contact-link">
+                                <a href="tel:+88123123456" className="body-4 contact-link scroll-reveal">
                                     Booking Request : +88-123-123456
                                 </a>
-                                <p className="body-4">Open : 09:00 am - 01:00 pm</p>
-                                <div className="wrapper">
+                                <p className="body-4 scroll-reveal">Open : 09:00 am - 01:00 pm</p>
+                                <div className="wrapper scroll-reveal">
                                     <div className="separator"></div>
                                     <div className="separator"></div>
                                     <div className="separator"></div>
                                 </div>
-                                <p className="title-1">Get News & Offers</p>
-                                <p className="label-1">
+                                <p className="title-1 scroll-reveal">Get News & Offers</p>
+                                <p className="label-1 scroll-reveal">
                                     Subscribe us & Get <span className="span">25% Off.</span>
                                 </p>
-                                <form action="" className="input-wrapper">
+                                <form action="" className="input-wrapper scroll-reveal-scale">
                                     <div className="icon-wrapper">
                                         <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
                                         <input
@@ -300,7 +332,7 @@ const Blogs = () => {
                                         </span>
                                     </button>
                                 </form>
-                                <ul className="footer-list">
+                                <ul className="footer-list scroll-reveal-right">
                                     <p className="title-1">Follow us on: </p>
                                     <li>
                                         <a href="https://www.facebook.com/" className="label-2 footer-link">
@@ -330,7 +362,7 @@ const Blogs = () => {
                                 </ul>
                             </div>
                         </div>
-                        <div className="footer-bottom">
+                        <div className="footer-bottom scroll-reveal">
                             <p className="copyright">
                                 &copy; 2024 . All Rights Reserved | Crafted by{" "}
                                 <a
