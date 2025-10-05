@@ -84,6 +84,10 @@
 .hero-container {
     animation: fadeInScale 0.8s ease-out;
     position: relative;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .hero-container::after {
@@ -101,20 +105,40 @@
 .heroText {
     animation: slideInLeft 1s ease-out 0.3s both;
     text-shadow: 2px 2px 20px rgba(0,0,0,0.8);
-    position: relative;
+    position: absolute;
     z-index: 3;
+    top: 25%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    max-width: 90%;
+    text-align: center;
+    margin: 0;
+    padding: 0 20px;
 }
 
 .heroText::after {
     content: '';
     position: absolute;
-    bottom: -10px;
+    bottom: -15px;
     left: 50%;
     transform: translateX(-50%);
     width: 100px;
     height: 3px;
     background: linear-gradient(90deg, transparent, var(--gold-crayola, #d4af37), transparent);
     animation: shimmer 2s infinite;
+}
+
+@media (max-width: 768px) {
+    .heroText {
+        font-size: clamp(1.5rem, 5vw, 3rem);
+        max-width: 95%;
+    }
+    
+    .heroText::after {
+        bottom: -10px;
+        width: 80px;
+    }
 }
 
 .scroll-reveal {
