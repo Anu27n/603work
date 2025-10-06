@@ -8,7 +8,7 @@
     "@testing-library/user-event": "^14.6.1",
     "603work": "file:",
     "ionicons": "^8.0.13",
-    "react": "^19.1.1",
+    "react": "^19.2.0",
     "react-dom": "^19.1.1",
     "react-password-strength-bar": "^0.4.1",
     "react-router-dom": "^7.9.3",
