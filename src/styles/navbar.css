@@ -432,3 +432,12 @@
     padding: 8px 10px;
   }
 }
+/* NAVBAR VISIBILITY FIX */
+
+.header {
+  /* This forces the background to always be white */
+  background-color: #ffffff !important;
+
+  /* This forces the navbar to stay on top of all other content */
+  z-index: 100 ;
+}

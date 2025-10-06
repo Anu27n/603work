@@ -3,7 +3,7 @@ import ContactInfo from "./ContactInfo";
 import DirectorInfo from "./DirectorInfo";
 import ContactForm from "./ContactForm";
 import Navbar from "../../Components/Navbar";
-import styles from "../Contact/Contact.module.css";
+import styles from "./Contact.module.css";
 
 import facebookIcon from "../../images/facebook.svg"
 import instagramIcon from "../../images/instagram.svg"
