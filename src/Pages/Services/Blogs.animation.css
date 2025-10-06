@@ -107,8 +107,8 @@
     text-shadow: 2px 2px 20px rgba(0,0,0,0.8);
     position: absolute;
     z-index: 3;
-    top: 25%;
-    left: 25%;
+    top: 27%;
+    left: 21%;
     transform: translate(-50%, -50%);
     width: auto;
     max-width: 90%;
@@ -191,12 +191,13 @@
 
 .section-subtitle {
     animation: fadeInUp 0.6s ease-out 0.2s both;
-    background: linear-gradient(90deg, var(--gold-crayola, #d4af37), var(--white, #ffffff), var(--gold-crayola, #d4af37));
-    background-size: 200% auto;
+    /* Static gradient - no animation */
+    background: linear-gradient(90deg, var(--gold-crayola, #b0912c),  var(--gold-crayola, #d4af37));
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: gradientShift 3s ease infinite, fadeInUp 0.6s ease-out 0.2s both;
+    font-size: 2rem;
+    /* Removed gradientShift animation */
 }
 
 .section-title {
@@ -364,6 +365,7 @@
 .back-top-btn {
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
+    /* margin-bottom: 4rem; */
 }
 
 .back-top-btn::before {
@@ -384,6 +386,11 @@
 .back-top-btn:hover {
     transform: translateY(-8px) scale(1.15);
     animation: pulse 1s infinite;
+}
+
+.footer{
+    margin-top: 12rem !important; /* Force proper spacing from content */
+    position: relative !important;
 }
 
 .footer-link {
