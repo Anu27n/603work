@@ -189,7 +189,7 @@
     transition: all 0.8s ease-out;
 }
 
-.section-subtitle {
+.container .section-subtitle {
     animation: fadeInUp 0.6s ease-out 0.2s both;
     /* Static gradient - no animation */
     background: linear-gradient(90deg, var(--gold-crayola, #b0912c),  var(--gold-crayola, #d4af37));
