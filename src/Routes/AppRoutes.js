@@ -1,11 +1,11 @@
 import { Route, Routes } from "react-router-dom";
-import BlogPost from "../Pages/Blogs/BlogPost";
-import Blogs from "../Pages/Blogs/Blogs";
+import BlogPost from "../Pages/Blogs/BlogPost.js";
+import Blogs from "../Pages/Blogs/Blogs.js";
 import Book from "../Pages/Book/book.js";
-import Contact from "../Pages/Contact/Contact";
+import Contact from "../Pages/Contact/Contact.js";
 import Home from "../Pages/Home/Home.js";
 import Image from "../Pages/Photos/Photos.js";
-import Services from "../Pages/Services/Services";
+import Services from "../Pages/Services/Services.js";
 
 const AppRoutes = () => {
   return (
