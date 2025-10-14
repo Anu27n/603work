@@ -99,10 +99,7 @@
 }
 
 #faq .faq-button:hover,
-#faq .faq-item.open .faq-button {
-  background-color: var(--gold-1); /* Change background color on hover */
-}
-#faq .faq-question:hover,
+#faq .faq-item.open .faq-button,
 #faq .faq-item.open .faq-question {
   background-color: var(--gold-1); /* Change background color on hover */
 }
