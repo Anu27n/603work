@@ -8,6 +8,17 @@ function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [theme, setTheme] = useState('light');
+
+  const toggleTheme = () => {
+    if (theme === 'light') {
+      setTheme('dark');
+      document.body.classList.add('dark-mode');
+    } else {
+      setTheme('light');
+      document.body.classList.remove('dark-mode');
+    }
+  };
 
   const location = useLocation();
 
@@ -186,6 +197,11 @@ function Navbar() {
               Make Your Space
             </span>
           </a>
+
+          <button onClick={toggleTheme} className="btn btn-secondary">
+            <span className="text text-1">{theme === 'light' ? 'Dark' : 'Light'}</span>
+            <span className="text text-2" aria-hidden="true">{theme === 'light' ? 'Dark' : 'Light'}</span>
+          </button>
 
           <button
             className="nav-open-btn"
