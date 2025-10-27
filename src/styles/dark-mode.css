@@ -1,0 +1,430 @@
+/* ============================================
+   ENHANCED DARK MODE FOR 603 COWORKING SPACE
+   ============================================ */
+
+body.dark-mode {
+  /* ==================
+     CORE COLOR PALETTE
+     ================== */
+  
+  /* Premium Gold Accents - More vibrant and luxurious */
+  --gold-crayola: hsl(43, 85%, 70%);
+  --gold-accent: hsl(43, 95%, 72%);
+  --gold-dim: hsl(43, 75%, 65%);
+  
+  /* Sophisticated Grays - Blue-tinted for modern feel */
+  --quick-silver: hsla(220, 8%, 80%, 1);
+  --davys-grey: hsla(220, 10%, 68%, 1);
+  
+  /* Text Colors - High contrast for readability */
+  --smoky-black-1: hsla(0, 0%, 98%, 1);
+  --smoky-black-2: hsla(0, 0%, 94%, 1);
+  --smoky-black-3: hsla(0, 0%, 88%, 1);
+  
+  /* Rich Dark Backgrounds - Deep blue-blacks */
+  --eerie-black-1: hsl(222, 20%, 8%);
+  --eerie-black-2: hsl(222, 18%, 11%);
+  --eerie-black-3: hsl(222, 16%, 14%);
+  --eerie-black-4: hsl(222, 14%, 18%);
+
+  /* Layered Gray Scale */
+  --gray-1: hsl(222, 18%, 11%);
+  --gray-2: hsl(222, 16%, 15%);
+  --gray-3: hsl(222, 14%, 22%);
+  --gray-4: hsl(222, 10%, 48%);
+  --gray-5: hsl(222, 8%, 68%);
+
+  /* Premium Gold Highlights */
+  --gold-1: hsl(43, 100%, 65%);
+  --gold-2: hsl(40, 95%, 60%);
+  --gold-glow: hsla(43, 100%, 65%, 0.25);
+
+  /* Semantic Colors with Alpha Channels */
+  --white: hsla(0, 0%, 98%, 1);
+  --white-alpha-90: hsla(0, 0%, 100%, 0.9);
+  --white-alpha-70: hsla(0, 0%, 100%, 0.7);
+  --white-alpha-50: hsla(0, 0%, 100%, 0.5);
+  --white-alpha-30: hsla(0, 0%, 100%, 0.3);
+  --white-alpha-20: hsla(0, 0%, 100%, 0.2);
+  --white-alpha-10: hsla(0, 0%, 100%, 0.1);
+  --white-alpha-05: hsla(0, 0%, 100%, 0.05);
+  
+  --black: hsla(222, 20%, 8%, 1);
+  --black-alpha-80: hsla(0, 0%, 0%, 0.8);
+  --black-alpha-50: hsla(0, 0%, 0%, 0.5);
+  --black-alpha-35: hsla(0, 0%, 0%, 0.35);
+  --black-alpha-20: hsla(0, 0%, 0%, 0.2);
+  --black-alpha-15: hsla(0, 0%, 0%, 0.15);
+  --black-alpha-10: hsla(0, 0%, 0%, 0.1);
+
+  /* Accent Colors for UI Elements */
+  --accent-blue: hsl(210, 85%, 60%);
+  --accent-success: hsl(142, 70%, 55%);
+  --accent-warning: hsl(35, 90%, 60%);
+  --accent-error: hsl(5, 80%, 60%);
+
+  /* Apply base styles */
+  background-color: var(--eerie-black-1);
+  color: var(--smoky-black-1);
+  transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ==================
+   PRELOADER STYLES
+   ================== */
+
+.dark-mode .preload {
+  background: linear-gradient(135deg, var(--eerie-black-1) 0%, var(--eerie-black-2) 100%);
+}
+
+.dark-mode .circle {
+  border-color: var(--gold-1);
+  border-block-start-color: var(--eerie-black-3);
+  box-shadow: 
+    0 0 30px var(--gold-glow),
+    inset 0 0 20px rgba(0, 0, 0, 0.3);
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 
+      0 0 30px var(--gold-glow),
+      inset 0 0 20px rgba(0, 0, 0, 0.3);
+  }
+  50% {
+    box-shadow: 
+      0 0 45px hsla(43, 100%, 65%, 0.4),
+      inset 0 0 25px rgba(0, 0, 0, 0.4);
+  }
+}
+
+.dark-mode .preload .text {
+  -webkit-text-stroke: 1.5px var(--gold-accent);
+  color: transparent;
+  filter: drop-shadow(0 0 15px var(--gold-glow));
+}
+
+/* ==================
+   HEADER STYLES
+   ================== */
+
+.dark-mode .header {
+  background: linear-gradient(
+    180deg,
+    var(--gray-1) 0%,
+    rgba(27, 32, 43, 0.95) 100%
+  );
+  border-bottom: 1px solid var(--white-alpha-10);
+  box-shadow: 
+    0 4px 30px rgba(0, 0, 0, 0.4),
+    0 1px 0 var(--white-alpha-05);
+  backdrop-filter: blur(12px);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dark-mode .header.active {
+  background: rgba(27, 32, 43, 0.98);
+  backdrop-filter: blur(16px) saturate(180%);
+  box-shadow: 
+    0 8px 40px rgba(0, 0, 0, 0.5),
+    0 2px 12px rgba(0, 0, 0, 0.3),
+    0 1px 0 var(--white-alpha-10);
+  border-bottom-color: var(--white-alpha-20);
+}
+
+/* ==================
+   NAVIGATION STYLES
+   ================== */
+
+.dark-mode .navbar {
+  background: linear-gradient(
+    to bottom,
+    var(--gray-1) 0%,
+    var(--eerie-black-2) 100%
+  );
+  box-shadow: 
+    -4px 0 40px rgba(0, 0, 0, 0.5),
+    inset 1px 0 0 var(--white-alpha-05);
+  border-left: 1px solid var(--white-alpha-10);
+}
+
+.dark-mode .navbar-item {
+  color: var(--gray-5);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.dark-mode .navbar-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3px;
+  height: 0;
+  background: linear-gradient(to bottom, var(--gold-1), var(--gold-2));
+  border-radius: 0 3px 3px 0;
+  transition: height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dark-mode .navbar-link:is(:hover, :focus-visible, .active) .span {
+  color: var(--gold-1);
+  text-shadow: 0 0 20px var(--gold-glow);
+  transform: translateX(8px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dark-mode .navbar-link:is(:hover, :focus-visible, .active) ~ .navbar-item::before {
+  height: 100%;
+}
+
+.dark-mode .navbar-scrolled .navbar-link:is(:hover, :focus-visible, .active) .span {
+  color: var(--gold-1);
+}
+
+.dark-mode .navbar-link:is(:hover, :focus-visible, .active) .separator {
+  border: 1px solid var(--gold-1);
+  box-shadow: 
+    0 0 12px var(--gold-glow),
+    0 0 24px hsla(43, 100%, 65%, 0.15);
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--gold-glow) 50%,
+    transparent 100%
+  );
+}
+
+.dark-mode .navbar .body-4 {
+  color: var(--gray-4);
+  transition: color 0.3s ease;
+}
+
+.dark-mode .navbar-link:hover .body-4 {
+  color: var(--gray-5);
+}
+
+/* ==================
+   NAVIGATION TOGGLE
+   ================== */
+
+.dark-mode .nav-open-btn {
+  position: relative;
+  z-index: 10;
+}
+
+.dark-mode .nav-open-btn .line {
+  background: linear-gradient(
+    90deg,
+    var(--smoky-black-1) 0%,
+    var(--quick-silver) 100%
+  );
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.dark-mode .nav-open-btn:hover .line {
+  background: linear-gradient(
+    90deg,
+    var(--gold-1) 0%,
+    var(--gold-2) 100%
+  );
+  box-shadow: 
+    0 0 12px var(--gold-glow),
+    0 2px 12px rgba(0, 0, 0, 0.3);
+  transform: scaleX(1.1);
+}
+
+.dark-mode .navbar-scrolled .nav-open-btn .line {
+  background: linear-gradient(
+    90deg,
+    var(--gray-5) 0%,
+    var(--gray-4) 100%
+  );
+}
+
+.dark-mode .navbar .close-btn {
+  color: var(--smoky-black-2);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  background: var(--white-alpha-05);
+  border-radius: 50%;
+  padding: 8px;
+}
+
+.dark-mode .navbar .close-btn:is(:hover, :focus-visible) {
+  color: var(--gold-1);
+  text-shadow: 0 0 20px var(--gold-glow);
+  background: var(--white-alpha-10);
+  transform: rotate(90deg) scale(1.1);
+}
+
+/* ==================
+   TOP NAVBAR
+   ================== */
+
+.dark-mode .top_navbar_style {
+  color: var(--smoky-black-1);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 193, 7, 0.12) 0%,
+    rgba(255, 193, 7, 0.04) 50%,
+    transparent 100%
+  );
+  border-bottom: 1px solid rgba(255, 193, 7, 0.3);
+  box-shadow: 
+    0 4px 20px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 var(--white-alpha-10);
+  backdrop-filter: blur(12px) saturate(150%);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dark-mode .header.active .top_navbar_style {
+  color: var(--smoky-black-2);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 193, 7, 0.08) 0%,
+    rgba(255, 193, 7, 0.02) 50%,
+    transparent 100%
+  );
+  border-bottom-color: rgba(255, 193, 7, 0.2);
+}
+
+/* ==================
+   ADDITIONAL UI ELEMENTS
+   ================== */
+
+.dark-mode .btn {
+  background: linear-gradient(135deg, var(--gold-1), var(--gold-2));
+  color: var(--eerie-black-1);
+  box-shadow: 
+    0 4px 20px var(--gold-glow),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dark-mode .btn:hover {
+  background: linear-gradient(135deg, var(--gold-accent), var(--gold-1));
+  box-shadow: 
+    0 8px 32px hsla(43, 100%, 65%, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.dark-mode .card {
+  background: linear-gradient(
+    135deg,
+    var(--gray-2) 0%,
+    var(--gray-1) 100%
+  );
+  border: 1px solid var(--white-alpha-10);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 var(--white-alpha-05);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dark-mode .card:hover {
+  border-color: var(--gold-1);
+  box-shadow: 
+    0 12px 48px rgba(0, 0, 0, 0.5),
+    0 0 32px var(--gold-glow),
+    inset 0 1px 0 var(--white-alpha-10);
+  transform: translateY(-4px);
+}
+
+.dark-mode input,
+.dark-mode textarea,
+.dark-mode select {
+  background: var(--gray-2);
+  border: 1px solid var(--white-alpha-20);
+  color: var(--smoky-black-1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dark-mode input:focus,
+.dark-mode textarea:focus,
+.dark-mode select:focus {
+  background: var(--gray-1);
+  border-color: var(--gold-1);
+  box-shadow: 
+    0 0 0 3px var(--gold-glow),
+    inset 0 2px 8px rgba(0, 0, 0, 0.2);
+  outline: none;
+}
+
+.dark-mode ::placeholder {
+  color: var(--gray-4);
+}
+
+/* ==================
+   SCROLLBAR STYLING
+   ================== */
+
+.dark-mode ::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+.dark-mode ::-webkit-scrollbar-track {
+  background: var(--gray-1);
+  border-left: 1px solid var(--white-alpha-05);
+}
+
+.dark-mode ::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    180deg,
+    var(--gray-3) 0%,
+    var(--gray-4) 100%
+  );
+  border-radius: 6px;
+  border: 2px solid var(--gray-1);
+  transition: background 0.3s ease;
+}
+
+.dark-mode ::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+    180deg,
+    var(--gold-1) 0%,
+    var(--gold-2) 100%
+  );
+}
+
+/* ==================
+   SELECTION STYLING
+   ================== */
+
+.dark-mode ::selection {
+  background: var(--gold-1);
+  color: var(--eerie-black-1);
+  text-shadow: none;
+}
+
+.dark-mode ::-moz-selection {
+  background: var(--gold-1);
+  color: var(--eerie-black-1);
+  text-shadow: none;
+}
+
+/* ==================
+   ACCESSIBILITY
+   ================== */
+
+.dark-mode :focus-visible {
+  outline: 2px solid var(--gold-1);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px var(--gold-glow);
+}
+
+/* ==================
+   SMOOTH TRANSITIONS
+   ================== */
+
+.dark-mode * {
+  transition-duration: 0.3s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dark-mode *:not(.preload *) {
+  transition-property: background-color, border-color, color, box-shadow, transform;
+}
