@@ -1,29 +1,31 @@
-import React, { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import React, { useEffect, useState, useRef } from "react";
+import { NavLink, useLocation } from "react-router-dom";
 import Modal from "../Helper/Modal";
 
 function Navbar() {
-  const [prevScrollPos, setPrevScrollPos] = useState(window.scrollY);
   const [hidden, setHidden] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const location = useLocation();
+  const prevScrollPosRef = useRef(window.scrollY);
 
+  /*Handle Scroll Hide/Show Navbar */
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollPos = window.scrollY;
-      const isHidden = prevScrollPos < currentScrollPos;
+      const isHidden = prevScrollPosRef.current < currentScrollPos;
       setHidden(isHidden);
-      setPrevScrollPos(currentScrollPos);
+      prevScrollPosRef.current = currentScrollPos;
       setIsScrolled(window.scrollY > 0);
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [prevScrollPos]);
+  }, []);
 
+  /* Smooth Scroll to Anchors */
   useEffect(() => {
     if (location.hash) {
       const sectionId = location.hash.replace("#", "");
@@ -32,13 +34,23 @@ function Navbar() {
     }
   }, [location]);
 
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
-  const toggleModal = () => setIsModalOpen(!isModalOpen);
+  /* Lock Scroll When Menu Is Open */
+  useEffect(() => {
+    document.body.style.overflow = isMenuOpen ? "hidden" : "auto";
+  }, [isMenuOpen]);
 
-  const isHomeOpen = location.pathname === "/";
-  const isServicesOpen = location.pathname === "/services";
-  const isBlogsOpen = location.pathname === "/blogs";
-  const isImgsOpen = location.pathname === "/photos";
+  const toggleMenu = () => setIsMenuOpen((prev) => !prev);
+  const toggleModal = () => setIsModalOpen((prev) => !prev);
+
+  const navItems = [
+    { to: "/", label: "Home" },
+    { to: "/#spaces", label: "Spaces" },
+    { to: "/#about", label: "About Us" },
+    { to: "/services", label: "Our Services" },
+    { to: "/blogs", label: "Our Blogs" },
+    { to: "/photos", label: "Images" },
+    { to: "/Contact", label: "Contact" },
+  ];
 
   return (
     <>
@@ -48,6 +60,7 @@ function Navbar() {
         }`}
         data-header
       >
+        {/* Top Info Bar */}
         <div className="top_navbar_style container">
           <p>
             Makhija Arcade, 35th Rd, Khar, Khar West, Mumbai, Maharashtra 400052
@@ -65,75 +78,78 @@ function Navbar() {
           </a>
         </div>
 
+        {/*Main Navbar */}
         <div className="container">
+          
           <a href="/" className="logo">
             <img
               src="./images/603logo (1).avif"
               width="160"
               height="50"
-              alt="Grilli - Home"
+              alt="603 Coworking - Home"
               className="logohover"
             />
           </a>
 
-          <nav className={`navbar ${isMenuOpen ? "active" : ""}`} data-navbar>
+          
+          <nav
+            className={`navbar ${isMenuOpen ? "active" : ""}`}
+            role="navigation"
+            aria-label="Main navigation"
+            id="navbar-menu"
+            data-navbar
+          >
+           
             <button
               className="close-btn"
-              aria-label="close menu"
+              aria-label="Close menu"
+              aria-controls="navbar-menu"
               onClick={toggleMenu}
             >
               <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
             </button>
 
-            <a href="#" className="logo">
+            {/* Logo inside mobile menu */}
+            <a href="/" className="logo">
               <img
                 src="./images/603logo (1).avif"
                 width="160"
                 height="50"
-                alt="Grilli - Home"
+                alt="603 Coworking"
               />
             </a>
 
+            
             <ul className="navbar-list">
-              {[
-                { to: "/", label: "Home", active: isHomeOpen },
-                { to: "/#spaces", label: "Spaces" },
-                { to: "/#about", label: "About Us" },
-                {
-                  to: "/services",
-                  label: "Our Services",
-                  active: isServicesOpen,
-                },
-                { to: "/blogs", label: "Our Blogs", active: isBlogsOpen },
-                { to: "/photos", label: "Images", active: isImgsOpen },
-                { to: "/Contact", label: "Contact" },
-              ].map((item) => (
+              {navItems.map((item) => (
                 <li key={item.label} className="navbar-item">
-                  <a
-                    href={item.to}
-                    className={`navbar-link hover-underline ${
-                      item.active ? "active" : ""
-                    }`}
+                  <NavLink
+                    to={item.to}
+                    className={({ isActive }) =>
+                      `navbar-link hover-underline ${
+                        isActive ? "active" : ""
+                      }`
+                    }
                     style={{
                       fontWeight: 600,
                       fontSize: "16px",
-                      color: item.active ? "#d4a017" : "#333",
+                      color: "#333",
                       letterSpacing: "0.5px",
                       textTransform: "uppercase",
-                      transition: "color 0.3s ease, border-bottom 0.3s ease",
-                      textShadow: "none",
-                      filter: "none",
+                      transition:
+                        "color 0.3s ease, border-bottom 0.3s ease, opacity 0.3s",
                     }}
+                    onClick={() => setIsMenuOpen(false)}
                   >
                     <div className="separator"></div>
                     <span className="span">{item.label}</span>
-                  </a>
+                  </NavLink>
                 </li>
               ))}
 
+              
               <li className="navbar-item">
-                <a
-                  href="/#"
+                <button
                   className="navbar-link hover-underline"
                   onClick={toggleModal}
                   style={{
@@ -142,17 +158,18 @@ function Navbar() {
                     color: "#333",
                     letterSpacing: "0.5px",
                     textTransform: "uppercase",
-                    transition: "color 0.3s ease, border-bottom 0.3s ease",
-                    textShadow: "none",
-                    filter: "none",
+                    background: "none",
+                    border: "none",
+                    cursor: "pointer",
                   }}
                 >
                   <div className="separator"></div>
                   <span className="span">Login</span>
-                </a>
+                </button>
               </li>
             </ul>
 
+            
             <div className="text-center">
               <p className="headline-1 navbar-title">Visit Us</p>
               <address className="body-4">
@@ -177,6 +194,7 @@ function Navbar() {
             </div>
           </nav>
 
+          
           <a
             href="https://603interiorlayout.netlify.app/"
             className="btn btn-secondary"
@@ -187,9 +205,12 @@ function Navbar() {
             </span>
           </a>
 
+          {/* Menu Toggle */}
           <button
             className="nav-open-btn"
-            aria-label="open menu"
+            aria-label="Open menu"
+            aria-expanded={isMenuOpen}
+            aria-controls="navbar-menu"
             onClick={toggleMenu}
           >
             <span className="line line-1"></span>
@@ -197,6 +218,7 @@ function Navbar() {
             <span className="line line-3"></span>
           </button>
 
+          
           <div
             className={`overlay ${isMenuOpen ? "active" : ""}`}
             onClick={toggleMenu}
@@ -206,7 +228,7 @@ function Navbar() {
         </div>
       </header>
 
-      {}
+      {/* Login Modal */}
       <Modal isModalOpen={isModalOpen} toggleModal={toggleModal} />
     </>
   );
